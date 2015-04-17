@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		DA5533481AE0B57F003E369E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5533471AE0B57F003E369E /* AppDelegate.swift */; };
 		DA55334B1AE0B57F003E369E /* Surge_Client.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA5533491AE0B57F003E369E /* Surge_Client.xcdatamodeld */; };
-		DA55334D1AE0B57F003E369E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA55334C1AE0B57F003E369E /* ViewController.swift */; };
 		DA5533501AE0B57F003E369E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA55334E1AE0B57F003E369E /* Main.storyboard */; };
 		DA5533521AE0B57F003E369E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA5533511AE0B57F003E369E /* Images.xcassets */; };
 		DA5533551AE0B57F003E369E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA5533531AE0B57F003E369E /* LaunchScreen.xib */; };
 		DA5533611AE0B57F003E369E /* Surge_ClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5533601AE0B57F003E369E /* Surge_ClientTests.swift */; };
+		DAD498941AE0C114000E5E93 /* YakCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD498931AE0C114000E5E93 /* YakCell.swift */; };
+		DAD498961AE0C125000E5E93 /* YakTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD498951AE0C125000E5E93 /* YakTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +32,14 @@
 		DA5533461AE0B57F003E369E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA5533471AE0B57F003E369E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA55334A1AE0B57F003E369E /* Surge_Client.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Surge_Client.xcdatamodel; sourceTree = "<group>"; };
-		DA55334C1AE0B57F003E369E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DA55334F1AE0B57F003E369E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA5533511AE0B57F003E369E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DA5533541AE0B57F003E369E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		DA55335A1AE0B57F003E369E /* Surge-ClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Surge-ClientTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA55335F1AE0B57F003E369E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA5533601AE0B57F003E369E /* Surge_ClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Surge_ClientTests.swift; sourceTree = "<group>"; };
+		DAD498931AE0C114000E5E93 /* YakCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YakCell.swift; sourceTree = "<group>"; };
+		DAD498951AE0C125000E5E93 /* YakTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YakTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +82,9 @@
 			isa = PBXGroup;
 			children = (
 				DA5533471AE0B57F003E369E /* AppDelegate.swift */,
-				DA55334C1AE0B57F003E369E /* ViewController.swift */,
 				DA55334E1AE0B57F003E369E /* Main.storyboard */,
+				DAD498931AE0C114000E5E93 /* YakCell.swift */,
+				DAD498951AE0C125000E5E93 /* YakTableViewController.swift */,
 				DA5533511AE0B57F003E369E /* Images.xcassets */,
 				DA5533531AE0B57F003E369E /* LaunchScreen.xib */,
 				DA5533491AE0B57F003E369E /* Surge_Client.xcdatamodeld */,
@@ -215,8 +218,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA55334D1AE0B57F003E369E /* ViewController.swift in Sources */,
+				DAD498941AE0C114000E5E93 /* YakCell.swift in Sources */,
 				DA5533481AE0B57F003E369E /* AppDelegate.swift in Sources */,
+				DAD498961AE0C125000E5E93 /* YakTableViewController.swift in Sources */,
 				DA55334B1AE0B57F003E369E /* Surge_Client.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +417,7 @@
 				DA5533661AE0B57F003E369E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA5533671AE0B57F003E369E /* Build configuration list for PBXNativeTarget "Surge-ClientTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +426,7 @@
 				DA5533691AE0B57F003E369E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
