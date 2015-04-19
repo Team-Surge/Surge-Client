@@ -18,10 +18,10 @@ class YakCell: UITableViewCell {
   override func awakeFromNib() {
     super.awakeFromNib()
     // Initialization code
-    yakText.text = "<YakCell Default Text>"
-    yakTime.text = "<1m>"
-    karmaScore.text = "<\(999)>"
-    replyCount.text = "<99 replies>"
+    //yakText.text = "<YakCell Default Text>"
+    //yakTime.text = "<1m>"
+    //karmaScore.text = "<\(999)>"
+    //replyCount.text = "<99 replies>"
   }
   
   override func setSelected(selected: Bool, animated: Bool) {
