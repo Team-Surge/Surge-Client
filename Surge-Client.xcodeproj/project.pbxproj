@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA3DEB881AE355DB0067C020 /* YakPostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3DEB871AE355DB0067C020 /* YakPostDetailView.swift */; };
 		DA5533481AE0B57F003E369E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5533471AE0B57F003E369E /* AppDelegate.swift */; };
 		DA55334B1AE0B57F003E369E /* Surge_Client.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA5533491AE0B57F003E369E /* Surge_Client.xcdatamodeld */; };
 		DA5533501AE0B57F003E369E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA55334E1AE0B57F003E369E /* Main.storyboard */; };
@@ -15,7 +16,6 @@
 		DA5533611AE0B57F003E369E /* Surge_ClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5533601AE0B57F003E369E /* Surge_ClientTests.swift */; };
 		DAC550EA1AE2FF8400ED4436 /* YakTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC550E91AE2FF8400ED4436 /* YakTableView.swift */; };
 		DAD498941AE0C114000E5E93 /* YakCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD498931AE0C114000E5E93 /* YakCell.swift */; };
-		DAEAC4401AE1CF9B00F96CAD /* YakDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEAC43F1AE1CF9B00F96CAD /* YakDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA3DEB871AE355DB0067C020 /* YakPostDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YakPostDetailView.swift; sourceTree = "<group>"; };
 		DA5533421AE0B57F003E369E /* Surge-Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Surge-Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5533461AE0B57F003E369E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA5533471AE0B57F003E369E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,7 +42,6 @@
 		DA5533601AE0B57F003E369E /* Surge_ClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Surge_ClientTests.swift; sourceTree = "<group>"; };
 		DAC550E91AE2FF8400ED4436 /* YakTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YakTableView.swift; sourceTree = "<group>"; };
 		DAD498931AE0C114000E5E93 /* YakCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YakCell.swift; sourceTree = "<group>"; };
-		DAEAC43F1AE1CF9B00F96CAD /* YakDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YakDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,9 +85,9 @@
 			children = (
 				DA5533471AE0B57F003E369E /* AppDelegate.swift */,
 				DA55334E1AE0B57F003E369E /* Main.storyboard */,
-				DAEAC43F1AE1CF9B00F96CAD /* YakDetailViewController.swift */,
 				DAD498931AE0C114000E5E93 /* YakCell.swift */,
 				DAC550E91AE2FF8400ED4436 /* YakTableView.swift */,
+				DA3DEB871AE355DB0067C020 /* YakPostDetailView.swift */,
 				DA5533511AE0B57F003E369E /* Images.xcassets */,
 				DA5533531AE0B57F003E369E /* LaunchScreen.xib */,
 				DA5533491AE0B57F003E369E /* Surge_Client.xcdatamodeld */,
@@ -222,8 +222,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAD498941AE0C114000E5E93 /* YakCell.swift in Sources */,
+				DA3DEB881AE355DB0067C020 /* YakPostDetailView.swift in Sources */,
 				DAC550EA1AE2FF8400ED4436 /* YakTableView.swift in Sources */,
-				DAEAC4401AE1CF9B00F96CAD /* YakDetailViewController.swift in Sources */,
 				DA5533481AE0B57F003E369E /* AppDelegate.swift in Sources */,
 				DA55334B1AE0B57F003E369E /* Surge_Client.xcdatamodeld in Sources */,
 			);
@@ -284,7 +284,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -328,6 +329,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";

@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Peek-->
         <scene sceneID="f8y-Zh-lUJ">
             <objects>
                 <viewController id="73D-ce-SNk" sceneMemberID="viewController">
@@ -14,17 +14,17 @@
                         <viewControllerLayoutGuide type="bottom" id="DkJ-mn-pl0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bVB-nW-FTb">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="hGD-5c-E6M"/>
+                    <tabBarItem key="tabBarItem" title="Peek" id="hGD-5c-E6M"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="be0-XW-gk2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1580" y="57"/>
         </scene>
-        <!--Item-->
+        <!--Me-->
         <scene sceneID="VHB-OJ-1RH">
             <objects>
                 <viewController id="xHD-mC-hrI" sceneMemberID="viewController">
@@ -33,17 +33,17 @@
                         <viewControllerLayoutGuide type="bottom" id="bI2-86-n08"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="IKt-jj-D6E">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="pQY-5J-kAg"/>
+                    <tabBarItem key="tabBarItem" title="Me" id="pQY-5J-kAg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kaT-aK-8fL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-918" y="57"/>
         </scene>
-        <!--Item-->
+        <!--More-->
         <scene sceneID="buY-A8-5t5">
             <objects>
                 <viewController id="fyd-hF-2yd" sceneMemberID="viewController">
@@ -52,15 +52,15 @@
                         <viewControllerLayoutGuide type="bottom" id="PGJ-uG-3pR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6O1-if-bgE">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="3ee-5v-odh"/>
+                    <tabBarItem key="tabBarItem" title="More" id="3ee-5v-odh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ua3-9c-OcM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="518" y="57"/>
+            <point key="canvasLocation" x="432" y="57"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="sWp-rx-T3U">
@@ -71,7 +71,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Swg-cj-eQf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="el9-QB-JPe" customClass="YakTableView" customModule="Surge_Client" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="3" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="5Sn-4l-uJP">
@@ -107,8 +107,11 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="postText" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCg-qy-qbm">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="postText" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCg-qy-qbm">
                                                     <rect key="frame" x="8" y="8" width="548" height="69"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="548" id="cr6-d4-lPr"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -147,6 +150,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="karma" destination="Lwn-d8-FSE" id="abY-N9-juL"/>
+                                            <outlet property="postText" destination="BCg-qy-qbm" id="Cka-1g-tic"/>
+                                            <outlet property="postTime" destination="E2T-jF-XRA" id="z1p-AG-pNj"/>
+                                            <outlet property="replyText" destination="OXr-ol-bhn" id="9gS-b3-RsM"/>
                                             <segue destination="f9n-0c-T09" kind="show" id="gI9-rg-AtF"/>
                                         </connections>
                                     </tableViewCell>
@@ -162,16 +169,27 @@
                         <constraints>
                             <constraint firstItem="5Sn-4l-uJP" firstAttribute="leading" secondItem="el9-QB-JPe" secondAttribute="leadingMargin" constant="-16" id="f9B-0s-PTQ"/>
                             <constraint firstAttribute="centerX" secondItem="5Sn-4l-uJP" secondAttribute="centerX" id="hzn-CL-3wU"/>
-                            <constraint firstAttribute="centerY" secondItem="5Sn-4l-uJP" secondAttribute="centerY" constant="24.5" id="ljM-Bg-ACP"/>
+                            <constraint firstAttribute="centerY" secondItem="5Sn-4l-uJP" secondAttribute="centerY" id="ljM-Bg-ACP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5Sn-4l-uJP" secondAttribute="trailing" constant="-16" id="qZU-vK-E3Y"/>
                             <constraint firstItem="5Sn-4l-uJP" firstAttribute="top" secondItem="el9-QB-JPe" secondAttribute="topMargin" id="xRn-tm-Xnz"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="A1c-Wj-w5H"/>
+                    <navigationItem key="navigationItem" id="A1c-Wj-w5H">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Ujp-le-YPc">
+                            <rect key="frame" x="239" y="7" width="123" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="New"/>
+                                <segment title="Hot"/>
+                            </segments>
+                        </segmentedControl>
+                        <barButtonItem key="rightBarButtonItem" title="New" style="plain" id="Ofy-Ak-4tz"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ges-h7-tjh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-249" y="720"/>
+            <point key="canvasLocation" x="-249" y="788"/>
         </scene>
         <!--Yak Detail View Controller-->
         <scene sceneID="DT0-xt-6bz">
@@ -181,25 +199,26 @@
                         <viewControllerLayoutGuide type="top" id="r4M-CM-xDR"/>
                         <viewControllerLayoutGuide type="bottom" id="bdn-lg-8GB"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="mkh-k0-LVc">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" contentMode="scaleToFill" id="mkh-k0-LVc" customClass="YakPostDetailView" customModule="Surge_Client" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lM7-S6-9oB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-249" y="1382"/>
+            <point key="canvasLocation" x="-249" y="1536"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Wf6-9d-1So">
             <objects>
                 <tabBarController id="rpj-yL-ax4" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="ntG-4I-q5a">
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="ntG-4I-q5a">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="vo5-wP-KNu" kind="relationship" relationship="viewControllers" id="nab-V7-6n6"/>
@@ -212,11 +231,11 @@
             </objects>
             <point key="canvasLocation" x="-540" y="-687"/>
         </scene>
-        <!--Main Window-->
+        <!--Home-->
         <scene sceneID="oVV-ok-FuO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vo5-wP-KNu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Main Window" id="e7u-H6-tIH"/>
+                    <tabBarItem key="tabBarItem" title="Home" id="e7u-H6-tIH"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="McW-hj-0Sw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
