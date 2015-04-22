@@ -14,7 +14,9 @@
 		DA5533521AE0B57F003E369E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA5533511AE0B57F003E369E /* Images.xcassets */; };
 		DA5533551AE0B57F003E369E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA5533531AE0B57F003E369E /* LaunchScreen.xib */; };
 		DA5533611AE0B57F003E369E /* Surge_ClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5533601AE0B57F003E369E /* Surge_ClientTests.swift */; };
-		DAC550EA1AE2FF8400ED4436 /* YakTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC550E91AE2FF8400ED4436 /* YakTableView.swift */; };
+		DAD2E43C1AE7374100DFBB53 /* YakMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD2E43B1AE7374100DFBB53 /* YakMainViewController.swift */; };
+		DAD2E43E1AE738A700DFBB53 /* YakDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD2E43D1AE738A700DFBB53 /* YakDetailViewController.swift */; };
+		DAD2E4441AE7405A00DFBB53 /* YakCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAD2E4431AE7405A00DFBB53 /* YakCell.xib */; };
 		DAD498941AE0C114000E5E93 /* YakCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD498931AE0C114000E5E93 /* YakCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +42,9 @@
 		DA55335A1AE0B57F003E369E /* Surge-ClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Surge-ClientTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA55335F1AE0B57F003E369E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA5533601AE0B57F003E369E /* Surge_ClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Surge_ClientTests.swift; sourceTree = "<group>"; };
-		DAC550E91AE2FF8400ED4436 /* YakTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YakTableView.swift; sourceTree = "<group>"; };
+		DAD2E43B1AE7374100DFBB53 /* YakMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YakMainViewController.swift; sourceTree = "<group>"; };
+		DAD2E43D1AE738A700DFBB53 /* YakDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YakDetailViewController.swift; sourceTree = "<group>"; };
+		DAD2E4431AE7405A00DFBB53 /* YakCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YakCell.xib; sourceTree = "<group>"; };
 		DAD498931AE0C114000E5E93 /* YakCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YakCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,9 +89,11 @@
 			children = (
 				DA5533471AE0B57F003E369E /* AppDelegate.swift */,
 				DA55334E1AE0B57F003E369E /* Main.storyboard */,
+				DAD2E4431AE7405A00DFBB53 /* YakCell.xib */,
 				DAD498931AE0C114000E5E93 /* YakCell.swift */,
-				DAC550E91AE2FF8400ED4436 /* YakTableView.swift */,
+				DAD2E43B1AE7374100DFBB53 /* YakMainViewController.swift */,
 				DA3DEB871AE355DB0067C020 /* YakPostDetailView.swift */,
+				DAD2E43D1AE738A700DFBB53 /* YakDetailViewController.swift */,
 				DA5533511AE0B57F003E369E /* Images.xcassets */,
 				DA5533531AE0B57F003E369E /* LaunchScreen.xib */,
 				DA5533491AE0B57F003E369E /* Surge_Client.xcdatamodeld */,
@@ -202,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA5533501AE0B57F003E369E /* Main.storyboard in Resources */,
+				DAD2E4441AE7405A00DFBB53 /* YakCell.xib in Resources */,
 				DA5533551AE0B57F003E369E /* LaunchScreen.xib in Resources */,
 				DA5533521AE0B57F003E369E /* Images.xcassets in Resources */,
 			);
@@ -222,10 +229,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAD498941AE0C114000E5E93 /* YakCell.swift in Sources */,
+				DAD2E43C1AE7374100DFBB53 /* YakMainViewController.swift in Sources */,
 				DA3DEB881AE355DB0067C020 /* YakPostDetailView.swift in Sources */,
-				DAC550EA1AE2FF8400ED4436 /* YakTableView.swift in Sources */,
 				DA5533481AE0B57F003E369E /* AppDelegate.swift in Sources */,
 				DA55334B1AE0B57F003E369E /* Surge_Client.xcdatamodeld in Sources */,
+				DAD2E43E1AE738A700DFBB53 /* YakDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

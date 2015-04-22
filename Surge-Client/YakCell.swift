@@ -9,19 +9,18 @@
 import UIKit
 
 class YakCell: UITableViewCell {
-  
-  @IBOutlet weak var postText: UILabel!
-  @IBOutlet weak var postTime: UILabel!
-  @IBOutlet weak var karma: UILabel!
-  @IBOutlet weak var replyText: UILabel!
+  @IBOutlet weak var replyLabel: UILabel!
+  @IBOutlet weak var karmaLabel: UILabel!
+  @IBOutlet weak var contentLabel: UILabel!
+  @IBOutlet weak var timeLabel: UILabel!
   
   override func awakeFromNib() {
     super.awakeFromNib()
     // Initialization code
-    postText.text = "<YakCell Default Text>"
-    postTime.text = "<1m>"
-    karma.text = "<\(999)>"
-    replyText.text = "<99 replies>"
+    contentLabel.text = "<YakCell Default Text>"
+    timeLabel.text = "1m"
+    karmaLabel.text = "<\(999)>"
+    replyLabel.text = "<99 replies>"
   }
   
   override func setSelected(selected: Bool, animated: Bool) {
