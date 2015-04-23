@@ -10,13 +10,21 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class YakDetailViewController: UIViewController {
+class YakDetailViewController: UIViewController,UITextFieldDelegate {
 
-  @IBOutlet weak var innerTableView: UITableView!
+  @IBOutlet weak var innerTableView: UITableView?
   @IBOutlet weak var mapView: MKMapView!
   @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+  @IBOutlet weak var sendButton: UIButton!
+  @IBOutlet weak var textField: UITextField!
   
+  var originalBottomConstraintConstant: CGFloat!
   var location: CLLocation!
+
+  
+  @IBAction func onSendButtonPress(sender: AnyObject) {
+    textFieldShouldReturn(textField)
+  }
   
   override func viewDidLoad() {
     // Set map centered to user
@@ -28,11 +36,15 @@ class YakDetailViewController: UIViewController {
   
     super.viewDidLoad()
 
-    // Do any additional setup after loading the view.
-    innerTableView.registerNib(UINib(nibName: "YakCell", bundle: nil), forCellReuseIdentifier: "YakCell")
-    innerTableView.delegate = self
-    NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil)
+    // Setup table cells
+    innerTableView?.registerNib(UINib(nibName: "YakCell", bundle: nil), forCellReuseIdentifier: "YakCell")
+    innerTableView?.delegate = self
 
+    // Setup text field and keyboard
+    textField.delegate = self
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil)
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil)
+    
   }
   
   override func didReceiveMemoryWarning() {
@@ -40,24 +52,22 @@ class YakDetailViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
   
+  func keyboardWillHide(notification: NSNotification) {
+    var info = notification.userInfo!
+    var keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+    bottomConstraint.constant = originalBottomConstraintConstant
+  }
 
   func keyboardWillShow(notification: NSNotification) {
     var info = notification.userInfo!
     var keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+    originalBottomConstraintConstant = bottomConstraint.constant
     bottomConstraint.constant = keyboardFrame.size.height + bottomConstraint.constant
   }
-  
-  /*
-  // MARK: - Navigation
-  
-  // In a storyboard-based application, you will often want to do a little preparation before navigation
-  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-  // Get the new view controller using segue.destinationViewController.
-  // Pass the selected object to the new view controller.
-  }
-  */
+
 }
 
+// MARK: - UITableViewDelegate
 extension YakDetailViewController: UITableViewDelegate {
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -70,9 +80,9 @@ extension YakDetailViewController: UITableViewDelegate {
     return cell
   }
   
-
 }
 
+// MARK: - UITableViewDataSource
 extension YakDetailViewController: UITableViewDataSource {
   
   func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -91,8 +101,22 @@ extension YakDetailViewController: UITableViewDataSource {
     
     return 1
   }
+  
 }
 
+// MARK: - UITextFieldDelegate
+extension YakDetailViewController: UITextFieldDelegate {
+  
+  func textFieldShouldReturn(textField: UITextField) -> Bool {
+    textField.resignFirstResponder()
+    println("TextFieldValue: \(textField.text)")
+    textField.text = ""
+    return true
+  }
+  
+}
+
+// MARK: - MKMapViewDelegate
 extension YakDetailViewController: MKMapViewDelegate {
   
 }
