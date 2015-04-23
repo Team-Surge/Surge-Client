@@ -143,8 +143,7 @@
                                                 <exclude reference="iSa-45-SLH"/>
                                             </mask>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="65" width="375" height="1347"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
                                             <mask key="subviews">
                                                 <include reference="0CI-XA-9uL"/>
                                                 <include reference="Agu-Db-lMM"/>
@@ -252,6 +251,7 @@
             <objects>
                 <tableViewController title="Featured Table View Controller" id="gYl-PB-qfK" customClass="FeaturedTableViewController" customModule="Surge_Client" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="22" id="XZy-cM-RMw">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -266,7 +266,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="featuredPlaceName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jS9-Tq-hcl">
                                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -284,12 +284,12 @@
                                             <exclude reference="jS9-Tq-hcl"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <exclude reference="bm3-r3-IW2"/>
-                                            <exclude reference="eRY-WW-j6d"/>
-                                            <exclude reference="wJ8-cl-j0p"/>
                                             <exclude reference="YdH-e6-iCa"/>
                                             <exclude reference="Ydk-Am-NRL"/>
                                             <exclude reference="vJx-rH-NJO"/>
+                                            <exclude reference="bm3-r3-IW2"/>
+                                            <exclude reference="eRY-WW-j6d"/>
+                                            <exclude reference="wJ8-cl-j0p"/>
                                         </mask>
                                     </variation>
                                     <variation key="heightClass=regular-widthClass=compact">
@@ -298,12 +298,12 @@
                                             <include reference="jS9-Tq-hcl"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <include reference="bm3-r3-IW2"/>
-                                            <include reference="eRY-WW-j6d"/>
-                                            <include reference="wJ8-cl-j0p"/>
                                             <include reference="YdH-e6-iCa"/>
                                             <include reference="Ydk-Am-NRL"/>
                                             <include reference="vJx-rH-NJO"/>
+                                            <include reference="bm3-r3-IW2"/>
+                                            <include reference="eRY-WW-j6d"/>
+                                            <include reference="wJ8-cl-j0p"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
