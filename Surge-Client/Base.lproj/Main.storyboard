@@ -117,7 +117,7 @@
         <!--Yak Detail View Controller-->
         <scene sceneID="DT0-xt-6bz">
             <objects>
-                <viewController id="f9n-0c-T09" customClass="YakDetailViewController" customModule="Surge_Client" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="f9n-0c-T09" customClass="YakDetailViewController" customModule="Surge_Client" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uUI-vY-Pgk"/>
                         <viewControllerLayoutGuide type="bottom" id="dUr-Q7-6uE"/>
@@ -126,26 +126,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZNT-hZ-ZZr">
+                                <rect key="frame" x="16" y="513" width="505" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqs-AG-9fU">
+                                <rect key="frame" x="538" y="513" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="DjV-3b-Ni6"/>
+                                </constraints>
+                                <state key="normal" title="Send">
+                                    <color key="titleColor" red="0.59999999999999998" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="7Bh-hJ-Zr2">
-                                <rect key="frame" x="0.0" y="298" width="600" height="253"/>
+                                <rect key="frame" x="0.0" y="252" width="600" height="253"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="f9n-0c-T09" id="TbG-uh-B0J"/>
                                     <outlet property="delegate" destination="f9n-0c-T09" id="AUN-wD-TS9"/>
                                 </connections>
                             </tableView>
+                            <mapView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsBuildings="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pH-Ww-pcy">
+                                <rect key="frame" x="-6" y="59" width="613" height="192"/>
+                                <connections>
+                                    <outlet property="delegate" destination="f9n-0c-T09" id="ELb-B1-QJu"/>
+                                </connections>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="vqs-AG-9fU" firstAttribute="leading" secondItem="ZNT-hZ-ZZr" secondAttribute="trailing" constant="17" id="5Pd-Lo-nvf"/>
+                            <constraint firstItem="7Bh-hJ-Zr2" firstAttribute="leading" secondItem="3pH-Ww-pcy" secondAttribute="leading" id="BYM-Gh-yk8"/>
+                            <constraint firstItem="dUr-Q7-6uE" firstAttribute="top" secondItem="ZNT-hZ-ZZr" secondAttribute="bottom" constant="8" id="DgY-wW-jcA"/>
+                            <constraint firstItem="dUr-Q7-6uE" firstAttribute="top" secondItem="ZNT-hZ-ZZr" secondAttribute="bottom" constant="8" id="Juw-NL-S3m"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7Bh-hJ-Zr2" secondAttribute="trailing" constant="-16" id="K5I-DX-RDj"/>
-                            <constraint firstItem="dUr-Q7-6uE" firstAttribute="top" secondItem="7Bh-hJ-Zr2" secondAttribute="bottom" id="aY9-Tn-k6a"/>
-                            <constraint firstItem="7Bh-hJ-Zr2" firstAttribute="top" secondItem="uUI-vY-Pgk" secondAttribute="bottom" constant="234" id="gEb-Gd-f9Q"/>
+                            <constraint firstItem="vqs-AG-9fU" firstAttribute="trailing" secondItem="rX3-Vt-UNV" secondAttribute="trailingMargin" id="L4b-0e-60W"/>
+                            <constraint firstItem="ZNT-hZ-ZZr" firstAttribute="leading" secondItem="rX3-Vt-UNV" secondAttribute="leadingMargin" id="NCh-qC-fWE"/>
+                            <constraint firstItem="dUr-Q7-6uE" firstAttribute="top" secondItem="7Bh-hJ-Zr2" secondAttribute="bottom" constant="46" id="aY9-Tn-k6a"/>
+                            <constraint firstItem="7Bh-hJ-Zr2" firstAttribute="top" secondItem="uUI-vY-Pgk" secondAttribute="bottom" constant="188" id="gEb-Gd-f9Q"/>
                             <constraint firstItem="7Bh-hJ-Zr2" firstAttribute="leading" secondItem="rX3-Vt-UNV" secondAttribute="leadingMargin" constant="-16" id="iDy-00-NMP"/>
                             <constraint firstAttribute="centerX" secondItem="7Bh-hJ-Zr2" secondAttribute="centerX" id="iTa-U5-yg0"/>
+                            <constraint firstItem="vqs-AG-9fU" firstAttribute="top" secondItem="ZNT-hZ-ZZr" secondAttribute="top" id="ka5-RE-8Z9"/>
+                            <constraint firstItem="7Bh-hJ-Zr2" firstAttribute="trailing" secondItem="3pH-Ww-pcy" secondAttribute="trailing" id="nQU-W7-0eX"/>
+                            <constraint firstAttribute="centerX" secondItem="3pH-Ww-pcy" secondAttribute="centerX" id="pYa-VD-XDc"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <connections>
                         <outlet property="innerTableView" destination="7Bh-hJ-Zr2" id="zzv-QA-mxn"/>
+                        <outlet property="mapView" destination="3pH-Ww-pcy" id="wch-1p-Veh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lM7-S6-9oB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -162,6 +194,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.59999999999999998" green="0.40000000000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="vo5-wP-KNu" kind="relationship" relationship="viewControllers" id="nab-V7-6n6"/>
@@ -183,7 +216,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="McW-hj-0Sw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.50980392156862742" green="0.31764705882352939" blue="0.80392156862745101" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.59999999999999998" green="0.40000000000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

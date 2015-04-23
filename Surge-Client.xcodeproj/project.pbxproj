@@ -14,6 +14,8 @@
 		DA5533521AE0B57F003E369E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA5533511AE0B57F003E369E /* Images.xcassets */; };
 		DA5533551AE0B57F003E369E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA5533531AE0B57F003E369E /* LaunchScreen.xib */; };
 		DA5533611AE0B57F003E369E /* Surge_ClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5533601AE0B57F003E369E /* Surge_ClientTests.swift */; };
+		DAC478111AE8988B00D300F3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAC478101AE8988B00D300F3 /* MapKit.framework */; };
+		DAC478131AE8989200D300F3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAC478121AE8989200D300F3 /* UIKit.framework */; };
 		DAD2E43C1AE7374100DFBB53 /* YakMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD2E43B1AE7374100DFBB53 /* YakMainViewController.swift */; };
 		DAD2E43E1AE738A700DFBB53 /* YakDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD2E43D1AE738A700DFBB53 /* YakDetailViewController.swift */; };
 		DAD2E4441AE7405A00DFBB53 /* YakCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAD2E4431AE7405A00DFBB53 /* YakCell.xib */; };
@@ -42,6 +44,8 @@
 		DA55335A1AE0B57F003E369E /* Surge-ClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Surge-ClientTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA55335F1AE0B57F003E369E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA5533601AE0B57F003E369E /* Surge_ClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Surge_ClientTests.swift; sourceTree = "<group>"; };
+		DAC478101AE8988B00D300F3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		DAC478121AE8989200D300F3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DAD2E43B1AE7374100DFBB53 /* YakMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YakMainViewController.swift; sourceTree = "<group>"; };
 		DAD2E43D1AE738A700DFBB53 /* YakDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YakDetailViewController.swift; sourceTree = "<group>"; };
 		DAD2E4431AE7405A00DFBB53 /* YakCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YakCell.xib; sourceTree = "<group>"; };
@@ -53,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAC478131AE8989200D300F3 /* UIKit.framework in Frameworks */,
+				DAC478111AE8988B00D300F3 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +75,8 @@
 		DA5533391AE0B57F003E369E = {
 			isa = PBXGroup;
 			children = (
+				DAC478121AE8989200D300F3 /* UIKit.framework */,
+				DAC478101AE8988B00D300F3 /* MapKit.framework */,
 				DA5533441AE0B57F003E369E /* Surge-Client */,
 				DA55335D1AE0B57F003E369E /* Surge-ClientTests */,
 				DA5533431AE0B57F003E369E /* Products */,
@@ -91,8 +99,8 @@
 				DA55334E1AE0B57F003E369E /* Main.storyboard */,
 				DAD2E4431AE7405A00DFBB53 /* YakCell.xib */,
 				DAD498931AE0C114000E5E93 /* YakCell.swift */,
-				DAD2E43B1AE7374100DFBB53 /* YakMainViewController.swift */,
 				DA3DEB871AE355DB0067C020 /* YakPostDetailView.swift */,
+				DAD2E43B1AE7374100DFBB53 /* YakMainViewController.swift */,
 				DAD2E43D1AE738A700DFBB53 /* YakDetailViewController.swift */,
 				DA5533511AE0B57F003E369E /* Images.xcassets */,
 				DA5533531AE0B57F003E369E /* LaunchScreen.xib */,
@@ -176,6 +184,7 @@
 				TargetAttributes = {
 					DA5533411AE0B57F003E369E = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = B732X55MZ5;
 					};
 					DA5533591AE0B57F003E369E = {
 						CreatedOnToolsVersion = 6.3;
@@ -293,7 +302,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -312,7 +321,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -351,7 +360,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -362,9 +371,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Surge-Client/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -372,9 +384,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Surge-Client/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
