@@ -14,7 +14,8 @@ class YakDetailViewController: UIViewController {
 
   @IBOutlet weak var innerTableView: UITableView!
   @IBOutlet weak var mapView: MKMapView!
-
+  @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+  
   var location: CLLocation!
   
   override func viewDidLoad() {
@@ -30,6 +31,8 @@ class YakDetailViewController: UIViewController {
     // Do any additional setup after loading the view.
     innerTableView.registerNib(UINib(nibName: "YakCell", bundle: nil), forCellReuseIdentifier: "YakCell")
     innerTableView.delegate = self
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil)
+
   }
   
   override func didReceiveMemoryWarning() {
@@ -37,7 +40,14 @@ class YakDetailViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
   
-    /*
+
+  func keyboardWillShow(notification: NSNotification) {
+    var info = notification.userInfo!
+    var keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+    bottomConstraint.constant = keyboardFrame.size.height + bottomConstraint.constant
+  }
+  
+  /*
   // MARK: - Navigation
   
   // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -46,9 +56,8 @@ class YakDetailViewController: UIViewController {
   // Pass the selected object to the new view controller.
   }
   */
-  
 }
-    
+
 extension YakDetailViewController: UITableViewDelegate {
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

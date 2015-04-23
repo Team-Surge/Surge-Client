@@ -130,11 +130,14 @@
                                 <rect key="frame" x="16" y="513" width="505" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="f9n-0c-T09" id="xXn-kD-G34"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqs-AG-9fU">
                                 <rect key="frame" x="538" y="513" width="46" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="DjV-3b-Ni6"/>
+                                    <constraint firstAttribute="width" constant="46" id="ej4-oi-93K"/>
                                 </constraints>
                                 <state key="normal" title="Send">
                                     <color key="titleColor" red="0.59999999999999998" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -149,8 +152,11 @@
                                     <outlet property="delegate" destination="f9n-0c-T09" id="AUN-wD-TS9"/>
                                 </connections>
                             </tableView>
-                            <mapView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsBuildings="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pH-Ww-pcy">
+                            <mapView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsBuildings="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pH-Ww-pcy">
                                 <rect key="frame" x="-6" y="59" width="613" height="192"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="192" id="NGs-jX-1Hq"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="f9n-0c-T09" id="ELb-B1-QJu"/>
                                 </connections>
@@ -158,24 +164,23 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="vqs-AG-9fU" firstAttribute="leading" secondItem="ZNT-hZ-ZZr" secondAttribute="trailing" constant="17" id="5Pd-Lo-nvf"/>
-                            <constraint firstItem="7Bh-hJ-Zr2" firstAttribute="leading" secondItem="3pH-Ww-pcy" secondAttribute="leading" id="BYM-Gh-yk8"/>
-                            <constraint firstItem="dUr-Q7-6uE" firstAttribute="top" secondItem="ZNT-hZ-ZZr" secondAttribute="bottom" constant="8" id="DgY-wW-jcA"/>
-                            <constraint firstItem="dUr-Q7-6uE" firstAttribute="top" secondItem="ZNT-hZ-ZZr" secondAttribute="bottom" constant="8" id="Juw-NL-S3m"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="7Bh-hJ-Zr2" secondAttribute="trailing" constant="-16" id="K5I-DX-RDj"/>
-                            <constraint firstItem="vqs-AG-9fU" firstAttribute="trailing" secondItem="rX3-Vt-UNV" secondAttribute="trailingMargin" id="L4b-0e-60W"/>
-                            <constraint firstItem="ZNT-hZ-ZZr" firstAttribute="leading" secondItem="rX3-Vt-UNV" secondAttribute="leadingMargin" id="NCh-qC-fWE"/>
-                            <constraint firstItem="dUr-Q7-6uE" firstAttribute="top" secondItem="7Bh-hJ-Zr2" secondAttribute="bottom" constant="46" id="aY9-Tn-k6a"/>
-                            <constraint firstItem="7Bh-hJ-Zr2" firstAttribute="top" secondItem="uUI-vY-Pgk" secondAttribute="bottom" constant="188" id="gEb-Gd-f9Q"/>
-                            <constraint firstItem="7Bh-hJ-Zr2" firstAttribute="leading" secondItem="rX3-Vt-UNV" secondAttribute="leadingMargin" constant="-16" id="iDy-00-NMP"/>
-                            <constraint firstAttribute="centerX" secondItem="7Bh-hJ-Zr2" secondAttribute="centerX" id="iTa-U5-yg0"/>
-                            <constraint firstItem="vqs-AG-9fU" firstAttribute="top" secondItem="ZNT-hZ-ZZr" secondAttribute="top" id="ka5-RE-8Z9"/>
-                            <constraint firstItem="7Bh-hJ-Zr2" firstAttribute="trailing" secondItem="3pH-Ww-pcy" secondAttribute="trailing" id="nQU-W7-0eX"/>
-                            <constraint firstAttribute="centerX" secondItem="3pH-Ww-pcy" secondAttribute="centerX" id="pYa-VD-XDc"/>
+                            <constraint firstItem="3pH-Ww-pcy" firstAttribute="top" secondItem="rX3-Vt-UNV" secondAttribute="topMargin" constant="59" id="6eS-3o-7gc"/>
+                            <constraint firstItem="ZNT-hZ-ZZr" firstAttribute="top" secondItem="7Bh-hJ-Zr2" secondAttribute="bottom" constant="8" symbolic="YES" id="98D-Ff-P7n"/>
+                            <constraint firstItem="ZNT-hZ-ZZr" firstAttribute="leading" secondItem="rX3-Vt-UNV" secondAttribute="leadingMargin" id="Eht-uN-Pxy"/>
+                            <constraint firstItem="vqs-AG-9fU" firstAttribute="leading" secondItem="ZNT-hZ-ZZr" secondAttribute="trailing" constant="17" id="M6W-M1-JeO"/>
+                            <constraint firstItem="7Bh-hJ-Zr2" firstAttribute="leading" secondItem="rX3-Vt-UNV" secondAttribute="leading" id="VMP-8k-ZBP"/>
+                            <constraint firstItem="dUr-Q7-6uE" firstAttribute="top" secondItem="ZNT-hZ-ZZr" secondAttribute="bottom" constant="8" symbolic="YES" id="Ved-2I-Nlh"/>
+                            <constraint firstAttribute="trailing" secondItem="7Bh-hJ-Zr2" secondAttribute="trailing" id="alx-Ik-BFb"/>
+                            <constraint firstItem="vqs-AG-9fU" firstAttribute="trailing" secondItem="rX3-Vt-UNV" secondAttribute="trailingMargin" id="eAf-Nr-YcC"/>
+                            <constraint firstItem="vqs-AG-9fU" firstAttribute="top" secondItem="ZNT-hZ-ZZr" secondAttribute="top" id="g5Q-bk-atQ"/>
+                            <constraint firstItem="3pH-Ww-pcy" firstAttribute="leading" secondItem="rX3-Vt-UNV" secondAttribute="leadingMargin" constant="-22" id="gAF-Bv-AVH"/>
+                            <constraint firstItem="7Bh-hJ-Zr2" firstAttribute="centerX" secondItem="3pH-Ww-pcy" secondAttribute="centerX" id="p3K-Xy-gUq"/>
+                            <constraint firstItem="7Bh-hJ-Zr2" firstAttribute="top" secondItem="3pH-Ww-pcy" secondAttribute="bottom" constant="1" id="rnv-YB-VOG"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <connections>
+                        <outlet property="bottomConstraint" destination="Ved-2I-Nlh" id="Tb8-QX-BGh"/>
                         <outlet property="innerTableView" destination="7Bh-hJ-Zr2" id="zzv-QA-mxn"/>
                         <outlet property="mapView" destination="3pH-Ww-pcy" id="wch-1p-Veh"/>
                     </connections>
