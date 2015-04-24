@@ -20,7 +20,7 @@ class MeViewController: UIViewController {
   
   override func viewDidAppear(animated: Bool) {
     // Start with notification view on
-    if(notificationsTableView != nil) {
+    if(notificationsTableView != nil && myStuffTableView != nil) {
       notificationsTableView!.hidden = false
       myStuffTableView!.hidden = true
     }
@@ -37,12 +37,12 @@ class MeViewController: UIViewController {
   
   func toggleViews(sender: UIButton!) {
     if(sender == showNotificationsButton) {
-      if(notificationsTableView != nil) {
+      if(notificationsTableView != nil && myStuffTableView != nil) {
         notificationsTableView!.hidden = false
         myStuffTableView!.hidden = true
       }
     } else if(sender == showMyStuffButton) {
-      if(myStuffTableView != nil) {
+      if(myStuffTableView != nil && notificationsTableView != nil) {
         myStuffTableView!.hidden = false
         notificationsTableView!.hidden = true
       }
