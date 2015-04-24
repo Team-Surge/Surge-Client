@@ -11,6 +11,8 @@
 		3F20A3051AE9814D004C2598 /* NearTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20A3041AE9814D004C2598 /* NearTableViewCell.swift */; };
 		3F4446301AE978300001DA1A /* FeaturedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44462F1AE978300001DA1A /* FeaturedTableViewCell.swift */; };
 		3F4446321AE9792D0001DA1A /* FeaturedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4446311AE9792D0001DA1A /* FeaturedTableViewController.swift */; };
+		3FB0BDAA1AE9FC81009A8DB0 /* NotificationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0BDA91AE9FC81009A8DB0 /* NotificationsTableViewCell.swift */; };
+		3FB0BDAD1AE9FCAD009A8DB0 /* NotificationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0BDAC1AE9FCAD009A8DB0 /* NotificationsTableViewController.swift */; };
 		DA3DEB881AE355DB0067C020 /* YakPostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3DEB871AE355DB0067C020 /* YakPostDetailView.swift */; };
 		DA5533481AE0B57F003E369E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5533471AE0B57F003E369E /* AppDelegate.swift */; };
 		DA55334B1AE0B57F003E369E /* Surge_Client.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA5533491AE0B57F003E369E /* Surge_Client.xcdatamodeld */; };
@@ -41,6 +43,8 @@
 		3F20A3041AE9814D004C2598 /* NearTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearTableViewCell.swift; sourceTree = "<group>"; };
 		3F44462F1AE978300001DA1A /* FeaturedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedTableViewCell.swift; sourceTree = "<group>"; };
 		3F4446311AE9792D0001DA1A /* FeaturedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedTableViewController.swift; sourceTree = "<group>"; };
+		3FB0BDA91AE9FC81009A8DB0 /* NotificationsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewCell.swift; sourceTree = "<group>"; };
+		3FB0BDAC1AE9FCAD009A8DB0 /* NotificationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewController.swift; sourceTree = "<group>"; };
 		DA3DEB871AE355DB0067C020 /* YakPostDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YakPostDetailView.swift; sourceTree = "<group>"; };
 		DA5533421AE0B57F003E369E /* Surge-Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Surge-Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5533461AE0B57F003E369E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -119,6 +123,23 @@
 			name = Peek;
 			sourceTree = "<group>";
 		};
+		3FB0BDA81AE9FC65009A8DB0 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				3FB0BDAB1AE9FC88009A8DB0 /* Notifications */,
+			);
+			name = Me;
+			sourceTree = "<group>";
+		};
+		3FB0BDAB1AE9FC88009A8DB0 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				3FB0BDA91AE9FC81009A8DB0 /* NotificationsTableViewCell.swift */,
+				3FB0BDAC1AE9FCAD009A8DB0 /* NotificationsTableViewController.swift */,
+			);
+			name = Notifications;
+			sourceTree = "<group>";
+		};
 		DA5533391AE0B57F003E369E = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				DA5533471AE0B57F003E369E /* AppDelegate.swift */,
+				3FB0BDA81AE9FC65009A8DB0 /* Me */,
 				3F20A2FF1AE97CD8004C2598 /* Home */,
 				DA55334E1AE0B57F003E369E /* Main.storyboard */,
 				3F4446331AE979B20001DA1A /* Peek */,
@@ -283,8 +305,10 @@
 			files = (
 				DAD498941AE0C114000E5E93 /* YakCell.swift in Sources */,
 				3F20A3031AE98134004C2598 /* NearTableViewController.swift in Sources */,
+				3FB0BDAD1AE9FCAD009A8DB0 /* NotificationsTableViewController.swift in Sources */,
 				3F4446321AE9792D0001DA1A /* FeaturedTableViewController.swift in Sources */,
 				3F20A3051AE9814D004C2598 /* NearTableViewCell.swift in Sources */,
+				3FB0BDAA1AE9FC81009A8DB0 /* NotificationsTableViewCell.swift in Sources */,
 				DAD2E43C1AE7374100DFBB53 /* YakMainViewController.swift in Sources */,
 				DA3DEB881AE355DB0067C020 /* YakPostDetailView.swift in Sources */,
 				DA5533481AE0B57F003E369E /* AppDelegate.swift in Sources */,

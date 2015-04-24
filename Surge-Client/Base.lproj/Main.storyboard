@@ -424,20 +424,22 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Y5D-AD-9j3"/>
                                 </items>
                             </toolbar>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="07I-rJ-Qck">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <connections>
-                                    <segue destination="w7U-BI-SWc" kind="embed" id="7HI-NL-j2Y"/>
-                                </connections>
-                            </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t5D-Rt-zmU">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="0.94948315930000005" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="uMD-XP-Xru" kind="embed" id="Fz4-3e-rPS"/>
                                 </connections>
                             </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="07I-rJ-Qck">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="0.94948315930000005" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="w7U-BI-SWc" kind="embed" id="7HI-NL-j2Y"/>
+                                </connections>
+                            </containerView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.90232547019999998" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="F9b-Ae-no8" secondAttribute="trailing" constant="-16" id="1cL-T0-WCA"/>
                             <constraint firstItem="F9b-Ae-no8" firstAttribute="leading" secondItem="IKt-jj-D6E" secondAttribute="leadingMargin" constant="-16" id="8SL-TS-1kr"/>
@@ -465,8 +467,8 @@
                             <mask key="subviews">
                                 <exclude reference="b4s-i2-CA4"/>
                                 <exclude reference="F9b-Ae-no8"/>
-                                <exclude reference="07I-rJ-Qck"/>
                                 <exclude reference="t5D-Rt-zmU"/>
+                                <exclude reference="07I-rJ-Qck"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="F5p-p4-oha"/>
@@ -496,8 +498,8 @@
                             <mask key="subviews">
                                 <include reference="b4s-i2-CA4"/>
                                 <include reference="F9b-Ae-no8"/>
-                                <include reference="07I-rJ-Qck"/>
                                 <include reference="t5D-Rt-zmU"/>
+                                <include reference="07I-rJ-Qck"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="F5p-p4-oha"/>
@@ -533,18 +535,79 @@
         <!--Notifications Table View Controller-->
         <scene sceneID="sYj-IB-nx9">
             <objects>
-                <tableViewController title="Notifications Table View Controller" id="w7U-BI-SWc" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Dd7-2z-355">
+                <tableViewController title="Notifications Table View Controller" id="w7U-BI-SWc" customClass="NotificationsTableViewController" customModule="Surge_Client" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="22" sectionFooterHeight="22" id="Dd7-2z-355">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" white="0.94948315930000005" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="5mp-Xx-dlk">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NotificationsTableViewCell" id="5mp-Xx-dlk" customClass="NotificationsTableViewCell" customModule="Surge_Client" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5mp-Xx-dlk" id="Xxa-Cb-Ko6">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="&lt;What Event Occured&gt; This would be the explaination about what just occured." translatesAutoresizingMaskIntoConstraints="NO" id="bX5-8s-srw">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                            <color key="backgroundColor" white="0.94948315930000005" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23h" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pwa-tI-18p">
+                                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.94948315930000005" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="pwa-tI-18p" firstAttribute="top" secondItem="Xxa-Cb-Ko6" secondAttribute="topMargin" constant="19" id="7jD-wr-mjU"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="pwa-tI-18p" secondAttribute="bottom" constant="20" id="Emb-bA-bIm"/>
+                                        <constraint firstItem="bX5-8s-srw" firstAttribute="top" secondItem="Xxa-Cb-Ko6" secondAttribute="topMargin" constant="-8" id="O9Z-kI-DkG"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="bX5-8s-srw" secondAttribute="bottom" constant="-8" id="Xoa-Jp-GER"/>
+                                        <constraint firstItem="pwa-tI-18p" firstAttribute="leading" secondItem="bX5-8s-srw" secondAttribute="trailing" constant="8" id="efe-ZJ-ZMw"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="pwa-tI-18p" secondAttribute="trailing" constant="-1" id="pEx-gx-2pS"/>
+                                        <constraint firstItem="bX5-8s-srw" firstAttribute="leading" secondItem="Xxa-Cb-Ko6" secondAttribute="leadingMargin" constant="-8" id="x4S-bu-o2t"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="bX5-8s-srw"/>
+                                            <exclude reference="pwa-tI-18p"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <exclude reference="O9Z-kI-DkG"/>
+                                            <exclude reference="Xoa-Jp-GER"/>
+                                            <exclude reference="x4S-bu-o2t"/>
+                                            <exclude reference="7jD-wr-mjU"/>
+                                            <exclude reference="Emb-bA-bIm"/>
+                                            <exclude reference="efe-ZJ-ZMw"/>
+                                            <exclude reference="pEx-gx-2pS"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=regular-widthClass=compact">
+                                        <mask key="subviews">
+                                            <include reference="bX5-8s-srw"/>
+                                            <include reference="pwa-tI-18p"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <include reference="O9Z-kI-DkG"/>
+                                            <include reference="Xoa-Jp-GER"/>
+                                            <include reference="x4S-bu-o2t"/>
+                                            <include reference="7jD-wr-mjU"/>
+                                            <include reference="Emb-bA-bIm"/>
+                                            <include reference="efe-ZJ-ZMw"/>
+                                            <include reference="pEx-gx-2pS"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.94948315930000005" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="notificationText" destination="bX5-8s-srw" id="Edi-VZ-kvk"/>
+                                    <outlet property="timeOfNotificationText" destination="pwa-tI-18p" id="nRg-Fq-XdF"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="w7U-BI-SWc" id="ho7-T5-H8f"/>
                             <outlet property="delegate" destination="w7U-BI-SWc" id="J0q-y3-Oh5"/>
@@ -558,6 +621,7 @@
         <!--My Stuff Table View Controller-->
         <scene sceneID="2sh-yu-IKt">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xa5-fC-SNV" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController title="My Stuff Table View Controller" id="uMD-XP-Xru" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="P5u-U4-Lj3">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -576,7 +640,6 @@
                         </connections>
                     </tableView>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xa5-fC-SNV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2287.5" y="1331.25"/>
         </scene>
