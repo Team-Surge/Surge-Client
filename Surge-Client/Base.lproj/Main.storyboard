@@ -384,7 +384,7 @@
         <!--Me-->
         <scene sceneID="VHB-OJ-1RH">
             <objects>
-                <viewController id="xHD-mC-hrI" sceneMemberID="viewController">
+                <viewController id="xHD-mC-hrI" customClass="MeViewController" customModule="Surge_Client" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gsn-UR-nOu"/>
                         <viewControllerLayoutGuide type="bottom" id="bI2-86-n08"/>
@@ -428,14 +428,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="0.94948315930000005" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="uMD-XP-Xru" kind="embed" id="Fz4-3e-rPS"/>
+                                    <segue destination="uMD-XP-Xru" kind="embed" identifier="myStuffTableViewSegue" id="Fz4-3e-rPS"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="07I-rJ-Qck">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="0.94948315930000005" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="w7U-BI-SWc" kind="embed" id="7HI-NL-j2Y"/>
+                                    <segue destination="w7U-BI-SWc" kind="embed" identifier="notificationsTableViewSegue" id="7HI-NL-j2Y"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -527,6 +527,10 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Me" id="k7Y-J9-jRK"/>
+                    <connections>
+                        <outlet property="showMyStuffButton" destination="CVY-68-tma" id="nAg-gl-QoX"/>
+                        <outlet property="showNotificationsButton" destination="2df-KT-mT5" id="wkr-dO-Voi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kaT-aK-8fL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

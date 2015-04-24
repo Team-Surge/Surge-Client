@@ -13,6 +13,7 @@
 		3F4446321AE9792D0001DA1A /* FeaturedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4446311AE9792D0001DA1A /* FeaturedTableViewController.swift */; };
 		3FB0BDAA1AE9FC81009A8DB0 /* NotificationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0BDA91AE9FC81009A8DB0 /* NotificationsTableViewCell.swift */; };
 		3FB0BDAD1AE9FCAD009A8DB0 /* NotificationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0BDAC1AE9FCAD009A8DB0 /* NotificationsTableViewController.swift */; };
+		3FB0BDAF1AEA1E23009A8DB0 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0BDAE1AEA1E23009A8DB0 /* MeViewController.swift */; };
 		DA3DEB881AE355DB0067C020 /* YakPostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3DEB871AE355DB0067C020 /* YakPostDetailView.swift */; };
 		DA5533481AE0B57F003E369E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5533471AE0B57F003E369E /* AppDelegate.swift */; };
 		DA55334B1AE0B57F003E369E /* Surge_Client.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA5533491AE0B57F003E369E /* Surge_Client.xcdatamodeld */; };
@@ -45,6 +46,7 @@
 		3F4446311AE9792D0001DA1A /* FeaturedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedTableViewController.swift; sourceTree = "<group>"; };
 		3FB0BDA91AE9FC81009A8DB0 /* NotificationsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewCell.swift; sourceTree = "<group>"; };
 		3FB0BDAC1AE9FCAD009A8DB0 /* NotificationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewController.swift; sourceTree = "<group>"; };
+		3FB0BDAE1AEA1E23009A8DB0 /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 		DA3DEB871AE355DB0067C020 /* YakPostDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YakPostDetailView.swift; sourceTree = "<group>"; };
 		DA5533421AE0B57F003E369E /* Surge-Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Surge-Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5533461AE0B57F003E369E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 		3FB0BDA81AE9FC65009A8DB0 /* Me */ = {
 			isa = PBXGroup;
 			children = (
+				3FB0BDAE1AEA1E23009A8DB0 /* MeViewController.swift */,
 				3FB0BDAB1AE9FC88009A8DB0 /* Notifications */,
 			);
 			name = Me;
@@ -303,6 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FB0BDAF1AEA1E23009A8DB0 /* MeViewController.swift in Sources */,
 				DAD498941AE0C114000E5E93 /* YakCell.swift in Sources */,
 				3F20A3031AE98134004C2598 /* NearTableViewController.swift in Sources */,
 				3FB0BDAD1AE9FCAD009A8DB0 /* NotificationsTableViewController.swift in Sources */,
