@@ -19,7 +19,7 @@ class YakDetailViewController: UIViewController,UITextFieldDelegate {
   @IBOutlet weak var textField: UITextField!
   
   var originalBottomConstraintConstant: CGFloat!
-  var location: CLLocation!
+  var location: CLLocation?
 
   
   @IBAction func onSendButtonPress(sender: AnyObject) {
@@ -28,12 +28,14 @@ class YakDetailViewController: UIViewController,UITextFieldDelegate {
   
   override func viewDidLoad() {
     // Set map centered to user
-    let center = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
-    let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.00725, longitudeDelta: 0.00725))
-    mapView.setRegion(region, animated: false)
+    if let loc = location {
+      let center = CLLocationCoordinate2DMake(loc.coordinate.latitude, loc.coordinate.longitude)
+      let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.00725, longitudeDelta: 0.00725))
+      mapView.setRegion(region, animated: false)
+    }
+  
     mapView.showsUserLocation = false
     mapView.delegate = self
-  
     super.viewDidLoad()
 
     // Setup table cells

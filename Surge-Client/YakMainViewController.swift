@@ -45,7 +45,7 @@ class YakMainViewController: UIViewController {
     
     // Give the detailView the current region
     let detailView = segue.destinationViewController as! YakDetailViewController
-    detailView.location = location!
+    detailView.location = location
   }
   
 }
