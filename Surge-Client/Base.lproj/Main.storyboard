@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rpj-yL-ax4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rpj-yL-ax4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -528,7 +528,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Me" id="k7Y-J9-jRK"/>
                     <connections>
-                        <outlet property="currentLocationMap" destination="b4s-i2-CA4" id="Ejb-5U-pFx"/>
                         <outlet property="showMyStuffButton" destination="CVY-68-tma" id="nAg-gl-QoX"/>
                         <outlet property="showNotificationsButton" destination="2df-KT-mT5" id="wkr-dO-Voi"/>
                     </connections>
@@ -1275,42 +1274,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ivd-cc-5dT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2587.5" y="64.5"/>
-        </scene>
-        <!--Login View Controller-->
-        <scene sceneID="ecf-Qt-8WP">
-            <objects>
-                <viewController title="Login View Controller" id="SEc-io-4kM" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="V1l-nM-zlj"/>
-                        <viewControllerLayoutGuide type="bottom" id="06E-V7-rpc"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="IZi-RU-QXg">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="i5Q-ih-LlG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1999.5" y="-919.5"/>
-        </scene>
-        <!--Register View Controller-->
-        <scene sceneID="NCg-gt-mky">
-            <objects>
-                <viewController title="Register View Controller" id="r5D-45-2ug" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="o6j-Wy-bTJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="Cui-ds-OEx"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="9pk-iR-tdx">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cpo-EH-TbY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2995.5" y="-919.5"/>
         </scene>
         <!--Me-->
         <scene sceneID="4tb-bh-SPP">
