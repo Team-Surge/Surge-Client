@@ -16,6 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    let loginController = storyboard.instantiateViewControllerWithIdentifier("LoginViewController") as! UIViewController
+    
+    // TODO: - Switch to login controller only if the user is not authenticated.
+    if let window = self.window {
+      window.rootViewController = loginController
+    }
     return true
   }
   
