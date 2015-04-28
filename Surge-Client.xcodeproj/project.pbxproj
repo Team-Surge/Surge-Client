@@ -16,6 +16,11 @@
 		3FB0BDAA1AE9FC81009A8DB0 /* NotificationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0BDA91AE9FC81009A8DB0 /* NotificationsTableViewCell.swift */; };
 		3FB0BDAD1AE9FCAD009A8DB0 /* NotificationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0BDAC1AE9FCAD009A8DB0 /* NotificationsTableViewController.swift */; };
 		3FB0BDAF1AEA1E23009A8DB0 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0BDAE1AEA1E23009A8DB0 /* MeViewController.swift */; };
+		DA194DE31AF0343A005EFC28 /* HTTPRequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA194DDF1AF0343A005EFC28 /* HTTPRequestSerializer.swift */; };
+		DA194DE41AF0343A005EFC28 /* HTTPResponseSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA194DE01AF0343A005EFC28 /* HTTPResponseSerializer.swift */; };
+		DA194DE51AF0343A005EFC28 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA194DE11AF0343A005EFC28 /* HTTPTask.swift */; };
+		DA194DE61AF0343A005EFC28 /* HTTPUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA194DE21AF0343A005EFC28 /* HTTPUpload.swift */; };
+		DA194DE91AF0344B005EFC28 /* JSONJoy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA194DE81AF0344B005EFC28 /* JSONJoy.swift */; };
 		DA5533481AE0B57F003E369E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5533471AE0B57F003E369E /* AppDelegate.swift */; };
 		DA55334B1AE0B57F003E369E /* Surge_Client.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA5533491AE0B57F003E369E /* Surge_Client.xcdatamodeld */; };
 		DA5533501AE0B57F003E369E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA55334E1AE0B57F003E369E /* Main.storyboard */; };
@@ -51,6 +56,12 @@
 		3FB0BDA91AE9FC81009A8DB0 /* NotificationsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewCell.swift; sourceTree = "<group>"; };
 		3FB0BDAC1AE9FCAD009A8DB0 /* NotificationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewController.swift; sourceTree = "<group>"; };
 		3FB0BDAE1AEA1E23009A8DB0 /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
+		DA194DDF1AF0343A005EFC28 /* HTTPRequestSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestSerializer.swift; sourceTree = "<group>"; };
+		DA194DE01AF0343A005EFC28 /* HTTPResponseSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPResponseSerializer.swift; sourceTree = "<group>"; };
+		DA194DE11AF0343A005EFC28 /* HTTPTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		DA194DE21AF0343A005EFC28 /* HTTPUpload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPUpload.swift; sourceTree = "<group>"; };
+		DA194DE71AF0344B005EFC28 /* JSONJoy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONJoy.h; sourceTree = "<group>"; };
+		DA194DE81AF0344B005EFC28 /* JSONJoy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONJoy.swift; sourceTree = "<group>"; };
 		DA5533421AE0B57F003E369E /* Surge-Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Surge-Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5533461AE0B57F003E369E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA5533471AE0B57F003E369E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +167,18 @@
 			name = Notifications;
 			sourceTree = "<group>";
 		};
+		DA194DEA1AF03453005EFC28 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				DA194DE01AF0343A005EFC28 /* HTTPResponseSerializer.swift */,
+				DA194DE11AF0343A005EFC28 /* HTTPTask.swift */,
+				DA194DE21AF0343A005EFC28 /* HTTPUpload.swift */,
+				DA194DE71AF0344B005EFC28 /* JSONJoy.h */,
+				DA194DE81AF0344B005EFC28 /* JSONJoy.swift */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
 		DA5533391AE0B57F003E369E = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +211,8 @@
 				DA5533511AE0B57F003E369E /* Images.xcassets */,
 				DA5533531AE0B57F003E369E /* LaunchScreen.xib */,
 				DA5533491AE0B57F003E369E /* Surge_Client.xcdatamodeld */,
+				DA194DDF1AF0343A005EFC28 /* HTTPRequestSerializer.swift */,
+				DA194DEA1AF03453005EFC28 /* lib */,
 				DA5533451AE0B57F003E369E /* Supporting Files */,
 			);
 			path = "Surge-Client";
@@ -320,21 +345,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA194DE91AF0344B005EFC28 /* JSONJoy.swift in Sources */,
 				3F9A3D741AEF1895006E4B70 /* LoginViewController.swift in Sources */,
 				3FB0BDAF1AEA1E23009A8DB0 /* MeViewController.swift in Sources */,
 				DAD498941AE0C114000E5E93 /* YakCell.swift in Sources */,
 				3F20A3031AE98134004C2598 /* NearTableViewController.swift in Sources */,
+				DA194DE61AF0343A005EFC28 /* HTTPUpload.swift in Sources */,
 				3FB0BDAD1AE9FCAD009A8DB0 /* NotificationsTableViewController.swift in Sources */,
 				3F4446321AE9792D0001DA1A /* FeaturedTableViewController.swift in Sources */,
 				3F8E5D671AEF4CE100B7363F /* RegisterViewController.swift in Sources */,
 				3F20A3051AE9814D004C2598 /* NearTableViewCell.swift in Sources */,
 				3FB0BDAA1AE9FC81009A8DB0 /* NotificationsTableViewCell.swift in Sources */,
+				DA194DE31AF0343A005EFC28 /* HTTPRequestSerializer.swift in Sources */,
 				DAD2E43C1AE7374100DFBB53 /* YakMainViewController.swift in Sources */,
 				DA5533481AE0B57F003E369E /* AppDelegate.swift in Sources */,
+				DA194DE51AF0343A005EFC28 /* HTTPTask.swift in Sources */,
 				DAC2D0ED1AEF1EEE0047E4AE /* YakCreatePostViewController.swift in Sources */,
 				DA55334B1AE0B57F003E369E /* Surge_Client.xcdatamodeld in Sources */,
 				3F4446301AE978300001DA1A /* FeaturedTableViewCell.swift in Sources */,
 				DAD2E43E1AE738A700DFBB53 /* YakDetailViewController.swift in Sources */,
+				DA194DE41AF0343A005EFC28 /* HTTPResponseSerializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
