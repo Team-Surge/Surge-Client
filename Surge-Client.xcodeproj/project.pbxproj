@@ -11,6 +11,7 @@
 		3F20A3051AE9814D004C2598 /* NearTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20A3041AE9814D004C2598 /* NearTableViewCell.swift */; };
 		3F4446301AE978300001DA1A /* FeaturedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44462F1AE978300001DA1A /* FeaturedTableViewCell.swift */; };
 		3F4446321AE9792D0001DA1A /* FeaturedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4446311AE9792D0001DA1A /* FeaturedTableViewController.swift */; };
+		3F9A3D741AEF1895006E4B70 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A3D731AEF1895006E4B70 /* LoginViewController.swift */; };
 		3FB0BDAA1AE9FC81009A8DB0 /* NotificationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0BDA91AE9FC81009A8DB0 /* NotificationsTableViewCell.swift */; };
 		3FB0BDAD1AE9FCAD009A8DB0 /* NotificationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0BDAC1AE9FCAD009A8DB0 /* NotificationsTableViewController.swift */; };
 		3FB0BDAF1AEA1E23009A8DB0 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0BDAE1AEA1E23009A8DB0 /* MeViewController.swift */; };
@@ -44,6 +45,7 @@
 		3F20A3041AE9814D004C2598 /* NearTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearTableViewCell.swift; sourceTree = "<group>"; };
 		3F44462F1AE978300001DA1A /* FeaturedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedTableViewCell.swift; sourceTree = "<group>"; };
 		3F4446311AE9792D0001DA1A /* FeaturedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedTableViewController.swift; sourceTree = "<group>"; };
+		3F9A3D731AEF1895006E4B70 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3FB0BDA91AE9FC81009A8DB0 /* NotificationsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewCell.swift; sourceTree = "<group>"; };
 		3FB0BDAC1AE9FCAD009A8DB0 /* NotificationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewController.swift; sourceTree = "<group>"; };
 		3FB0BDAE1AEA1E23009A8DB0 /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +127,14 @@
 			name = Peek;
 			sourceTree = "<group>";
 		};
+		3F9A3D721AEF17F8006E4B70 /* Login/Register */ = {
+			isa = PBXGroup;
+			children = (
+				3F9A3D731AEF1895006E4B70 /* LoginViewController.swift */,
+			);
+			name = Login/Register;
+			sourceTree = "<group>";
+		};
 		3FB0BDA81AE9FC65009A8DB0 /* Me */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				DA5533471AE0B57F003E369E /* AppDelegate.swift */,
+				3F9A3D721AEF17F8006E4B70 /* Login/Register */,
 				3FB0BDA81AE9FC65009A8DB0 /* Me */,
 				3F20A2FF1AE97CD8004C2598 /* Home */,
 				DA55334E1AE0B57F003E369E /* Main.storyboard */,
@@ -306,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F9A3D741AEF1895006E4B70 /* LoginViewController.swift in Sources */,
 				3FB0BDAF1AEA1E23009A8DB0 /* MeViewController.swift in Sources */,
 				DAD498941AE0C114000E5E93 /* YakCell.swift in Sources */,
 				3F20A3031AE98134004C2598 /* NearTableViewController.swift in Sources */,
