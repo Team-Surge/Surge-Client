@@ -1406,7 +1406,7 @@
                                     <constraint firstAttribute="height" constant="40" id="NCz-uk-MBB"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="NCz-uk-MBB"/>
@@ -1424,7 +1424,7 @@
                                     <constraint firstAttribute="height" constant="40" id="bQD-St-2IY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="bQD-St-2IY"/>
