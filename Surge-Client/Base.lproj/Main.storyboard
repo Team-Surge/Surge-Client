@@ -1049,6 +1049,105 @@
             </objects>
             <point key="canvasLocation" x="4288.5" y="64.125"/>
         </scene>
+        <!--Send a Yak-->
+        <scene sceneID="mYq-bd-7LF">
+            <objects>
+                <viewController title="Send a Yak" id="el0-JQ-ce6" customClass="YakCreatePostViewController" customModule="Surge_Client" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="73j-Rh-5oB"/>
+                        <viewControllerLayoutGuide type="bottom" id="v7D-eR-8Wj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pxV-Hh-ma4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zUW-mL-5PJ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="textShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Title" id="xyU-o9-Wce"/>
+                                </items>
+                            </navigationBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.20000000000000001" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Pg7-Ny-MNn">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </mapView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.59999999999999964" contentMode="scaleToFill" text="What's on your mind?" translatesAutoresizingMaskIntoConstraints="NO" id="3le-wu-Ozi">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Pg7-Ny-MNn" firstAttribute="trailing" secondItem="zUW-mL-5PJ" secondAttribute="trailing" id="B91-SZ-uIV"/>
+                            <constraint firstItem="Pg7-Ny-MNn" firstAttribute="bottom" secondItem="v7D-eR-8Wj" secondAttribute="top" id="COs-FI-WPD"/>
+                            <constraint firstItem="Pg7-Ny-MNn" firstAttribute="leading" secondItem="pxV-Hh-ma4" secondAttribute="leading" id="ECD-bV-1sd"/>
+                            <constraint firstItem="Pg7-Ny-MNn" firstAttribute="leading" secondItem="zUW-mL-5PJ" secondAttribute="leading" id="KeW-nA-qll"/>
+                            <constraint firstItem="Pg7-Ny-MNn" firstAttribute="top" secondItem="zUW-mL-5PJ" secondAttribute="bottom" id="NFa-vz-i7m"/>
+                            <constraint firstItem="3le-wu-Ozi" firstAttribute="trailing" secondItem="Pg7-Ny-MNn" secondAttribute="trailing" id="PRL-qA-n8U"/>
+                            <constraint firstItem="3le-wu-Ozi" firstAttribute="bottom" secondItem="v7D-eR-8Wj" secondAttribute="top" id="Qb3-at-klk"/>
+                            <constraint firstItem="3le-wu-Ozi" firstAttribute="leading" secondItem="Pg7-Ny-MNn" secondAttribute="leading" id="ZoX-g8-503"/>
+                            <constraint firstItem="3le-wu-Ozi" firstAttribute="top" secondItem="73j-Rh-5oB" secondAttribute="bottom" constant="280" id="e9U-vS-wcj">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="Pg7-Ny-MNn" firstAttribute="top" secondItem="73j-Rh-5oB" secondAttribute="bottom" id="kFq-KN-xok"/>
+                            <constraint firstAttribute="trailing" secondItem="Pg7-Ny-MNn" secondAttribute="trailing" id="oBQ-I8-OUh"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="zUW-mL-5PJ"/>
+                                <exclude reference="Pg7-Ny-MNn"/>
+                                <exclude reference="3le-wu-Ozi"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="PRL-qA-n8U"/>
+                                <exclude reference="Qb3-at-klk"/>
+                                <exclude reference="ZoX-g8-503"/>
+                                <exclude reference="e9U-vS-wcj"/>
+                                <exclude reference="B91-SZ-uIV"/>
+                                <exclude reference="COs-FI-WPD"/>
+                                <exclude reference="ECD-bV-1sd"/>
+                                <exclude reference="KeW-nA-qll"/>
+                                <exclude reference="NFa-vz-i7m"/>
+                                <exclude reference="kFq-KN-xok"/>
+                                <exclude reference="oBQ-I8-OUh"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="zUW-mL-5PJ"/>
+                                <include reference="Pg7-Ny-MNn"/>
+                                <include reference="3le-wu-Ozi"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="PRL-qA-n8U"/>
+                                <include reference="Qb3-at-klk"/>
+                                <include reference="ZoX-g8-503"/>
+                                <include reference="e9U-vS-wcj"/>
+                                <include reference="B91-SZ-uIV"/>
+                                <include reference="COs-FI-WPD"/>
+                                <include reference="ECD-bV-1sd"/>
+                                <include reference="KeW-nA-qll"/>
+                                <include reference="NFa-vz-i7m"/>
+                                <include reference="kFq-KN-xok"/>
+                                <include reference="oBQ-I8-OUh"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="Pg7-Ny-MNn" id="VK8-qh-0gM"/>
+                        <outlet property="textView" destination="3le-wu-Ozi" id="Djh-w5-uov"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ml2-y7-Reo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3871.5" y="1533"/>
+        </scene>
         <!--Yak Main View Controller-->
         <scene sceneID="sWp-rx-T3U">
             <objects>
@@ -1090,7 +1189,11 @@
                                 <segment title="Hot"/>
                             </segments>
                         </segmentedControl>
-                        <barButtonItem key="rightBarButtonItem" title="New" style="plain" id="Ofy-Ak-4tz"/>
+                        <barButtonItem key="rightBarButtonItem" title="New" style="plain" id="Ofy-Ak-4tz">
+                            <connections>
+                                <segue destination="el0-JQ-ce6" kind="show" id="dJf-sb-ntt"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="innerTableView" destination="5Sn-4l-uJP" id="eEo-TY-Za1"/>

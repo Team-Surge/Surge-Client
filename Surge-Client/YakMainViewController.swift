@@ -44,8 +44,8 @@ class YakMainViewController: UIViewController {
   // Pass the selected object to the new view controller
     
     // Give the detailView the current region
-    let detailView = segue.destinationViewController as! YakDetailViewController
-    detailView.location = location
+    //let detailView = segue.destinationViewController as! YakDetailViewController
+    //detailView.location = location
   }
   
 }
