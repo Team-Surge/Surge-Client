@@ -34,6 +34,7 @@
 		DAD2E43E1AE738A700DFBB53 /* YakDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD2E43D1AE738A700DFBB53 /* YakDetailViewController.swift */; };
 		DAD2E4441AE7405A00DFBB53 /* YakCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAD2E4431AE7405A00DFBB53 /* YakCell.xib */; };
 		DAD498941AE0C114000E5E93 /* YakCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD498931AE0C114000E5E93 /* YakCell.swift */; };
+		DAE725E41AF036FA008B8DA3 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE725E31AF036FA008B8DA3 /* LocationManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,9 @@
 		DAD2E43D1AE738A700DFBB53 /* YakDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YakDetailViewController.swift; sourceTree = "<group>"; };
 		DAD2E4431AE7405A00DFBB53 /* YakCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YakCell.xib; sourceTree = "<group>"; };
 		DAD498931AE0C114000E5E93 /* YakCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YakCell.swift; sourceTree = "<group>"; };
+		DAE725E21AF036FA008B8DA3 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		DAE725E31AF036FA008B8DA3 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
+		DAE725E51AF03774008B8DA3 /* Surge-Client-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Surge-Client-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,9 +174,13 @@
 		DA194DEA1AF03453005EFC28 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				DA194DDF1AF0343A005EFC28 /* HTTPRequestSerializer.swift */,
 				DA194DE01AF0343A005EFC28 /* HTTPResponseSerializer.swift */,
 				DA194DE11AF0343A005EFC28 /* HTTPTask.swift */,
 				DA194DE21AF0343A005EFC28 /* HTTPUpload.swift */,
+				DAE725E51AF03774008B8DA3 /* Surge-Client-Bridging-Header.h */,
+				DAE725E21AF036FA008B8DA3 /* LocationManager.h */,
+				DAE725E31AF036FA008B8DA3 /* LocationManager.m */,
 				DA194DE71AF0344B005EFC28 /* JSONJoy.h */,
 				DA194DE81AF0344B005EFC28 /* JSONJoy.swift */,
 			);
@@ -211,7 +219,6 @@
 				DA5533511AE0B57F003E369E /* Images.xcassets */,
 				DA5533531AE0B57F003E369E /* LaunchScreen.xib */,
 				DA5533491AE0B57F003E369E /* Surge_Client.xcdatamodeld */,
-				DA194DDF1AF0343A005EFC28 /* HTTPRequestSerializer.swift */,
 				DA194DEA1AF03453005EFC28 /* lib */,
 				DA5533451AE0B57F003E369E /* Supporting Files */,
 			);
@@ -360,6 +367,7 @@
 				DAD2E43C1AE7374100DFBB53 /* YakMainViewController.swift in Sources */,
 				DA5533481AE0B57F003E369E /* AppDelegate.swift in Sources */,
 				DA194DE51AF0343A005EFC28 /* HTTPTask.swift in Sources */,
+				DAE725E41AF036FA008B8DA3 /* LocationManager.m in Sources */,
 				DAC2D0ED1AEF1EEE0047E4AE /* YakCreatePostViewController.swift in Sources */,
 				DA55334B1AE0B57F003E369E /* Surge_Client.xcdatamodeld in Sources */,
 				3F4446301AE978300001DA1A /* FeaturedTableViewCell.swift in Sources */,
@@ -493,12 +501,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Surge-Client/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Surge-Client/Surge-Client-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -506,12 +517,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Surge-Client/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Surge-Client/Surge-Client-Bridging-Header.h";
 			};
 			name = Release;
 		};

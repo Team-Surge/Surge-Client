@@ -13,13 +13,17 @@ class YakCreatePostViewController: UIViewController {
   @IBOutlet weak var mapView: MKMapView!
   @IBOutlet weak var textView: UITextView!
   var clearField = true
-  //@IBOutlet weak var navBar: UINavigationBar!
   
   override func viewDidLoad() {
+    LocationManager.sharedInstance().addLocationManagerDelegate(self)
     textView.delegate = self
     textView.returnKeyType = UIReturnKeyType.Send
     textView.becomeFirstResponder()
     super.viewDidLoad()
+  }
+  
+  override func viewDidAppear(animated: Bool) {
+    setMapLocation(LocationManager.sharedInstance().lastLocation)
   }
   
   override func didReceiveMemoryWarning() {
@@ -27,10 +31,10 @@ class YakCreatePostViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
   
-  // MARK: - Navigation
-  
-  // In a storyboard-based application, you will often want to do a little preparation before navigation
-  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+  func setMapLocation(location: CLLocation!) {
+    let center = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
+    let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.00725, longitudeDelta: 0.00725))
+    mapView.setRegion(region, animated: false)
   }
 }
 
@@ -45,7 +49,6 @@ extension YakCreatePostViewController: UITextViewDelegate {
   
   
   func textViewShouldEndEditing(textView: UITextView) -> Bool {
-    //textView.resignFirstResponder()
     println("TextViewValue: \(textView.text)")
     navigationController?.popViewControllerAnimated(true)
     return true
@@ -58,9 +61,15 @@ extension YakCreatePostViewController: UITextViewDelegate {
     } else if clearField {
       textView.text = text
       clearField = false
-      return true
+      return false
     } else {
       return true
     }
+  }
+}
+
+extension YakCreatePostViewController: LocationManagerDelegate {
+  func locationManagerDidUpdateLocation(location: CLLocation!) {
+    setMapLocation(location)
   }
 }

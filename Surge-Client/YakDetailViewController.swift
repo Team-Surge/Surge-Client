@@ -19,7 +19,6 @@ class YakDetailViewController: UIViewController,UITextFieldDelegate {
   @IBOutlet weak var textField: UITextField!
   
   var originalBottomConstraintConstant: CGFloat!
-  var location: CLLocation?
 
   
   @IBAction func onSendButtonPress(sender: AnyObject) {
@@ -27,15 +26,11 @@ class YakDetailViewController: UIViewController,UITextFieldDelegate {
   }
   
   override func viewDidLoad() {
-    // Set map centered to user
-    if let loc = location {
-      let center = CLLocationCoordinate2DMake(loc.coordinate.latitude, loc.coordinate.longitude)
-      let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.00725, longitudeDelta: 0.00725))
-      mapView.setRegion(region, animated: false)
-    }
-  
+    // Setup map
+    LocationManager.sharedInstance().addLocationManagerDelegate(self)
     mapView.showsUserLocation = false
     mapView.delegate = self
+    
     super.viewDidLoad()
 
     // Setup table cells
@@ -47,6 +42,15 @@ class YakDetailViewController: UIViewController,UITextFieldDelegate {
     NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil)
     NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil)
     
+  }
+  
+  override func viewDidAppear(animated: Bool) {
+    setMapLocation(LocationManager.sharedInstance().lastLocation)
+    
+  }
+  
+  override func viewDidDisappear(animated: Bool) {
+    //LocationManager.sharedInstance().removeLocationManagerDelegate(self)
   }
   
   override func didReceiveMemoryWarning() {
@@ -67,13 +71,17 @@ class YakDetailViewController: UIViewController,UITextFieldDelegate {
     bottomConstraint.constant = keyboardFrame.size.height + bottomConstraint.constant
   }
 
+  func setMapLocation(location: CLLocation!) {
+    let center = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
+    let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.00725, longitudeDelta: 0.00725))
+    mapView.setRegion(region, animated: false)
+  }
 }
 
 // MARK: - UITableViewDelegate
 extension YakDetailViewController: UITableViewDelegate {
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    // Configure the cell...
     let cell = tableView.dequeueReusableCellWithIdentifier("YakCell", forIndexPath: indexPath) as! YakCell
     cell.karmaLabel.text = "\((indexPath.row + 1) * 5)"
     cell.timeLabel.text = "\((indexPath.row + 1) * 3)m"
@@ -92,15 +100,10 @@ extension YakDetailViewController: UITableViewDataSource {
   }
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    // #warning Incomplete method implementation.
-    // Return the number of rows in the section.
     return 4
   }
   
   func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-    // #warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    
     return 1
   }
   
@@ -121,4 +124,10 @@ extension YakDetailViewController: UITextFieldDelegate {
 // MARK: - MKMapViewDelegate
 extension YakDetailViewController: MKMapViewDelegate {
   
+}
+
+extension YakDetailViewController: LocationManagerDelegate {
+  func locationManagerDidUpdateLocation(location: CLLocation!) {
+    setMapLocation(location)
+  }
 }
