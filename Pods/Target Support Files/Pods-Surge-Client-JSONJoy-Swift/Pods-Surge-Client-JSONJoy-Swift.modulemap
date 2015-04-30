@@ -1,0 +1,6 @@
+framework module JSONJoy {
+  umbrella header "Pods-Surge-Client-JSONJoy-Swift-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module SwiftHTTP {
+  umbrella header "Pods-Surge-Client-SwiftHTTP-umbrella.h"
+
+  export *
+  module * { export * }
+}
