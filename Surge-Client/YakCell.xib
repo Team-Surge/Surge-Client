@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -14,20 +14,14 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ou3-4N-d5G" id="7NX-JT-7pE">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NxH-r1-xip">
-                        <rect key="frame" x="276" y="69" width="30" height="22"/>
-                        <state key="normal" image="down">
-                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                        </state>
-                    </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 replies" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="moH-1g-HwL">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 replies" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="moH-1g-HwL" userLabel="replyLabel">
                         <rect key="frame" x="133" y="70" width="48" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5m" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fke-Y7-vIv">
-                        <rect key="frame" x="8" y="70" width="25" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5m" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fke-Y7-vIv" userLabel="timeLabel">
+                        <rect key="frame" x="8" y="51" width="25" height="60"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="25" id="PqC-d9-4rN"/>
                         </constraints>
@@ -35,57 +29,73 @@
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAe-mr-py4">
-                        <rect key="frame" x="272" y="38" width="39" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1234" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAe-mr-py4" userLabel="score">
+                        <rect key="frame" x="247" y="39" width="84" height="21"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMa-Z3-PJN">
-                        <rect key="frame" x="8" y="8" width="256" height="60"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMa-Z3-PJN" userLabel="postContent">
+                        <rect key="frame" x="8" y="8" width="211" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vp-H7-9Mq">
-                        <rect key="frame" x="274" y="8" width="35" height="22"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ibb-AN-0CL" userLabel="downBtn">
+                        <rect key="frame" x="274" y="69" width="31" height="22"/>
+                        <state key="normal" image="down"/>
+                        <state key="selected" image="down_selected"/>
+                        <state key="highlighted" image="down_selected"/>
+                        <connections>
+                            <action selector="buttonPressed:" destination="ou3-4N-d5G" eventType="touchUpInside" id="bG8-fQ-m16"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67w-So-F1L" userLabel="upBtn">
+                        <rect key="frame" x="274" y="9" width="31" height="22"/>
                         <state key="normal" image="up">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
+                        <state key="selected" image="up_selected"/>
+                        <connections>
+                            <action selector="buttonPressed:" destination="ou3-4N-d5G" eventType="touchUpInside" id="hHu-HK-cLQ"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="4vp-H7-9Mq" firstAttribute="top" secondItem="wMa-Z3-PJN" secondAttribute="top" id="1JZ-KU-2of"/>
-                    <constraint firstItem="iAe-mr-py4" firstAttribute="centerX" secondItem="NxH-r1-xip" secondAttribute="centerX" id="9u8-PY-DHw"/>
-                    <constraint firstItem="Fke-Y7-vIv" firstAttribute="top" secondItem="wMa-Z3-PJN" secondAttribute="bottom" constant="2" id="AOg-FD-flR"/>
-                    <constraint firstItem="4vp-H7-9Mq" firstAttribute="centerX" secondItem="iAe-mr-py4" secondAttribute="centerX" id="ART-zy-XHe"/>
-                    <constraint firstItem="NxH-r1-xip" firstAttribute="baseline" secondItem="moH-1g-HwL" secondAttribute="baseline" id="HBr-q5-H1W"/>
-                    <constraint firstItem="iAe-mr-py4" firstAttribute="leading" secondItem="wMa-Z3-PJN" secondAttribute="trailing" constant="8" symbolic="YES" id="HO8-FD-zEc"/>
-                    <constraint firstItem="NxH-r1-xip" firstAttribute="leading" secondItem="moH-1g-HwL" secondAttribute="trailing" constant="95" id="LAA-lc-jxT"/>
+                    <constraint firstItem="Ibb-AN-0CL" firstAttribute="centerY" secondItem="moH-1g-HwL" secondAttribute="centerY" id="4X3-cL-ytI"/>
+                    <constraint firstItem="67w-So-F1L" firstAttribute="centerX" secondItem="iAe-mr-py4" secondAttribute="centerX" id="8cd-L5-Tml"/>
+                    <constraint firstItem="Fke-Y7-vIv" firstAttribute="top" secondItem="wMa-Z3-PJN" secondAttribute="bottom" constant="22" id="AOg-FD-flR"/>
+                    <constraint firstItem="iAe-mr-py4" firstAttribute="leading" secondItem="wMa-Z3-PJN" secondAttribute="trailing" constant="28" id="HO8-FD-zEc"/>
+                    <constraint firstItem="iAe-mr-py4" firstAttribute="centerY" secondItem="7NX-JT-7pE" secondAttribute="centerY" id="JAM-EI-8RE"/>
                     <constraint firstItem="wMa-Z3-PJN" firstAttribute="top" secondItem="7NX-JT-7pE" secondAttribute="topMargin" id="LaY-3r-MDc"/>
                     <constraint firstItem="Fke-Y7-vIv" firstAttribute="leading" secondItem="wMa-Z3-PJN" secondAttribute="leading" id="Ndp-9R-BAJ"/>
-                    <constraint firstItem="4vp-H7-9Mq" firstAttribute="leading" secondItem="wMa-Z3-PJN" secondAttribute="trailing" constant="10" id="Wj8-rJ-H1m"/>
+                    <constraint firstItem="67w-So-F1L" firstAttribute="trailing" secondItem="7NX-JT-7pE" secondAttribute="trailingMargin" constant="-7" id="Vvv-S0-iGm"/>
                     <constraint firstItem="moH-1g-HwL" firstAttribute="bottom" secondItem="7NX-JT-7pE" secondAttribute="bottomMargin" id="Y2a-C3-DlV"/>
-                    <constraint firstItem="moH-1g-HwL" firstAttribute="baseline" secondItem="Fke-Y7-vIv" secondAttribute="baseline" id="a1n-mq-7Mk"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="iAe-mr-py4" secondAttribute="trailing" constant="1" id="gIQ-si-ARW"/>
-                    <constraint firstItem="iAe-mr-py4" firstAttribute="top" secondItem="4vp-H7-9Mq" secondAttribute="bottom" constant="8" symbolic="YES" id="gZQ-jo-cIU"/>
-                    <constraint firstItem="NxH-r1-xip" firstAttribute="bottom" secondItem="moH-1g-HwL" secondAttribute="bottom" id="pmC-ba-Spa"/>
+                    <constraint firstItem="moH-1g-HwL" firstAttribute="baseline" secondItem="Fke-Y7-vIv" secondAttribute="baseline" constant="-20" id="a1n-mq-7Mk"/>
+                    <constraint firstItem="Ibb-AN-0CL" firstAttribute="bottom" secondItem="moH-1g-HwL" secondAttribute="bottom" id="a9i-DU-4qG"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="iAe-mr-py4" secondAttribute="trailing" constant="-19" id="gIQ-si-ARW"/>
+                    <constraint firstItem="iAe-mr-py4" firstAttribute="top" secondItem="67w-So-F1L" secondAttribute="bottom" constant="8" symbolic="YES" id="nzz-Xk-PRh"/>
+                    <constraint firstItem="Ibb-AN-0CL" firstAttribute="leading" secondItem="67w-So-F1L" secondAttribute="leading" id="rsU-Si-ZIG"/>
                     <constraint firstItem="wMa-Z3-PJN" firstAttribute="leading" secondItem="7NX-JT-7pE" secondAttribute="leadingMargin" id="sDW-9q-U1G"/>
-                    <constraint firstItem="moH-1g-HwL" firstAttribute="firstBaseline" secondItem="Fke-Y7-vIv" secondAttribute="firstBaseline" id="yYS-TT-H4D"/>
-                    <constraint firstItem="moH-1g-HwL" firstAttribute="centerY" secondItem="NxH-r1-xip" secondAttribute="centerY" id="zYG-70-AB5"/>
+                    <constraint firstItem="Ibb-AN-0CL" firstAttribute="leading" secondItem="moH-1g-HwL" secondAttribute="trailing" constant="93" id="tPs-68-uFd"/>
+                    <constraint firstItem="moH-1g-HwL" firstAttribute="firstBaseline" secondItem="Fke-Y7-vIv" secondAttribute="firstBaseline" constant="19" id="yYS-TT-H4D"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="contentLabel" destination="wMa-Z3-PJN" id="h5O-xR-9Tu"/>
+                <outlet property="downBtn" destination="Ibb-AN-0CL" id="Ka4-9z-NPQ"/>
                 <outlet property="karmaLabel" destination="iAe-mr-py4" id="C4k-PD-nfB"/>
                 <outlet property="replyLabel" destination="moH-1g-HwL" id="ilt-B6-nQZ"/>
                 <outlet property="timeLabel" destination="Fke-Y7-vIv" id="WA2-eG-sjj"/>
+                <outlet property="upBtn" destination="67w-So-F1L" id="zfP-Hd-MXp"/>
             </connections>
             <point key="canvasLocation" x="529" y="518"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="down" width="30" height="15"/>
-        <image name="up" width="30" height="15"/>
+        <image name="down" width="31" height="19"/>
+        <image name="down_selected" width="31" height="19"/>
+        <image name="up" width="31" height="19"/>
+        <image name="up_selected" width="31" height="19"/>
     </resources>
 </document>

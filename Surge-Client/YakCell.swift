@@ -14,6 +14,17 @@ class YakCell: UITableViewCell {
   @IBOutlet weak var contentLabel: UILabel!
   @IBOutlet weak var timeLabel: UILabel!
   
+  @IBOutlet weak var upBtn: UIButton!
+  @IBOutlet weak var downBtn: UIButton!
+  
+  @IBAction func buttonPressed(sender: UIButton) {
+    if sender == upBtn {
+      upvote()
+    } else if sender == downBtn {
+      downvote()
+    }
+  }
+  
   override func awakeFromNib() {
     super.awakeFromNib()
     // Initialization code
@@ -29,5 +40,22 @@ class YakCell: UITableViewCell {
     // Configure the view for the selected state
   }
   
+  func upvote() {
+    if upBtn.selected {
+      upBtn.selected = false
+    } else {
+      downBtn.selected = false
+      upBtn.selected = true
+    }
+  }
+  
+  func downvote() {
+    if downBtn.selected {
+      downBtn.selected = false
+    } else {
+      downBtn.selected = true
+      upBtn.selected = false
+    }
+  }
 }
  
