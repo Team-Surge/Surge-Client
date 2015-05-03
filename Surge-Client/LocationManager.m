@@ -19,7 +19,6 @@
 static int errorCount = 0;
 #define MAX_LOCATION_ERROR 3
 
-//This is a singleton the objective-c way
 + (LocationManager*) sharedInstance {
   static LocationManager *sharedInstance = nil;
   static dispatch_once_t token;
@@ -53,6 +52,7 @@ static int errorCount = 0;
   return self;
 }
 
+
 - (void) addLocationManagerDelegate:(id<LocationManagerDelegate>)delegate {
   if (![self.observers containsObject:delegate]) {
     [self.observers addObject:delegate];
@@ -73,9 +73,10 @@ static int errorCount = 0;
 {
   [self.manager stopUpdatingLocation];
   _lastLocation = locations.lastObject;
+  MKCoordinateRegion region = MKCoordinateRegionMake(_lastLocation.coordinate, MKCoordinateSpanMake(0.00725, 0.00725));
   for(id<LocationManagerDelegate> observer in self.observers) {
     if (observer) {
-      [observer locationManagerDidUpdateLocation:[locations lastObject]];
+      [[observer mapViewToUpdateOnNewLocation] setRegion: region animated: false];
     }
   }
 }

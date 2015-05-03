@@ -393,7 +393,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="b4s-i2-CA4">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsBuildings="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4s-i2-CA4">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             </mapView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F9b-Ae-no8">
@@ -528,6 +528,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Me" id="k7Y-J9-jRK"/>
                     <connections>
+                        <outlet property="mapView" destination="b4s-i2-CA4" id="Flm-Aj-3dr"/>
                         <outlet property="showMyStuffButton" destination="CVY-68-tma" id="nAg-gl-QoX"/>
                         <outlet property="showNotificationsButton" destination="2df-KT-mT5" id="wkr-dO-Voi"/>
                     </connections>

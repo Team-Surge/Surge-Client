@@ -7,12 +7,27 @@
 //
 
 import UIKit
+import MapKit
 
 class MeViewController: UIViewController {
   @IBOutlet weak var showNotificationsButton: UIButton!
   @IBOutlet weak var showMyStuffButton: UIButton!
+  @IBOutlet weak var mapView: MKMapView!
+  
   weak var notificationsTableView: UIView?
   weak var myStuffTableView: UIView?
+  
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    LocationManager.sharedInstance().addLocationManagerDelegate(self)
+    mapView.showsUserLocation = true
+  }
+  
+  override func viewDidDisappear(animated: Bool) {
+    super.viewDidDisappear(animated)
+    LocationManager.sharedInstance().removeLocationManagerDelegate(self)
+    mapView.showsUserLocation = false
+  }
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -58,5 +73,12 @@ class MeViewController: UIViewController {
     } else if((segue.identifier as String!) == "myStuffTableViewSegue") {
       myStuffTableView = segue.destinationViewController.view!! as UIView
     }
+  }
+}
+
+extension MeViewController: LocationManagerDelegate {
+  
+  func mapViewToUpdateOnNewLocation() -> MKMapView! {
+    return mapView;
   }
 }

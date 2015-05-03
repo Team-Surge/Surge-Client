@@ -26,12 +26,12 @@ class YakDetailViewController: UIViewController,UITextFieldDelegate {
   }
   
   override func viewDidLoad() {
+    super.viewDidLoad()
+    
     // Setup map
-    LocationManager.sharedInstance().addLocationManagerDelegate(self)
     mapView.showsUserLocation = false
     mapView.delegate = self
     
-    super.viewDidLoad()
 
     // Setup table cells
     innerTableView?.registerNib(UINib(nibName: "YakCell", bundle: nil), forCellReuseIdentifier: "YakCell")
@@ -44,13 +44,14 @@ class YakDetailViewController: UIViewController,UITextFieldDelegate {
     
   }
   
-  override func viewDidAppear(animated: Bool) {
-    setMapLocation(LocationManager.sharedInstance().lastLocation)
-    
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillDisappear(animated)
+    LocationManager.sharedInstance().addLocationManagerDelegate(self)
   }
   
   override func viewDidDisappear(animated: Bool) {
-    //LocationManager.sharedInstance().removeLocationManagerDelegate(self)
+    super.viewDidDisappear(animated)
+    LocationManager.sharedInstance().removeLocationManagerDelegate(self)
   }
   
   override func didReceiveMemoryWarning() {
@@ -71,11 +72,6 @@ class YakDetailViewController: UIViewController,UITextFieldDelegate {
     bottomConstraint.constant = keyboardFrame.size.height + bottomConstraint.constant
   }
 
-  func setMapLocation(location: CLLocation!) {
-    let center = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
-    let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.00725, longitudeDelta: 0.00725))
-    mapView.setRegion(region, animated: false)
-  }
 }
 
 // MARK: - UITableViewDelegate
@@ -127,7 +123,7 @@ extension YakDetailViewController: MKMapViewDelegate {
 }
 
 extension YakDetailViewController: LocationManagerDelegate {
-  func locationManagerDidUpdateLocation(location: CLLocation!) {
-    setMapLocation(location)
+  func mapViewToUpdateOnNewLocation() -> MKMapView! {
+    return mapView;
   }
 }

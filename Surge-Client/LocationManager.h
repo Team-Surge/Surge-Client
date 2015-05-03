@@ -8,10 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "CoreLocation/CoreLocation.h"
+#import "MapKit/MapKit.h"
 
 @protocol LocationManagerDelegate
 
-- (void)locationManagerDidUpdateLocation:(CLLocation *)location;
+- (MKMapView*)mapViewToUpdateOnNewLocation;
+//- (void)locationManagerDidUpdateLocation:(CLLocation *)location;
+@required
+
 
 @end
 

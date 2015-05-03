@@ -10,32 +10,32 @@ import UIKit
 import MapKit
 
 class YakCreatePostViewController: UIViewController {
+  
   @IBOutlet weak var mapView: MKMapView!
   @IBOutlet weak var textView: UITextView!
   var clearField = true
   
   override func viewDidLoad() {
-    LocationManager.sharedInstance().addLocationManagerDelegate(self)
     textView.delegate = self
     textView.returnKeyType = UIReturnKeyType.Send
     textView.becomeFirstResponder()
     super.viewDidLoad()
   }
   
-  override func viewDidAppear(animated: Bool) {
-    setMapLocation(LocationManager.sharedInstance().lastLocation)
+  override func viewDidDisappear(animated: Bool) {
+    super.viewDidDisappear(animated)
+    LocationManager.sharedInstance().removeLocationManagerDelegate(self)
+  }
+  
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    LocationManager.sharedInstance().addLocationManagerDelegate(self)
   }
   
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
   }
   
-  func setMapLocation(location: CLLocation!) {
-    let center = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
-    let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.00725, longitudeDelta: 0.00725))
-    mapView.setRegion(region, animated: false)
-  }
 }
 
 extension YakCreatePostViewController: UITextViewDelegate {
@@ -69,7 +69,7 @@ extension YakCreatePostViewController: UITextViewDelegate {
 }
 
 extension YakCreatePostViewController: LocationManagerDelegate {
-  func locationManagerDidUpdateLocation(location: CLLocation!) {
-    setMapLocation(location)
+  func mapViewToUpdateOnNewLocation() -> MKMapView! {
+    return mapView
   }
 }

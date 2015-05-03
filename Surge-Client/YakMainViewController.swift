@@ -13,7 +13,6 @@ import CoreLocation
 class YakMainViewController: UIViewController {
   
   @IBOutlet weak var innerTableView: UITableView!
-  //var locationManager: CLLocationManager!
   var location: CLLocation?
   
   override func viewDidLoad() {
@@ -23,7 +22,6 @@ class YakMainViewController: UIViewController {
   
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
   }
   
 }
@@ -39,6 +37,7 @@ extension YakMainViewController: UITableViewDelegate {
 
 
 extension YakMainViewController: UITableViewDataSource {
+  
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return 12
   }
