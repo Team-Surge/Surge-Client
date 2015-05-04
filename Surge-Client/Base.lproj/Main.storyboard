@@ -1510,7 +1510,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QiO-8V-UBw">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QiO-8V-UBw">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="EWt-0t-JIl"/>
@@ -1583,6 +1583,9 @@
                                         <include reference="fs4-GM-xEG"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="registerAction:" destination="yQd-tA-wm4" eventType="touchUpInside" id="tXz-OJ-jW8"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NM0-j4-638">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -1599,11 +1602,16 @@
                                     <action selector="backToLoginAction:" destination="yQd-tA-wm4" eventType="touchUpInside" id="sEb-CT-Rga"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="9oC-9a-KEC">
+                                <rect key="frame" x="-10" y="-10" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.63208189069999998" green="0.39423388390000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="9tG-lv-j44" secondAttribute="trailing" constant="33" id="3HU-88-bls"/>
                             <constraint firstItem="ywR-9m-CDP" firstAttribute="top" secondItem="QiO-8V-UBw" secondAttribute="bottom" constant="8" id="7NG-h5-Pbh"/>
+                            <constraint firstItem="XsA-PW-v7u" firstAttribute="top" secondItem="9oC-9a-KEC" secondAttribute="bottom" constant="-30" id="9NR-Jp-Luz"/>
+                            <constraint firstItem="9oC-9a-KEC" firstAttribute="leading" secondItem="XsA-PW-v7u" secondAttribute="trailing" constant="-32" id="BNs-Xa-ZXg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XsA-PW-v7u" secondAttribute="trailing" constant="33" id="Dly-hM-Rwk"/>
                             <constraint firstItem="QiO-8V-UBw" firstAttribute="leading" secondItem="y6C-QQ-lFF" secondAttribute="leadingMargin" constant="33" id="EEU-2v-9x5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NM0-j4-638" secondAttribute="trailing" constant="16" id="FJG-jt-XYe"/>
@@ -1629,11 +1637,9 @@
                                 <exclude reference="XsA-PW-v7u"/>
                                 <exclude reference="NM0-j4-638"/>
                                 <exclude reference="5Im-xK-bLZ"/>
+                                <exclude reference="9oC-9a-KEC"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="3HU-88-bls"/>
-                                <exclude reference="jbK-Ro-5tW"/>
-                                <exclude reference="ml5-xz-Rdv"/>
                                 <exclude reference="FJG-jt-XYe"/>
                                 <exclude reference="Uno-DB-MTZ"/>
                                 <exclude reference="a5b-Tm-9ML"/>
@@ -1643,12 +1649,17 @@
                                 <exclude reference="7NG-h5-Pbh"/>
                                 <exclude reference="T3o-iq-5yg"/>
                                 <exclude reference="iHD-HU-1RQ"/>
-                                <exclude reference="VKB-8c-eh2"/>
-                                <exclude reference="pgy-7X-YYi"/>
-                                <exclude reference="rWr-s3-uNe"/>
+                                <exclude reference="3HU-88-bls"/>
+                                <exclude reference="jbK-Ro-5tW"/>
+                                <exclude reference="ml5-xz-Rdv"/>
+                                <exclude reference="9NR-Jp-Luz"/>
                                 <exclude reference="Dly-hM-Rwk"/>
                                 <exclude reference="H7l-aN-SRv"/>
                                 <exclude reference="iuf-KR-oAW"/>
+                                <exclude reference="VKB-8c-eh2"/>
+                                <exclude reference="pgy-7X-YYi"/>
+                                <exclude reference="rWr-s3-uNe"/>
+                                <exclude reference="BNs-Xa-ZXg"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -1659,11 +1670,9 @@
                                 <include reference="XsA-PW-v7u"/>
                                 <include reference="NM0-j4-638"/>
                                 <include reference="5Im-xK-bLZ"/>
+                                <include reference="9oC-9a-KEC"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="3HU-88-bls"/>
-                                <include reference="jbK-Ro-5tW"/>
-                                <include reference="ml5-xz-Rdv"/>
                                 <include reference="FJG-jt-XYe"/>
                                 <include reference="Uno-DB-MTZ"/>
                                 <include reference="a5b-Tm-9ML"/>
@@ -1673,15 +1682,26 @@
                                 <include reference="7NG-h5-Pbh"/>
                                 <include reference="T3o-iq-5yg"/>
                                 <include reference="iHD-HU-1RQ"/>
-                                <include reference="VKB-8c-eh2"/>
-                                <include reference="pgy-7X-YYi"/>
-                                <include reference="rWr-s3-uNe"/>
+                                <include reference="3HU-88-bls"/>
+                                <include reference="jbK-Ro-5tW"/>
+                                <include reference="ml5-xz-Rdv"/>
+                                <include reference="9NR-Jp-Luz"/>
                                 <include reference="Dly-hM-Rwk"/>
                                 <include reference="H7l-aN-SRv"/>
                                 <include reference="iuf-KR-oAW"/>
+                                <include reference="VKB-8c-eh2"/>
+                                <include reference="pgy-7X-YYi"/>
+                                <include reference="rWr-s3-uNe"/>
+                                <include reference="BNs-Xa-ZXg"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="QiO-8V-UBw" id="HZk-ri-5Ui"/>
+                        <outlet property="passwordField" destination="ywR-9m-CDP" id="kFR-y3-uH1"/>
+                        <outlet property="reenterPasswordField" destination="9tG-lv-j44" id="y8u-GY-bhy"/>
+                        <outlet property="registerSpinner" destination="9oC-9a-KEC" id="sJn-Mc-pQN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SyF-jq-W2J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
