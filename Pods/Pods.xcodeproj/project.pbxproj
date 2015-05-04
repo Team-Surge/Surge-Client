@@ -7,285 +7,352 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B6F52EB648E76629369CBD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7079B6FFCFF012B9A2374211 /* Foundation.framework */; };
-		16F8F36D59C0D90D0CAB6CB5 /* Pods-Surge-Client-JSONJoy-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE57BC33E87ABCBF01A46D /* Pods-Surge-Client-JSONJoy-Swift-dummy.m */; };
-		2E431C1F52527D08C380F685 /* Pods-Surge-Client-SwiftHTTP-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 620CAF83394A28E7234FFA71 /* Pods-Surge-Client-SwiftHTTP-dummy.m */; };
-		48E0CC7CAD20D9D1CF1EECF4 /* Pods-Surge-Client-SwiftHTTP-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E19CB7C00A14AF1A07B16AD0 /* Pods-Surge-Client-SwiftHTTP-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6CAA05A6FA20DE7C00E33D1C /* HTTPResponseSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD29B0E46B8881206AD4352 /* HTTPResponseSerializer.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7C92E29AF7C4094EDAA0B9AF /* HTTPRequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D16C370B203B8D0B2C42F8 /* HTTPRequestSerializer.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		90C2F448BF643D7FC38C31C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7079B6FFCFF012B9A2374211 /* Foundation.framework */; };
-		BEBCC81414332DAAA8A58A4C /* Pods-Surge-Client-JSONJoy-Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D195FCF1C92AD1A9D3C468C /* Pods-Surge-Client-JSONJoy-Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C4364B00097595471BCD581E /* Pods-Surge-Client-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 552802B09C5E1616EF2D42B8 /* Pods-Surge-Client-dummy.m */; };
-		CFFB0371C3769D4D812FE5D2 /* HTTPUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE25035AB3936C66D380D834 /* HTTPUpload.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D017677E0C5B6659BE886D9F /* JSONJoy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82D798814792DAE99DC6853 /* JSONJoy.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		E0F4B05412744EA1F7379A47 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A926A0A2F55752B042F16483 /* HTTPTask.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		E3703FA6490C4DF259A40B41 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7079B6FFCFF012B9A2374211 /* Foundation.framework */; };
-		E91EB6FED6A83326B868C0DC /* Pods-Surge-Client-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FBCA713987C978938D8D5D9 /* Pods-Surge-Client-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		01065B82DE750FF4CB0431DC /* HTTPResponseSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD2B1B815A7DE0183DB88BD /* HTTPResponseSerializer.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3D1E0D21D705864CEBB7BF2C /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC5D0B9F94864928F1E6D8C /* HTTPTask.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4711020A11A62684E22D1685 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF06FDC73520F0CD3A8232A3 /* Foundation.framework */; };
+		5E21D98C683284D37BA322DE /* CRToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 5593D2DC1D5BDDC3E615795D /* CRToast.m */; };
+		5E422997BD2B05F3AB6576EF /* HTTPUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD356566FA80AAE1549FA8C4 /* HTTPUpload.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		622B51EEC3F88E8939CF139E /* Pods-Surge-Client-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8ED693C0024FB2DE91A23B73 /* Pods-Surge-Client-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6C9111AE1F93E5B561E03176 /* Pods-Surge-Client-CRToast-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7086979AC062359C432ED46F /* Pods-Surge-Client-CRToast-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		806B0EE642BFEF397124FDB5 /* Pods-Surge-Client-SwiftHTTP-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F012FF91951414F98DED207F /* Pods-Surge-Client-SwiftHTTP-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		864FB4B57C24D869041879C6 /* Pods-Surge-Client-JSONJoy-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFC2C8130A718E6D96FD29D /* Pods-Surge-Client-JSONJoy-Swift-dummy.m */; };
+		9ECAAD127450244B7F24B28D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF06FDC73520F0CD3A8232A3 /* Foundation.framework */; };
+		A47E26859B5F1429A5C775AE /* Pods-Surge-Client-SwiftHTTP-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F6B2934F5C9567C467BB20 /* Pods-Surge-Client-SwiftHTTP-dummy.m */; };
+		A48A995F23108E4F24EFA760 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF06FDC73520F0CD3A8232A3 /* Foundation.framework */; };
+		C70E6BAF13A7E156E0455EB6 /* Pods-Surge-Client-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CA5D7DED11A12361A2DACDA8 /* Pods-Surge-Client-dummy.m */; };
+		C7E4C12591AA1713C6346FFE /* HTTPRequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300A0D2C04CD3EEB0A3658EF /* HTTPRequestSerializer.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C987023F412C11910D4BC818 /* Pods-Surge-Client-JSONJoy-Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 817959EBD4807FA611ABC0F1 /* Pods-Surge-Client-JSONJoy-Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBA569483F692871FD0D2C8D /* Pods-Surge-Client-CRToast-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 024967EA59BCFD6484158517 /* Pods-Surge-Client-CRToast-dummy.m */; };
+		D799CC17B18C1BECD6C28A10 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF06FDC73520F0CD3A8232A3 /* Foundation.framework */; };
+		DF92D1989FEF927E69F86F2F /* JSONJoy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9D173457E4D4083FA616E6 /* JSONJoy.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FC6E799CE5563CB3144DD3BE /* CRToast.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DA49948C166EA4B17013004 /* CRToast.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3F5656391AF28E140037DB16 /* PBXContainerItemProxy */ = {
+		0CE38B0D12BC52E49EB0BA8F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 79B0F97B1604BC5515601E83 /* Project object */;
+			containerPortal = 5143372FA15A633902368D28 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B477E734D1880637B7EED10A;
-			remoteInfo = "Pods-Surge-Client-SwiftHTTP";
+			remoteGlobalIDString = DBE8B058350B27F86C97DFA8;
+			remoteInfo = "Pods-Surge-Client-CRToast";
 		};
-		CC72A7DE329100CC43B98C7B /* PBXContainerItemProxy */ = {
+		8CBCC7AB3FFA0E86EC42B1BA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 79B0F97B1604BC5515601E83 /* Project object */;
+			containerPortal = 5143372FA15A633902368D28 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AE4759C2FBC5240123686715;
+			remoteGlobalIDString = B6DAE9E6A804B024BA0896EB;
 			remoteInfo = "Pods-Surge-Client-JSONJoy-Swift";
+		};
+		BB4DB643AF3C272C99234B9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5143372FA15A633902368D28 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBF9BB05D25DD61EBC86A781;
+			remoteInfo = "Pods-Surge-Client-SwiftHTTP";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05C0B393B93F120D800D43E6 /* Pods-Surge-Client-SwiftHTTP-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Surge-Client-SwiftHTTP-prefix.pch"; sourceTree = "<group>"; };
-		071D7A1FCA1DC2BFF2D9D32F /* Pods-Surge-Client-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Surge-Client-resources.sh"; sourceTree = "<group>"; };
-		0D5787380E63F0D2B38B1185 /* Pods-Surge-Client-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Surge-Client-environment.h"; sourceTree = "<group>"; };
-		1237E45866C3119D928D3449 /* Pods-Surge-Client-SwiftHTTP.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Surge-Client-SwiftHTTP.modulemap"; sourceTree = "<group>"; };
-		15B5EF4A667DB7020F3E9D54 /* Pods-Surge-Client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Surge-Client.debug.xcconfig"; sourceTree = "<group>"; };
-		1A21E747A11830256EB5F028 /* Pods-Surge-Client-JSONJoy-Swift-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Surge-Client-JSONJoy-Swift-Private.xcconfig"; sourceTree = "<group>"; };
-		2208F9F872C0A110C2F5B7AD /* Pods-Surge-Client-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Surge-Client-acknowledgements.plist"; sourceTree = "<group>"; };
-		2749B40DBCA19BFA2A57D49C /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		36D16C370B203B8D0B2C42F8 /* HTTPRequestSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HTTPRequestSerializer.swift; sourceTree = "<group>"; };
-		4B9EAEB44A6B3A236EF42D1A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		55096F0E4C650C1B81A42827 /* Pods-Surge-Client-JSONJoy-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Surge-Client-JSONJoy-Swift.modulemap"; sourceTree = "<group>"; };
-		552802B09C5E1616EF2D42B8 /* Pods-Surge-Client-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Surge-Client-dummy.m"; sourceTree = "<group>"; };
-		5C475FE810B96E8A407305A6 /* Pods-Surge-Client-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Surge-Client-frameworks.sh"; sourceTree = "<group>"; };
-		5CEE57BC33E87ABCBF01A46D /* Pods-Surge-Client-JSONJoy-Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Surge-Client-JSONJoy-Swift-dummy.m"; sourceTree = "<group>"; };
-		5E5060D195508D484CFAB472 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		620CAF83394A28E7234FFA71 /* Pods-Surge-Client-SwiftHTTP-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Surge-Client-SwiftHTTP-dummy.m"; sourceTree = "<group>"; };
-		7079B6FFCFF012B9A2374211 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7093E6934C1419D82F133E56 /* Pods-Surge-Client-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Surge-Client-acknowledgements.markdown"; sourceTree = "<group>"; };
-		7B1356AADFC8CE5C0FC8A118 /* Pods_Surge_Client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Surge_Client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C08FD7232EFEFFF8F00DDAC /* Pods-Surge-Client-JSONJoy-Swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Surge-Client-JSONJoy-Swift.xcconfig"; sourceTree = "<group>"; };
-		8D195FCF1C92AD1A9D3C468C /* Pods-Surge-Client-JSONJoy-Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Surge-Client-JSONJoy-Swift-umbrella.h"; sourceTree = "<group>"; };
-		8FBCA713987C978938D8D5D9 /* Pods-Surge-Client-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Surge-Client-umbrella.h"; sourceTree = "<group>"; };
-		9F966FC600FADBB165BEFF8F /* Pods-Surge-Client-SwiftHTTP-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Surge-Client-SwiftHTTP-Private.xcconfig"; sourceTree = "<group>"; };
-		A82D798814792DAE99DC6853 /* JSONJoy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JSONJoy.swift; sourceTree = "<group>"; };
-		A926A0A2F55752B042F16483 /* HTTPTask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
-		B2BEB3BCF51DE08E8788C9A8 /* Pods-Surge-Client-JSONJoy-Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Surge-Client-JSONJoy-Swift-prefix.pch"; sourceTree = "<group>"; };
-		BE306A534E28BB30AD89D5FA /* JSONJoy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JSONJoy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C556CA4C6F4E019F7F000337 /* Pods-Surge-Client.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Surge-Client.modulemap"; sourceTree = "<group>"; };
-		D952A4290610B11294A41BC0 /* Pods-Surge-Client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Surge-Client.release.xcconfig"; sourceTree = "<group>"; };
-		DE25035AB3936C66D380D834 /* HTTPUpload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HTTPUpload.swift; sourceTree = "<group>"; };
-		E19CB7C00A14AF1A07B16AD0 /* Pods-Surge-Client-SwiftHTTP-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Surge-Client-SwiftHTTP-umbrella.h"; sourceTree = "<group>"; };
-		E4A88DD3B5EAAB0F9F7B1CDD /* Pods-Surge-Client-SwiftHTTP.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Surge-Client-SwiftHTTP.xcconfig"; sourceTree = "<group>"; };
-		E7F67CDA9287ADBA111A60DF /* SwiftHTTP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftHTTP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EAD29B0E46B8881206AD4352 /* HTTPResponseSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HTTPResponseSerializer.swift; sourceTree = "<group>"; };
-		F2A3CC8403594DF0468224D4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		024967EA59BCFD6484158517 /* Pods-Surge-Client-CRToast-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Surge-Client-CRToast-dummy.m"; sourceTree = "<group>"; };
+		0913509B34341193F1B68B71 /* Pods-Surge-Client-JSONJoy-Swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Surge-Client-JSONJoy-Swift.xcconfig"; sourceTree = "<group>"; };
+		106E6942C475CD3822BCA712 /* Pods-Surge-Client-JSONJoy-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Surge-Client-JSONJoy-Swift.modulemap"; sourceTree = "<group>"; };
+		1977FF9A956F6155B2F9FB4F /* Pods-Surge-Client-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Surge-Client-acknowledgements.plist"; sourceTree = "<group>"; };
+		300A0D2C04CD3EEB0A3658EF /* HTTPRequestSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HTTPRequestSerializer.swift; sourceTree = "<group>"; };
+		34F6B2934F5C9567C467BB20 /* Pods-Surge-Client-SwiftHTTP-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Surge-Client-SwiftHTTP-dummy.m"; sourceTree = "<group>"; };
+		3FFC2C8130A718E6D96FD29D /* Pods-Surge-Client-JSONJoy-Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Surge-Client-JSONJoy-Swift-dummy.m"; sourceTree = "<group>"; };
+		45754ACECC264B1F742F8223 /* Pods-Surge-Client-SwiftHTTP.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Surge-Client-SwiftHTTP.modulemap"; sourceTree = "<group>"; };
+		4589422789AA9D08F68274AD /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		47D3BFC7A1449B867342F2D3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4818861A97E0ABAB38DB54A1 /* Pods-Surge-Client-JSONJoy-Swift-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Surge-Client-JSONJoy-Swift-Private.xcconfig"; sourceTree = "<group>"; };
+		48AAEBB63324A25F14FA9842 /* Pods-Surge-Client-CRToast-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Surge-Client-CRToast-Private.xcconfig"; sourceTree = "<group>"; };
+		4B8618F7AF0F3E2586E6A4B0 /* CRToast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CRToast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5593D2DC1D5BDDC3E615795D /* CRToast.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CRToast.m; path = CRToast/CRToast.m; sourceTree = "<group>"; };
+		662D455BEDE0AD2F2879BAA9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E0CE1FCAC8A3FB89A6FE6D9 /* Pods-Surge-Client-SwiftHTTP-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Surge-Client-SwiftHTTP-Private.xcconfig"; sourceTree = "<group>"; };
+		6E5EC8EF96DB24BE40F481E3 /* JSONJoy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JSONJoy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EB12A652656DA97BC4EB1AD /* Pods-Surge-Client-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Surge-Client-frameworks.sh"; sourceTree = "<group>"; };
+		7086979AC062359C432ED46F /* Pods-Surge-Client-CRToast-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Surge-Client-CRToast-umbrella.h"; sourceTree = "<group>"; };
+		7F9D173457E4D4083FA616E6 /* JSONJoy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JSONJoy.swift; sourceTree = "<group>"; };
+		7FC5D0B9F94864928F1E6D8C /* HTTPTask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		817959EBD4807FA611ABC0F1 /* Pods-Surge-Client-JSONJoy-Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Surge-Client-JSONJoy-Swift-umbrella.h"; sourceTree = "<group>"; };
+		878FC063D78F96FB0319480C /* Pods-Surge-Client-SwiftHTTP.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Surge-Client-SwiftHTTP.xcconfig"; sourceTree = "<group>"; };
+		8846AE484DB3C24DF77C84CF /* Pods-Surge-Client.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Surge-Client.modulemap"; sourceTree = "<group>"; };
+		8DA49948C166EA4B17013004 /* CRToast.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CRToast.h; path = CRToast/CRToast.h; sourceTree = "<group>"; };
+		8ED693C0024FB2DE91A23B73 /* Pods-Surge-Client-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Surge-Client-umbrella.h"; sourceTree = "<group>"; };
+		BAD2B1B815A7DE0183DB88BD /* HTTPResponseSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HTTPResponseSerializer.swift; sourceTree = "<group>"; };
+		BB93A112C53CA3CCACEA0155 /* Pods-Surge-Client-CRToast-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Surge-Client-CRToast-prefix.pch"; sourceTree = "<group>"; };
+		BD356566FA80AAE1549FA8C4 /* HTTPUpload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HTTPUpload.swift; sourceTree = "<group>"; };
+		BE11208E3ABEEE9DD334C18F /* Pods-Surge-Client-JSONJoy-Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Surge-Client-JSONJoy-Swift-prefix.pch"; sourceTree = "<group>"; };
+		C7476E42C9A2A4FFB3E4322D /* Pods-Surge-Client-SwiftHTTP-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Surge-Client-SwiftHTTP-prefix.pch"; sourceTree = "<group>"; };
+		C81C1CD7B8D87143AA0D7921 /* Pods-Surge-Client-CRToast.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Surge-Client-CRToast.modulemap"; sourceTree = "<group>"; };
+		CA5D7DED11A12361A2DACDA8 /* Pods-Surge-Client-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Surge-Client-dummy.m"; sourceTree = "<group>"; };
+		D1EA05C9E276CBFEEAC852AA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D67870D734A2ED3F12069CFD /* Pods-Surge-Client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Surge-Client.release.xcconfig"; sourceTree = "<group>"; };
+		D957B35C70A79680659E72A1 /* Pods-Surge-Client-CRToast.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Surge-Client-CRToast.xcconfig"; sourceTree = "<group>"; };
+		DADE75E5130A63E7F046A8F6 /* Pods-Surge-Client-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Surge-Client-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DCD21A908B123BAF8337D0E2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE92CFD10D43D7F5EA0306CB /* SwiftHTTP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftHTTP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF06FDC73520F0CD3A8232A3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E50794498E7CD4DE949C9CB2 /* Pods_Surge_Client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Surge_Client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7DE756B51F77437ABF615CE /* Pods-Surge-Client-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Surge-Client-resources.sh"; sourceTree = "<group>"; };
+		EA3499B2F8EC12159C4201F3 /* Pods-Surge-Client-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Surge-Client-environment.h"; sourceTree = "<group>"; };
+		F012FF91951414F98DED207F /* Pods-Surge-Client-SwiftHTTP-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Surge-Client-SwiftHTTP-umbrella.h"; sourceTree = "<group>"; };
+		F701921EF5B45B9657252875 /* Pods-Surge-Client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Surge-Client.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		134BAF6BF920D083D58126F2 /* Frameworks */ = {
+		4CEC6CC8F8B0CB2F2F12611F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B6F52EB648E76629369CBD0 /* Foundation.framework in Frameworks */,
+				D799CC17B18C1BECD6C28A10 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2402CB8A20BF439037547EEE /* Frameworks */ = {
+		5ACC01CCF46DFF5886973008 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90C2F448BF643D7FC38C31C3 /* Foundation.framework in Frameworks */,
+				4711020A11A62684E22D1685 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C4CDD5F686742461B1252048 /* Frameworks */ = {
+		F02978E4A55DC855BC29C09A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3703FA6490C4DF259A40B41 /* Foundation.framework in Frameworks */,
+				9ECAAD127450244B7F24B28D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDD01C0026BADAFB36101D47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A48A995F23108E4F24EFA760 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		078B8FC881CD4BA6DC50C7E1 /* Products */ = {
+		07EA57D1AC0D4F816B90B5BC /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				BE306A534E28BB30AD89D5FA /* JSONJoy.framework */,
-				7B1356AADFC8CE5C0FC8A118 /* Pods_Surge_Client.framework */,
-				E7F67CDA9287ADBA111A60DF /* SwiftHTTP.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		0F75DFBE241868F233E01157 = {
-			isa = PBXGroup;
-			children = (
-				2749B40DBCA19BFA2A57D49C /* Podfile */,
-				4DB777E97A6A2FCD6D731B51 /* Frameworks */,
-				E76320F3E17DB5BCDCE205FC /* Pods */,
-				078B8FC881CD4BA6DC50C7E1 /* Products */,
-				96ADE10BE47CFDF44EA9A427 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		2C9E74BF2412B104B22EE42A /* Pods-Surge-Client */ = {
-			isa = PBXGroup;
-			children = (
-				F2A3CC8403594DF0468224D4 /* Info.plist */,
-				C556CA4C6F4E019F7F000337 /* Pods-Surge-Client.modulemap */,
-				7093E6934C1419D82F133E56 /* Pods-Surge-Client-acknowledgements.markdown */,
-				2208F9F872C0A110C2F5B7AD /* Pods-Surge-Client-acknowledgements.plist */,
-				552802B09C5E1616EF2D42B8 /* Pods-Surge-Client-dummy.m */,
-				0D5787380E63F0D2B38B1185 /* Pods-Surge-Client-environment.h */,
-				5C475FE810B96E8A407305A6 /* Pods-Surge-Client-frameworks.sh */,
-				071D7A1FCA1DC2BFF2D9D32F /* Pods-Surge-Client-resources.sh */,
-				8FBCA713987C978938D8D5D9 /* Pods-Surge-Client-umbrella.h */,
-				15B5EF4A667DB7020F3E9D54 /* Pods-Surge-Client.debug.xcconfig */,
-				D952A4290610B11294A41BC0 /* Pods-Surge-Client.release.xcconfig */,
-			);
-			name = "Pods-Surge-Client";
-			path = "Target Support Files/Pods-Surge-Client";
-			sourceTree = "<group>";
-		};
-		2E2741858CEC572D77D55041 /* JSONJoy-Swift */ = {
-			isa = PBXGroup;
-			children = (
-				A82D798814792DAE99DC6853 /* JSONJoy.swift */,
-				E5309DBFFA4C004B2CB7CEA2 /* Support Files */,
-			);
-			path = "JSONJoy-Swift";
-			sourceTree = "<group>";
-		};
-		3B8C7A287D4EFE4E7254AD7E /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				7079B6FFCFF012B9A2374211 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		4DB777E97A6A2FCD6D731B51 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3B8C7A287D4EFE4E7254AD7E /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		65E27C5B54873A41E14E274A /* SwiftHTTP */ = {
-			isa = PBXGroup;
-			children = (
-				36D16C370B203B8D0B2C42F8 /* HTTPRequestSerializer.swift */,
-				EAD29B0E46B8881206AD4352 /* HTTPResponseSerializer.swift */,
-				A926A0A2F55752B042F16483 /* HTTPTask.swift */,
-				DE25035AB3936C66D380D834 /* HTTPUpload.swift */,
-				6FF0B6B46CD3A27EE846CF74 /* Support Files */,
-			);
-			path = SwiftHTTP;
-			sourceTree = "<group>";
-		};
-		6FF0B6B46CD3A27EE846CF74 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				5E5060D195508D484CFAB472 /* Info.plist */,
-				1237E45866C3119D928D3449 /* Pods-Surge-Client-SwiftHTTP.modulemap */,
-				E4A88DD3B5EAAB0F9F7B1CDD /* Pods-Surge-Client-SwiftHTTP.xcconfig */,
-				9F966FC600FADBB165BEFF8F /* Pods-Surge-Client-SwiftHTTP-Private.xcconfig */,
-				620CAF83394A28E7234FFA71 /* Pods-Surge-Client-SwiftHTTP-dummy.m */,
-				05C0B393B93F120D800D43E6 /* Pods-Surge-Client-SwiftHTTP-prefix.pch */,
-				E19CB7C00A14AF1A07B16AD0 /* Pods-Surge-Client-SwiftHTTP-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-Surge-Client-SwiftHTTP";
-			sourceTree = "<group>";
-		};
-		96ADE10BE47CFDF44EA9A427 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				2C9E74BF2412B104B22EE42A /* Pods-Surge-Client */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		E5309DBFFA4C004B2CB7CEA2 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				4B9EAEB44A6B3A236EF42D1A /* Info.plist */,
-				55096F0E4C650C1B81A42827 /* Pods-Surge-Client-JSONJoy-Swift.modulemap */,
-				7C08FD7232EFEFFF8F00DDAC /* Pods-Surge-Client-JSONJoy-Swift.xcconfig */,
-				1A21E747A11830256EB5F028 /* Pods-Surge-Client-JSONJoy-Swift-Private.xcconfig */,
-				5CEE57BC33E87ABCBF01A46D /* Pods-Surge-Client-JSONJoy-Swift-dummy.m */,
-				B2BEB3BCF51DE08E8788C9A8 /* Pods-Surge-Client-JSONJoy-Swift-prefix.pch */,
-				8D195FCF1C92AD1A9D3C468C /* Pods-Surge-Client-JSONJoy-Swift-umbrella.h */,
+				DCD21A908B123BAF8337D0E2 /* Info.plist */,
+				106E6942C475CD3822BCA712 /* Pods-Surge-Client-JSONJoy-Swift.modulemap */,
+				0913509B34341193F1B68B71 /* Pods-Surge-Client-JSONJoy-Swift.xcconfig */,
+				4818861A97E0ABAB38DB54A1 /* Pods-Surge-Client-JSONJoy-Swift-Private.xcconfig */,
+				3FFC2C8130A718E6D96FD29D /* Pods-Surge-Client-JSONJoy-Swift-dummy.m */,
+				BE11208E3ABEEE9DD334C18F /* Pods-Surge-Client-JSONJoy-Swift-prefix.pch */,
+				817959EBD4807FA611ABC0F1 /* Pods-Surge-Client-JSONJoy-Swift-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pods-Surge-Client-JSONJoy-Swift";
 			sourceTree = "<group>";
 		};
-		E76320F3E17DB5BCDCE205FC /* Pods */ = {
+		3B8BF8BAAAD44BEC5FF12520 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				2E2741858CEC572D77D55041 /* JSONJoy-Swift */,
-				65E27C5B54873A41E14E274A /* SwiftHTTP */,
+				F7FD54ECE7979E775124F6B8 /* Pods-Surge-Client */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		3C6A79D1521B3847734A4DB2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E339E7EB13DDD3A799006780 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		45AB558139147CD756AD2AA2 /* CRToast */ = {
+			isa = PBXGroup;
+			children = (
+				8DA49948C166EA4B17013004 /* CRToast.h */,
+				5593D2DC1D5BDDC3E615795D /* CRToast.m */,
+				7A75CE05A177D16A60C93C87 /* Support Files */,
+			);
+			path = CRToast;
+			sourceTree = "<group>";
+		};
+		4AE73F0EF7C3C62FD6823420 /* JSONJoy-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				7F9D173457E4D4083FA616E6 /* JSONJoy.swift */,
+				07EA57D1AC0D4F816B90B5BC /* Support Files */,
+			);
+			path = "JSONJoy-Swift";
+			sourceTree = "<group>";
+		};
+		52BBA0622F7F0C2C39733190 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D1EA05C9E276CBFEEAC852AA /* Info.plist */,
+				45754ACECC264B1F742F8223 /* Pods-Surge-Client-SwiftHTTP.modulemap */,
+				878FC063D78F96FB0319480C /* Pods-Surge-Client-SwiftHTTP.xcconfig */,
+				6E0CE1FCAC8A3FB89A6FE6D9 /* Pods-Surge-Client-SwiftHTTP-Private.xcconfig */,
+				34F6B2934F5C9567C467BB20 /* Pods-Surge-Client-SwiftHTTP-dummy.m */,
+				C7476E42C9A2A4FFB3E4322D /* Pods-Surge-Client-SwiftHTTP-prefix.pch */,
+				F012FF91951414F98DED207F /* Pods-Surge-Client-SwiftHTTP-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-Surge-Client-SwiftHTTP";
+			sourceTree = "<group>";
+		};
+		5FBAB5EA7FCFF7BB1A9E9B17 /* SwiftHTTP */ = {
+			isa = PBXGroup;
+			children = (
+				300A0D2C04CD3EEB0A3658EF /* HTTPRequestSerializer.swift */,
+				BAD2B1B815A7DE0183DB88BD /* HTTPResponseSerializer.swift */,
+				7FC5D0B9F94864928F1E6D8C /* HTTPTask.swift */,
+				BD356566FA80AAE1549FA8C4 /* HTTPUpload.swift */,
+				52BBA0622F7F0C2C39733190 /* Support Files */,
+			);
+			path = SwiftHTTP;
+			sourceTree = "<group>";
+		};
+		62CC2EE7EF30C2E9BCD1DD8E = {
+			isa = PBXGroup;
+			children = (
+				4589422789AA9D08F68274AD /* Podfile */,
+				3C6A79D1521B3847734A4DB2 /* Frameworks */,
+				756A9CCADA1C5D536999F1C9 /* Pods */,
+				78ADE38B0ABC6C8E67970971 /* Products */,
+				3B8BF8BAAAD44BEC5FF12520 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		756A9CCADA1C5D536999F1C9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				45AB558139147CD756AD2AA2 /* CRToast */,
+				4AE73F0EF7C3C62FD6823420 /* JSONJoy-Swift */,
+				5FBAB5EA7FCFF7BB1A9E9B17 /* SwiftHTTP */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		78ADE38B0ABC6C8E67970971 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4B8618F7AF0F3E2586E6A4B0 /* CRToast.framework */,
+				6E5EC8EF96DB24BE40F481E3 /* JSONJoy.framework */,
+				E50794498E7CD4DE949C9CB2 /* Pods_Surge_Client.framework */,
+				DE92CFD10D43D7F5EA0306CB /* SwiftHTTP.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7A75CE05A177D16A60C93C87 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				47D3BFC7A1449B867342F2D3 /* Info.plist */,
+				C81C1CD7B8D87143AA0D7921 /* Pods-Surge-Client-CRToast.modulemap */,
+				D957B35C70A79680659E72A1 /* Pods-Surge-Client-CRToast.xcconfig */,
+				48AAEBB63324A25F14FA9842 /* Pods-Surge-Client-CRToast-Private.xcconfig */,
+				024967EA59BCFD6484158517 /* Pods-Surge-Client-CRToast-dummy.m */,
+				BB93A112C53CA3CCACEA0155 /* Pods-Surge-Client-CRToast-prefix.pch */,
+				7086979AC062359C432ED46F /* Pods-Surge-Client-CRToast-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-Surge-Client-CRToast";
+			sourceTree = "<group>";
+		};
+		E339E7EB13DDD3A799006780 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				DF06FDC73520F0CD3A8232A3 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F7FD54ECE7979E775124F6B8 /* Pods-Surge-Client */ = {
+			isa = PBXGroup;
+			children = (
+				662D455BEDE0AD2F2879BAA9 /* Info.plist */,
+				8846AE484DB3C24DF77C84CF /* Pods-Surge-Client.modulemap */,
+				DADE75E5130A63E7F046A8F6 /* Pods-Surge-Client-acknowledgements.markdown */,
+				1977FF9A956F6155B2F9FB4F /* Pods-Surge-Client-acknowledgements.plist */,
+				CA5D7DED11A12361A2DACDA8 /* Pods-Surge-Client-dummy.m */,
+				EA3499B2F8EC12159C4201F3 /* Pods-Surge-Client-environment.h */,
+				6EB12A652656DA97BC4EB1AD /* Pods-Surge-Client-frameworks.sh */,
+				E7DE756B51F77437ABF615CE /* Pods-Surge-Client-resources.sh */,
+				8ED693C0024FB2DE91A23B73 /* Pods-Surge-Client-umbrella.h */,
+				F701921EF5B45B9657252875 /* Pods-Surge-Client.debug.xcconfig */,
+				D67870D734A2ED3F12069CFD /* Pods-Surge-Client.release.xcconfig */,
+			);
+			name = "Pods-Surge-Client";
+			path = "Target Support Files/Pods-Surge-Client";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		108259D0812CC0125346398D /* Headers */ = {
+		14FCED55F26CFC992A25E1CA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48E0CC7CAD20D9D1CF1EECF4 /* Pods-Surge-Client-SwiftHTTP-umbrella.h in Headers */,
+				622B51EEC3F88E8939CF139E /* Pods-Surge-Client-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8FCE128D231E6EDBF575A814 /* Headers */ = {
+		C5D201E7054DA5F6E836D50E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEBCC81414332DAAA8A58A4C /* Pods-Surge-Client-JSONJoy-Swift-umbrella.h in Headers */,
+				C987023F412C11910D4BC818 /* Pods-Surge-Client-JSONJoy-Swift-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C3A1E4178821EEDC03C2EB7A /* Headers */ = {
+		CFF2E2EFB4E085D84ED7BBF1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E91EB6FED6A83326B868C0DC /* Pods-Surge-Client-umbrella.h in Headers */,
+				FC6E799CE5563CB3144DD3BE /* CRToast.h in Headers */,
+				6C9111AE1F93E5B561E03176 /* Pods-Surge-Client-CRToast-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCD1F98D704047E7F6684F0D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				806B0EE642BFEF397124FDB5 /* Pods-Surge-Client-SwiftHTTP-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4C894837F783A44ADAFC4AF3 /* Pods-Surge-Client */ = {
+		259A09476F1A75C25BECEEC1 /* Pods-Surge-Client */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 29445C4330EAC2B1A80FCD30 /* Build configuration list for PBXNativeTarget "Pods-Surge-Client" */;
+			buildConfigurationList = 3920DA239F79E049E0B71EE8 /* Build configuration list for PBXNativeTarget "Pods-Surge-Client" */;
 			buildPhases = (
-				1504E1F9424CA53430021281 /* Sources */,
-				2402CB8A20BF439037547EEE /* Frameworks */,
-				C3A1E4178821EEDC03C2EB7A /* Headers */,
+				DD5BCB390322F523568D32C3 /* Sources */,
+				FDD01C0026BADAFB36101D47 /* Frameworks */,
+				14FCED55F26CFC992A25E1CA /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3F56563A1AF28E140037DB16 /* PBXTargetDependency */,
-				352B6D569DE277A894582233 /* PBXTargetDependency */,
+				4B080174A09C844F7285A6EB /* PBXTargetDependency */,
+				83E7FB937A35BFC5A3CCBABA /* PBXTargetDependency */,
+				D55D882FADB0446437DC511C /* PBXTargetDependency */,
 			);
 			name = "Pods-Surge-Client";
 			productName = "Pods-Surge-Client";
-			productReference = 7B1356AADFC8CE5C0FC8A118 /* Pods_Surge_Client.framework */;
+			productReference = E50794498E7CD4DE949C9CB2 /* Pods_Surge_Client.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		AE4759C2FBC5240123686715 /* Pods-Surge-Client-JSONJoy-Swift */ = {
+		B6DAE9E6A804B024BA0896EB /* Pods-Surge-Client-JSONJoy-Swift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 87694771C2CED7BFF4EDE9B6 /* Build configuration list for PBXNativeTarget "Pods-Surge-Client-JSONJoy-Swift" */;
+			buildConfigurationList = EAED109CAC035018D4DEC206 /* Build configuration list for PBXNativeTarget "Pods-Surge-Client-JSONJoy-Swift" */;
 			buildPhases = (
-				6C9EF655224A7B16890048B2 /* Sources */,
-				C4CDD5F686742461B1252048 /* Frameworks */,
-				8FCE128D231E6EDBF575A814 /* Headers */,
+				A0D6CF9642C0F642CC865368 /* Sources */,
+				4CEC6CC8F8B0CB2F2F12611F /* Frameworks */,
+				C5D201E7054DA5F6E836D50E /* Headers */,
 			);
 			buildRules = (
 			);
@@ -293,16 +360,33 @@
 			);
 			name = "Pods-Surge-Client-JSONJoy-Swift";
 			productName = "Pods-Surge-Client-JSONJoy-Swift";
-			productReference = BE306A534E28BB30AD89D5FA /* JSONJoy.framework */;
+			productReference = 6E5EC8EF96DB24BE40F481E3 /* JSONJoy.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		B477E734D1880637B7EED10A /* Pods-Surge-Client-SwiftHTTP */ = {
+		DBE8B058350B27F86C97DFA8 /* Pods-Surge-Client-CRToast */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 143AEB29E3FD04E6EC92A90D /* Build configuration list for PBXNativeTarget "Pods-Surge-Client-SwiftHTTP" */;
+			buildConfigurationList = 82183F70637ECD5456E64955 /* Build configuration list for PBXNativeTarget "Pods-Surge-Client-CRToast" */;
 			buildPhases = (
-				836D1009B76AA0D0024CB2B8 /* Sources */,
-				134BAF6BF920D083D58126F2 /* Frameworks */,
-				108259D0812CC0125346398D /* Headers */,
+				6865E6CDB6031993C22BB765 /* Sources */,
+				F02978E4A55DC855BC29C09A /* Frameworks */,
+				CFF2E2EFB4E085D84ED7BBF1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Surge-Client-CRToast";
+			productName = "Pods-Surge-Client-CRToast";
+			productReference = 4B8618F7AF0F3E2586E6A4B0 /* CRToast.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EBF9BB05D25DD61EBC86A781 /* Pods-Surge-Client-SwiftHTTP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A8F55440AA03BF04E7C496C /* Build configuration list for PBXNativeTarget "Pods-Surge-Client-SwiftHTTP" */;
+			buildPhases = (
+				24CE6A0DB9F4ABB405F509D9 /* Sources */,
+				5ACC01CCF46DFF5886973008 /* Frameworks */,
+				DCD1F98D704047E7F6684F0D /* Headers */,
 			);
 			buildRules = (
 			);
@@ -310,86 +394,185 @@
 			);
 			name = "Pods-Surge-Client-SwiftHTTP";
 			productName = "Pods-Surge-Client-SwiftHTTP";
-			productReference = E7F67CDA9287ADBA111A60DF /* SwiftHTTP.framework */;
+			productReference = DE92CFD10D43D7F5EA0306CB /* SwiftHTTP.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		79B0F97B1604BC5515601E83 /* Project object */ = {
+		5143372FA15A633902368D28 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
 			};
-			buildConfigurationList = 6410A7795032038421CDFDFF /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 77CFFD5FCDAC81019FC4E87B /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 0F75DFBE241868F233E01157;
-			productRefGroup = 078B8FC881CD4BA6DC50C7E1 /* Products */;
+			mainGroup = 62CC2EE7EF30C2E9BCD1DD8E;
+			productRefGroup = 78ADE38B0ABC6C8E67970971 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4C894837F783A44ADAFC4AF3 /* Pods-Surge-Client */,
-				AE4759C2FBC5240123686715 /* Pods-Surge-Client-JSONJoy-Swift */,
-				B477E734D1880637B7EED10A /* Pods-Surge-Client-SwiftHTTP */,
+				259A09476F1A75C25BECEEC1 /* Pods-Surge-Client */,
+				DBE8B058350B27F86C97DFA8 /* Pods-Surge-Client-CRToast */,
+				B6DAE9E6A804B024BA0896EB /* Pods-Surge-Client-JSONJoy-Swift */,
+				EBF9BB05D25DD61EBC86A781 /* Pods-Surge-Client-SwiftHTTP */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1504E1F9424CA53430021281 /* Sources */ = {
+		24CE6A0DB9F4ABB405F509D9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4364B00097595471BCD581E /* Pods-Surge-Client-dummy.m in Sources */,
+				C7E4C12591AA1713C6346FFE /* HTTPRequestSerializer.swift in Sources */,
+				01065B82DE750FF4CB0431DC /* HTTPResponseSerializer.swift in Sources */,
+				3D1E0D21D705864CEBB7BF2C /* HTTPTask.swift in Sources */,
+				5E422997BD2B05F3AB6576EF /* HTTPUpload.swift in Sources */,
+				A47E26859B5F1429A5C775AE /* Pods-Surge-Client-SwiftHTTP-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6C9EF655224A7B16890048B2 /* Sources */ = {
+		6865E6CDB6031993C22BB765 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D017677E0C5B6659BE886D9F /* JSONJoy.swift in Sources */,
-				16F8F36D59C0D90D0CAB6CB5 /* Pods-Surge-Client-JSONJoy-Swift-dummy.m in Sources */,
+				5E21D98C683284D37BA322DE /* CRToast.m in Sources */,
+				CBA569483F692871FD0D2C8D /* Pods-Surge-Client-CRToast-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		836D1009B76AA0D0024CB2B8 /* Sources */ = {
+		A0D6CF9642C0F642CC865368 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C92E29AF7C4094EDAA0B9AF /* HTTPRequestSerializer.swift in Sources */,
-				6CAA05A6FA20DE7C00E33D1C /* HTTPResponseSerializer.swift in Sources */,
-				E0F4B05412744EA1F7379A47 /* HTTPTask.swift in Sources */,
-				CFFB0371C3769D4D812FE5D2 /* HTTPUpload.swift in Sources */,
-				2E431C1F52527D08C380F685 /* Pods-Surge-Client-SwiftHTTP-dummy.m in Sources */,
+				DF92D1989FEF927E69F86F2F /* JSONJoy.swift in Sources */,
+				864FB4B57C24D869041879C6 /* Pods-Surge-Client-JSONJoy-Swift-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD5BCB390322F523568D32C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C70E6BAF13A7E156E0455EB6 /* Pods-Surge-Client-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		352B6D569DE277A894582233 /* PBXTargetDependency */ = {
+		4B080174A09C844F7285A6EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Surge-Client-CRToast";
+			target = DBE8B058350B27F86C97DFA8 /* Pods-Surge-Client-CRToast */;
+			targetProxy = 0CE38B0D12BC52E49EB0BA8F /* PBXContainerItemProxy */;
+		};
+		83E7FB937A35BFC5A3CCBABA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-Surge-Client-JSONJoy-Swift";
-			target = AE4759C2FBC5240123686715 /* Pods-Surge-Client-JSONJoy-Swift */;
-			targetProxy = CC72A7DE329100CC43B98C7B /* PBXContainerItemProxy */;
+			target = B6DAE9E6A804B024BA0896EB /* Pods-Surge-Client-JSONJoy-Swift */;
+			targetProxy = 8CBCC7AB3FFA0E86EC42B1BA /* PBXContainerItemProxy */;
 		};
-		3F56563A1AF28E140037DB16 /* PBXTargetDependency */ = {
+		D55D882FADB0446437DC511C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B477E734D1880637B7EED10A /* Pods-Surge-Client-SwiftHTTP */;
-			targetProxy = 3F5656391AF28E140037DB16 /* PBXContainerItemProxy */;
+			name = "Pods-Surge-Client-SwiftHTTP";
+			target = EBF9BB05D25DD61EBC86A781 /* Pods-Surge-Client-SwiftHTTP */;
+			targetProxy = BB4DB643AF3C272C99234B9E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		00F6CFFFDBAD23EC1E4CEB46 /* Release */ = {
+		0B37520C55EEC5D4FD74BFAC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D952A4290610B11294A41BC0 /* Pods-Surge-Client.release.xcconfig */;
+			baseConfigurationReference = 4818861A97E0ABAB38DB54A1 /* Pods-Surge-Client-JSONJoy-Swift-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Surge-Client-JSONJoy-Swift/Pods-Surge-Client-JSONJoy-Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-Surge-Client-JSONJoy-Swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-Surge-Client-JSONJoy-Swift/Pods-Surge-Client-JSONJoy-Swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = JSONJoy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1D496D7D67B231B4DCCBDB7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4818861A97E0ABAB38DB54A1 /* Pods-Surge-Client-JSONJoy-Swift-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Surge-Client-JSONJoy-Swift/Pods-Surge-Client-JSONJoy-Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-Surge-Client-JSONJoy-Swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-Surge-Client-JSONJoy-Swift/Pods-Surge-Client-JSONJoy-Swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = JSONJoy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2629B9ED6996E4EF62ED5B9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48AAEBB63324A25F14FA9842 /* Pods-Surge-Client-CRToast-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Surge-Client-CRToast/Pods-Surge-Client-CRToast-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-Surge-Client-CRToast/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-Surge-Client-CRToast/Pods-Surge-Client-CRToast.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = CRToast;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		47107C0D6EB8766978F482EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D67870D734A2ED3F12069CFD /* Pods-Surge-Client.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -416,64 +599,9 @@
 			};
 			name = Release;
 		};
-		0F5AE6ECE037B0EB777EAB3B /* Debug */ = {
+		A1524AA542A76FB5AD5A31DE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1A21E747A11830256EB5F028 /* Pods-Surge-Client-JSONJoy-Swift-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-Surge-Client-JSONJoy-Swift/Pods-Surge-Client-JSONJoy-Swift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-Surge-Client-JSONJoy-Swift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-Surge-Client-JSONJoy-Swift/Pods-Surge-Client-JSONJoy-Swift.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = JSONJoy;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		2C9655D3367BE7654225ECF1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1A21E747A11830256EB5F028 /* Pods-Surge-Client-JSONJoy-Swift-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-Surge-Client-JSONJoy-Swift/Pods-Surge-Client-JSONJoy-Swift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-Surge-Client-JSONJoy-Swift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-Surge-Client-JSONJoy-Swift/Pods-Surge-Client-JSONJoy-Swift.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = JSONJoy;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		513F6D00763B419DBE1FA6BC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 15B5EF4A667DB7020F3E9D54 /* Pods-Surge-Client.debug.xcconfig */;
+			baseConfigurationReference = F701921EF5B45B9657252875 /* Pods-Surge-Client.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -501,41 +629,7 @@
 			};
 			name = Debug;
 		};
-		519D74B13CF04B012D4FF9EA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		731AE61A70BA8EAE55E91BF3 /* Debug */ = {
+		D39BDD38954F601895E5274F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -574,9 +668,97 @@
 			};
 			name = Debug;
 		};
-		E1BA3285DCC7C361A916F45F /* Debug */ = {
+		E444DA97FBDEEC5898624FF2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9F966FC600FADBB165BEFF8F /* Pods-Surge-Client-SwiftHTTP-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ED03BD1B1B46B5E8F76F88A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E0CE1FCAC8A3FB89A6FE6D9 /* Pods-Surge-Client-SwiftHTTP-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Surge-Client-SwiftHTTP/Pods-Surge-Client-SwiftHTTP-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-Surge-Client-SwiftHTTP/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-Surge-Client-SwiftHTTP/Pods-Surge-Client-SwiftHTTP.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftHTTP;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F9300C35EAC711C3E7F805BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48AAEBB63324A25F14FA9842 /* Pods-Surge-Client-CRToast-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Surge-Client-CRToast/Pods-Surge-Client-CRToast-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-Surge-Client-CRToast/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-Surge-Client-CRToast/Pods-Surge-Client-CRToast.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = CRToast;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FF2849604981D778A7583B78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E0CE1FCAC8A3FB89A6FE6D9 /* Pods-Surge-Client-SwiftHTTP-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -602,73 +784,55 @@
 			};
 			name = Debug;
 		};
-		E90FC912A12CA013ABC25089 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9F966FC600FADBB165BEFF8F /* Pods-Surge-Client-SwiftHTTP-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-Surge-Client-SwiftHTTP/Pods-Surge-Client-SwiftHTTP-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-Surge-Client-SwiftHTTP/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-Surge-Client-SwiftHTTP/Pods-Surge-Client-SwiftHTTP.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SwiftHTTP;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		143AEB29E3FD04E6EC92A90D /* Build configuration list for PBXNativeTarget "Pods-Surge-Client-SwiftHTTP" */ = {
+		0A8F55440AA03BF04E7C496C /* Build configuration list for PBXNativeTarget "Pods-Surge-Client-SwiftHTTP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E1BA3285DCC7C361A916F45F /* Debug */,
-				E90FC912A12CA013ABC25089 /* Release */,
+				FF2849604981D778A7583B78 /* Debug */,
+				ED03BD1B1B46B5E8F76F88A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		29445C4330EAC2B1A80FCD30 /* Build configuration list for PBXNativeTarget "Pods-Surge-Client" */ = {
+		3920DA239F79E049E0B71EE8 /* Build configuration list for PBXNativeTarget "Pods-Surge-Client" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				513F6D00763B419DBE1FA6BC /* Debug */,
-				00F6CFFFDBAD23EC1E4CEB46 /* Release */,
+				A1524AA542A76FB5AD5A31DE /* Debug */,
+				47107C0D6EB8766978F482EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6410A7795032038421CDFDFF /* Build configuration list for PBXProject "Pods" */ = {
+		77CFFD5FCDAC81019FC4E87B /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				731AE61A70BA8EAE55E91BF3 /* Debug */,
-				519D74B13CF04B012D4FF9EA /* Release */,
+				D39BDD38954F601895E5274F /* Debug */,
+				E444DA97FBDEEC5898624FF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		87694771C2CED7BFF4EDE9B6 /* Build configuration list for PBXNativeTarget "Pods-Surge-Client-JSONJoy-Swift" */ = {
+		82183F70637ECD5456E64955 /* Build configuration list for PBXNativeTarget "Pods-Surge-Client-CRToast" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0F5AE6ECE037B0EB777EAB3B /* Debug */,
-				2C9655D3367BE7654225ECF1 /* Release */,
+				2629B9ED6996E4EF62ED5B9D /* Debug */,
+				F9300C35EAC711C3E7F805BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAED109CAC035018D4DEC206 /* Build configuration list for PBXNativeTarget "Pods-Surge-Client-JSONJoy-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D496D7D67B231B4DCCBDB7D /* Debug */,
+				0B37520C55EEC5D4FD74BFAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 79B0F97B1604BC5515601E83 /* Project object */;
+	rootObject = 5143372FA15A633902368D28 /* Project object */;
 }

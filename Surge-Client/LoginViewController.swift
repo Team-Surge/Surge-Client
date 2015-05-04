@@ -7,9 +7,25 @@
 //
 
 import UIKit
+import CRToast
+import SwiftHTTP
+import JSONJoy
 
 class LoginViewController: UIViewController {
-  let appDelegate = UIApplication.sharedApplication().delegate!
+  @IBOutlet weak var emailField: UITextField!
+  @IBOutlet weak var passwordField: UITextField!
+  @IBOutlet weak var loginSpinner: UIActivityIndicatorView!
+  
+  let loginFailedToastOptions: [NSObject:AnyObject] = [
+    kCRToastNotificationTypeKey: CRToastType.NavigationBar.rawValue,
+    kCRToastTextKey: "Login failed please try again" as NSString,
+    kCRToastTextAlignmentKey: NSTextAlignment.Center.rawValue,
+    kCRToastBackgroundColorKey: UIColor.redColor(),
+    kCRToastAnimationInTypeKey: CRToastAnimationType.Linear.rawValue,
+    kCRToastAnimationOutTypeKey: CRToastAnimationType.Linear.rawValue,
+    kCRToastAnimationInDirectionKey: CRToastAnimationDirection.Top.rawValue,
+    kCRToastAnimationOutDirectionKey: CRToastAnimationDirection.Top.rawValue
+  ]
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -22,15 +38,43 @@ class LoginViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
   
-  @IBAction func loginAction(sender: UIButton) {
-    // TODO: - Actually log the user in. For now we just go to the
-    // main tab view
+  func goToInitialView() {
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
     let initialViewController = storyboard.instantiateInitialViewController() as! UIViewController
     appDelegate.window!.rootViewController = initialViewController
-    
   }
+  
+  @IBAction func loginAction(sender: UIButton) {
+    var request = HTTPTask()
+    let params: [String:AnyObject] = [
+      "action": "userLogin",
+      "email": emailField.text,
+      "password": passwordField.text
+    ]
+    
+    loginSpinner.startAnimating()
+    
+    request.POST("http://surge.seektom.com/auth", parameters: params,
+      success: {(response: HTTPResponse) in
+        let jsonResponse = LoginResponse(JSONDecoder(response.responseObject!))
+        if jsonResponse.success! == true {
+          dispatch_async(dispatch_get_main_queue(), {
+            self.goToInitialView()
+          })
+        } else {
+          dispatch_async(dispatch_get_main_queue(), {
+            self.loginSpinner.stopAnimating()
+            CRToastManager.showNotificationWithOptions(self.loginFailedToastOptions, completionBlock: {_ in})
+          })
+        }
+      }, failure: {(error: NSError, response: HTTPResponse?) in
+        dispatch_async(dispatch_get_main_queue(), {
+          self.loginSpinner.stopAnimating()
+        })
+      })
+  }
+  
   /*
   // MARK: - Navigation
 

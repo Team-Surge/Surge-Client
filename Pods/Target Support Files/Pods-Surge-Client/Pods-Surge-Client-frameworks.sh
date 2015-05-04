@@ -48,10 +48,12 @@ code_sign() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework 'CRToast.framework'
   install_framework 'JSONJoy.framework'
   install_framework 'SwiftHTTP.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework 'CRToast.framework'
   install_framework 'JSONJoy.framework'
   install_framework 'SwiftHTTP.framework'
 fi

@@ -1325,7 +1325,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Fd-Lq-N6s">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Fd-Lq-N6s">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Mdg-tk-yJy"/>
@@ -1401,17 +1401,22 @@
                                     <segue destination="yQd-tA-wm4" kind="show" id="vaR-6x-07G"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="yhs-Um-2JP">
+                                <rect key="frame" x="-10" y="-10" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.63208189069999998" green="0.39423388390000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="v8t-vx-UBZ" firstAttribute="top" secondItem="CRJ-Ih-nPL" secondAttribute="bottom" constant="68" id="2dT-To-GIH"/>
                             <constraint firstItem="v8t-vx-UBZ" firstAttribute="leading" secondItem="1Yd-KK-Svd" secondAttribute="leadingMargin" constant="89" id="4RT-Yw-3hZ"/>
+                            <constraint firstItem="yhs-Um-2JP" firstAttribute="leading" secondItem="cY2-BV-JQV" secondAttribute="trailing" constant="-35" id="8LQ-w3-F4Y"/>
                             <constraint firstAttribute="trailingMargin" secondItem="v8t-vx-UBZ" secondAttribute="trailing" constant="89" id="ALH-uN-BMF"/>
                             <constraint firstItem="UDz-T2-TqB" firstAttribute="leading" secondItem="1Yd-KK-Svd" secondAttribute="leadingMargin" constant="33" id="J3l-6L-Ncm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="UDz-T2-TqB" secondAttribute="trailing" constant="33" id="MBT-O0-dFR"/>
                             <constraint firstItem="Q4B-i5-rBv" firstAttribute="leading" secondItem="1Yd-KK-Svd" secondAttribute="leadingMargin" constant="106" id="ONj-LN-QYP">
                                 <variation key="heightClass=regular-widthClass=compact" constant="86"/>
                             </constraint>
+                            <constraint firstItem="yhs-Um-2JP" firstAttribute="top" secondItem="cY2-BV-JQV" secondAttribute="bottom" constant="-30" id="Xiq-Lt-kiW"/>
                             <constraint firstItem="cY2-BV-JQV" firstAttribute="top" secondItem="UDz-T2-TqB" secondAttribute="bottom" constant="8" id="ZKy-lx-JKw"/>
                             <constraint firstItem="UDz-T2-TqB" firstAttribute="top" secondItem="9Fd-Lq-N6s" secondAttribute="bottom" constant="8" id="ZUv-Ob-F6M"/>
                             <constraint firstItem="9Fd-Lq-N6s" firstAttribute="leading" secondItem="1Yd-KK-Svd" secondAttribute="leadingMargin" constant="33" id="aUP-vJ-69q"/>
@@ -1431,6 +1436,7 @@
                                 <exclude reference="UDz-T2-TqB"/>
                                 <exclude reference="cY2-BV-JQV"/>
                                 <exclude reference="Q4B-i5-rBv"/>
+                                <exclude reference="yhs-Um-2JP"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="aUP-vJ-69q"/>
@@ -1443,6 +1449,8 @@
                                 <exclude reference="2dT-To-GIH"/>
                                 <exclude reference="4RT-Yw-3hZ"/>
                                 <exclude reference="ALH-uN-BMF"/>
+                                <exclude reference="8LQ-w3-F4Y"/>
+                                <exclude reference="Xiq-Lt-kiW"/>
                                 <exclude reference="ONj-LN-QYP"/>
                                 <exclude reference="jfw-Lq-340"/>
                                 <exclude reference="ZKy-lx-JKw"/>
@@ -1457,6 +1465,7 @@
                                 <include reference="UDz-T2-TqB"/>
                                 <include reference="cY2-BV-JQV"/>
                                 <include reference="Q4B-i5-rBv"/>
+                                <include reference="yhs-Um-2JP"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="aUP-vJ-69q"/>
@@ -1469,6 +1478,8 @@
                                 <include reference="2dT-To-GIH"/>
                                 <include reference="4RT-Yw-3hZ"/>
                                 <include reference="ALH-uN-BMF"/>
+                                <include reference="8LQ-w3-F4Y"/>
+                                <include reference="Xiq-Lt-kiW"/>
                                 <include reference="ONj-LN-QYP"/>
                                 <include reference="jfw-Lq-340"/>
                                 <include reference="ZKy-lx-JKw"/>
@@ -1477,6 +1488,11 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="9Fd-Lq-N6s" id="iaP-rL-Sc5"/>
+                        <outlet property="loginSpinner" destination="yhs-Um-2JP" id="sAE-LN-fv0"/>
+                        <outlet property="passwordField" destination="UDz-T2-TqB" id="N7j-76-178"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mkA-IY-ttT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

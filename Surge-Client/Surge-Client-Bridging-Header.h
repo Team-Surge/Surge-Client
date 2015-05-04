@@ -3,3 +3,4 @@
 //
 
 #include "LocationManager.h"
+#include <CRToast/CRToast.h>

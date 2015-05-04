@@ -1,12 +1,15 @@
 PODS:
+  - CRToast (0.0.7)
   - JSONJoy-Swift (0.9.2)
   - SwiftHTTP (0.9.4)
 
 DEPENDENCIES:
+  - CRToast (~> 0.0.7)
   - JSONJoy-Swift (~> 0.9.1)
   - SwiftHTTP (~> 0.9.2)
 
 SPEC CHECKSUMS:
+  CRToast: 99a28f4387def43b439ad88f957ce31357ff7373
   JSONJoy-Swift: d51bde1053047c623db602e778f068414dd788e4
   SwiftHTTP: c2f880b1723e6e97c31517dab29a1b5c0bc1f49d
 
