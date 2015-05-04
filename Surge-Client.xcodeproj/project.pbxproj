@@ -17,6 +17,7 @@
 		3FB0BDAA1AE9FC81009A8DB0 /* NotificationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0BDA91AE9FC81009A8DB0 /* NotificationsTableViewCell.swift */; };
 		3FB0BDAD1AE9FCAD009A8DB0 /* NotificationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0BDAC1AE9FCAD009A8DB0 /* NotificationsTableViewController.swift */; };
 		3FB0BDAF1AEA1E23009A8DB0 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0BDAE1AEA1E23009A8DB0 /* MeViewController.swift */; };
+		3FCCBDD31AF75C0900D1695A /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCCBDD21AF75C0900D1695A /* RegisterResponse.swift */; };
 		65C111CACFEFFEA9FD86FB1C /* Pods_Surge_Client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D58DF9116783E77F98DB42 /* Pods_Surge_Client.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		DA5533481AE0B57F003E369E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5533471AE0B57F003E369E /* AppDelegate.swift */; };
 		DA55334B1AE0B57F003E369E /* Surge_Client.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA5533491AE0B57F003E369E /* Surge_Client.xcdatamodeld */; };
@@ -55,6 +56,7 @@
 		3FB0BDA91AE9FC81009A8DB0 /* NotificationsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewCell.swift; sourceTree = "<group>"; };
 		3FB0BDAC1AE9FCAD009A8DB0 /* NotificationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewController.swift; sourceTree = "<group>"; };
 		3FB0BDAE1AEA1E23009A8DB0 /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
+		3FCCBDD21AF75C0900D1695A /* RegisterResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
 		42FD031BEDF5185BD1CDFBA1 /* Pods-Surge-Client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surge-Client.release.xcconfig"; path = "Pods/Target Support Files/Pods-Surge-Client/Pods-Surge-Client.release.xcconfig"; sourceTree = "<group>"; };
 		63D58DF9116783E77F98DB42 /* Pods_Surge_Client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Surge_Client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5533421AE0B57F003E369E /* Surge-Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Surge-Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				3F9AF3F21AF72613007EADC3 /* LoginResponse.swift */,
+				3FCCBDD21AF75C0900D1695A /* RegisterResponse.swift */,
 			);
 			name = JSON;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				3F8E5D671AEF4CE100B7363F /* RegisterViewController.swift in Sources */,
 				3F20A3051AE9814D004C2598 /* NearTableViewCell.swift in Sources */,
 				3FB0BDAA1AE9FC81009A8DB0 /* NotificationsTableViewCell.swift in Sources */,
+				3FCCBDD31AF75C0900D1695A /* RegisterResponse.swift in Sources */,
 				DAD2E43C1AE7374100DFBB53 /* YakMainViewController.swift in Sources */,
 				DA5533481AE0B57F003E369E /* AppDelegate.swift in Sources */,
 				DAE725E41AF036FA008B8DA3 /* LocationManager.m in Sources */,
