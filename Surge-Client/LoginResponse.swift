@@ -12,7 +12,7 @@ import JSONJoy
 struct LoginResponse: JSONJoy {
   var action: String?
   var success: Bool?
-  var reasons: Dictionary<String, Array<String> >?
+  var reasons: [String:[String]]?
   
   init(_ decoder: JSONDecoder) {
     action = decoder["action"].string
