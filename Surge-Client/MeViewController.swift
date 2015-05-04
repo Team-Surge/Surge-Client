@@ -39,10 +39,6 @@ class MeViewController: UIViewController {
       notificationsTableView!.hidden = false
       myStuffTableView!.hidden = true
     }
-    
-    // Attach button dispatchers
-    showNotificationsButton.addTarget(self, action: "toggleViews:", forControlEvents: UIControlEvents.TouchUpInside)
-    showMyStuffButton.addTarget(self, action: "toggleViews:", forControlEvents: UIControlEvents.TouchUpInside)
   }
 
   override func didReceiveMemoryWarning() {
@@ -50,7 +46,7 @@ class MeViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
   
-  func toggleViews(sender: UIButton!) {
+  @IBAction func toggleViews(sender: UIButton!) {
     if(sender == showNotificationsButton) {
       if(notificationsTableView != nil && myStuffTableView != nil) {
         notificationsTableView!.hidden = false
