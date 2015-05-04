@@ -13,6 +13,7 @@
 		3F4446321AE9792D0001DA1A /* FeaturedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4446311AE9792D0001DA1A /* FeaturedTableViewController.swift */; };
 		3F8E5D671AEF4CE100B7363F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8E5D661AEF4CE100B7363F /* RegisterViewController.swift */; };
 		3F9A3D741AEF1895006E4B70 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A3D731AEF1895006E4B70 /* LoginViewController.swift */; };
+		3F9AF3F31AF72613007EADC3 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9AF3F21AF72613007EADC3 /* LoginResponse.swift */; };
 		3FB0BDAA1AE9FC81009A8DB0 /* NotificationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0BDA91AE9FC81009A8DB0 /* NotificationsTableViewCell.swift */; };
 		3FB0BDAD1AE9FCAD009A8DB0 /* NotificationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0BDAC1AE9FCAD009A8DB0 /* NotificationsTableViewController.swift */; };
 		3FB0BDAF1AEA1E23009A8DB0 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0BDAE1AEA1E23009A8DB0 /* MeViewController.swift */; };
@@ -50,6 +51,7 @@
 		3F4446311AE9792D0001DA1A /* FeaturedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedTableViewController.swift; sourceTree = "<group>"; };
 		3F8E5D661AEF4CE100B7363F /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		3F9A3D731AEF1895006E4B70 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3F9AF3F21AF72613007EADC3 /* LoginResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		3FB0BDA91AE9FC81009A8DB0 /* NotificationsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewCell.swift; sourceTree = "<group>"; };
 		3FB0BDAC1AE9FCAD009A8DB0 /* NotificationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewController.swift; sourceTree = "<group>"; };
 		3FB0BDAE1AEA1E23009A8DB0 /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +158,14 @@
 			name = Login/Register;
 			sourceTree = "<group>";
 		};
+		3F9AF3F11AF725A2007EADC3 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				3F9AF3F21AF72613007EADC3 /* LoginResponse.swift */,
+			);
+			name = JSON;
+			sourceTree = "<group>";
+		};
 		3FB0BDA81AE9FC65009A8DB0 /* Me */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +219,7 @@
 		DA5533441AE0B57F003E369E /* Surge-Client */ = {
 			isa = PBXGroup;
 			children = (
+				3F9AF3F11AF725A2007EADC3 /* JSON */,
 				DA5533471AE0B57F003E369E /* AppDelegate.swift */,
 				3F9A3D721AEF17F8006E4B70 /* Login/Register */,
 				3FB0BDA81AE9FC65009A8DB0 /* Me */,
@@ -425,6 +436,7 @@
 				DAC2D0ED1AEF1EEE0047E4AE /* YakCreatePostViewController.swift in Sources */,
 				DA55334B1AE0B57F003E369E /* Surge_Client.xcdatamodeld in Sources */,
 				3F4446301AE978300001DA1A /* FeaturedTableViewCell.swift in Sources */,
+				3F9AF3F31AF72613007EADC3 /* LoginResponse.swift in Sources */,
 				DAD2E43E1AE738A700DFBB53 /* YakDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
