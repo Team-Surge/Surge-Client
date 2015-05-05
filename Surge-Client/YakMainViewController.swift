@@ -17,9 +17,16 @@ class YakMainViewController: UIViewController {
   var location: CLLocation?
   var detailText = ""
   var posts = Array<Post>()
+  let refreshControl = UIRefreshControl()
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    refreshControl.addTarget(self, action: "updatePosts", forControlEvents: UIControlEvents.ValueChanged)
+    refreshControl.backgroundColor = UIColor.whiteColor()
+    refreshControl.tintColor = UIColor.blackColor()
+    
+    
+    innerTableView.addSubview(refreshControl)
     innerTableView.registerNib(UINib(nibName: "YakCell", bundle: nil), forCellReuseIdentifier: "YakCell")
   }
   
@@ -41,6 +48,7 @@ class YakMainViewController: UIViewController {
   }
   
   func updatePosts() {
+    println("Updating Posts")
     let request = HTTPTask()
     let params: Dictionary<String,AnyObject> = ["action": "postList"]
     posts.removeAll(keepCapacity: true)
@@ -55,9 +63,11 @@ class YakMainViewController: UIViewController {
           self.innerTableView.reloadData()
         })
       }
+      self.refreshControl.endRefreshing()
     }, failure: {(error: NSError, response: HTTPResponse?) in
         println("Failed")
         println("Got an error: \(error)")
+        self.refreshControl.endRefreshing()
     })
     
   }

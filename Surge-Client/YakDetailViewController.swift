@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class YakDetailViewController: UIViewController,UITextFieldDelegate {
+class YakDetailViewController: UIViewController {
 
   @IBOutlet weak var innerTableView: UITableView?
   @IBOutlet weak var mapView: MKMapView!
