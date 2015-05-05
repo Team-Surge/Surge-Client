@@ -17,9 +17,10 @@ class YakDetailViewController: UIViewController,UITextFieldDelegate {
   @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
   @IBOutlet weak var sendButton: UIButton!
   @IBOutlet weak var textField: UITextField!
+  @IBOutlet weak var textView: UITextView!
   
   var originalBottomConstraintConstant: CGFloat!
-
+  var contentText: String?
   
   @IBAction func onSendButtonPress(sender: AnyObject) {
     textFieldShouldReturn(textField)
@@ -27,6 +28,9 @@ class YakDetailViewController: UIViewController,UITextFieldDelegate {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    textView.text = contentText
+    textView.selectable = false
     
     // Setup map
     mapView.showsUserLocation = false

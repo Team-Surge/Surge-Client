@@ -15,6 +15,7 @@ class YakMainViewController: UIViewController {
   
   @IBOutlet weak var innerTableView: UITableView!
   var location: CLLocation?
+  var detailText = ""
   var posts = Array<Post>()
   
   override func viewDidLoad() {
@@ -29,6 +30,14 @@ class YakMainViewController: UIViewController {
   
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
+  }
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "detailViewSegue" {
+      let destination = segue.destinationViewController as! YakDetailViewController
+      let selectedCell = sender as! YakCell
+      destination.contentText = selectedCell.contentLabel.text
+    }
   }
   
   func updatePosts() {
@@ -52,13 +61,14 @@ class YakMainViewController: UIViewController {
     })
     
   }
+  
 }
 
 
 extension YakMainViewController: UITableViewDelegate {
   
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    performSegueWithIdentifier("detailViewSegue", sender: tableView)
+    performSegueWithIdentifier("detailViewSegue", sender: tableView.cellForRowAtIndexPath(indexPath))
   }
 
 }
@@ -73,13 +83,9 @@ extension YakMainViewController: UITableViewDataSource {
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("YakCell", forIndexPath: indexPath) as! YakCell
-    let post = self.posts[(indexPath.row + 1) % self.posts.count]
+    let post = self.posts[indexPath.row ]
     
-    if let voteCount = post.voteCount {
-      cell.karmaLabel.text = "\(voteCount)"
-    } else {
-      cell.karmaLabel.text = "123"
-    }
+    cell.karmaLabel.text = String(post.voteCount!)
     cell.timeLabel.text = "\((indexPath.row + 1) * 3)m"
     cell.replyLabel.text = "\((indexPath.row + 1) * 1) replies"
     cell.contentLabel.text = post.content!
