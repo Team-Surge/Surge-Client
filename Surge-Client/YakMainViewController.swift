@@ -7,23 +7,51 @@
 //
 
 import UIKit
-import MapKit
-import CoreLocation
+import SwiftHTTP
+import JSONJoy
 
 class YakMainViewController: UIViewController {
   
+  
   @IBOutlet weak var innerTableView: UITableView!
   var location: CLLocation?
+  var posts = Array<Post>()
   
   override func viewDidLoad() {
     super.viewDidLoad()
     innerTableView.registerNib(UINib(nibName: "YakCell", bundle: nil), forCellReuseIdentifier: "YakCell")
   }
   
+  
+  override func viewWillAppear(animated: Bool) {
+    updatePosts()
+  }
+  
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
   }
   
+  func updatePosts() {
+    let request = HTTPTask()
+    let params: Dictionary<String,AnyObject> = ["action": "postList"]
+    posts.removeAll(keepCapacity: true)
+    
+    request.POST("http://surge.seektom.com/post", parameters: params, success: {(response: HTTPResponse) in
+      if response.responseObject != nil {
+        let resp = PostResponse(JSONDecoder(response.responseObject!))
+        for post in resp.posts! {
+          self.posts.append(post)
+        }
+        dispatch_async(dispatch_get_main_queue(),{
+          self.innerTableView.reloadData()
+        })
+      }
+    }, failure: {(error: NSError, response: HTTPResponse?) in
+        println("Failed")
+        println("Got an error: \(error)")
+    })
+    
+  }
 }
 
 
@@ -39,16 +67,22 @@ extension YakMainViewController: UITableViewDelegate {
 extension YakMainViewController: UITableViewDataSource {
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 12
+    return posts.count
   }
   
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("YakCell", forIndexPath: indexPath) as! YakCell
-    cell.karmaLabel.text = "\((indexPath.row + 1) * 5)"
+    let post = self.posts[(indexPath.row + 1) % self.posts.count]
+    
+    if let voteCount = post.voteCount {
+      cell.karmaLabel.text = "\(voteCount)"
+    } else {
+      cell.karmaLabel.text = "123"
+    }
     cell.timeLabel.text = "\((indexPath.row + 1) * 3)m"
     cell.replyLabel.text = "\((indexPath.row + 1) * 1) replies"
-    cell.contentLabel.text = "I am cell #\(indexPath.row)"
+    cell.contentLabel.text = post.content!
     return cell
   }
   

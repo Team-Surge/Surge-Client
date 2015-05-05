@@ -25,9 +25,15 @@
 		DA5533521AE0B57F003E369E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA5533511AE0B57F003E369E /* Images.xcassets */; };
 		DA5533551AE0B57F003E369E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA5533531AE0B57F003E369E /* LaunchScreen.xib */; };
 		DA5533611AE0B57F003E369E /* Surge_ClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5533601AE0B57F003E369E /* Surge_ClientTests.swift */; };
+		DA7A3ED71AF875BD00B0B965 /* CRToast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA7A3ED61AF875BD00B0B965 /* CRToast.framework */; };
+		DA7A3EDD1AF877E900B0B965 /* Pods_Surge_Client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D58DF9116783E77F98DB42 /* Pods_Surge_Client.framework */; };
+		DA7A3EDE1AF877E900B0B965 /* Pods_Surge_Client.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63D58DF9116783E77F98DB42 /* Pods_Surge_Client.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DAAA205A1AF85633007FF97D /* JSONJoy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAA20591AF85633007FF97D /* JSONJoy.framework */; };
+		DAAA205C1AF85636007FF97D /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAA205B1AF85636007FF97D /* SwiftHTTP.framework */; };
 		DAC2D0ED1AEF1EEE0047E4AE /* YakCreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC2D0EC1AEF1EEE0047E4AE /* YakCreatePostViewController.swift */; };
 		DAC478111AE8988B00D300F3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAC478101AE8988B00D300F3 /* MapKit.framework */; };
 		DAC478131AE8989200D300F3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAC478121AE8989200D300F3 /* UIKit.framework */; };
+		DACF61EA1AF60B44004604FD /* APIResponseObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF61E91AF60B44004604FD /* APIResponseObjects.swift */; };
 		DAD2E43C1AE7374100DFBB53 /* YakMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD2E43B1AE7374100DFBB53 /* YakMainViewController.swift */; };
 		DAD2E43E1AE738A700DFBB53 /* YakDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD2E43D1AE738A700DFBB53 /* YakDetailViewController.swift */; };
 		DAD2E4441AE7405A00DFBB53 /* YakCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAD2E4431AE7405A00DFBB53 /* YakCell.xib */; };
@@ -44,6 +50,20 @@
 			remoteInfo = "Surge-Client";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DA7A3EDA1AF877E000B0B965 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DA7A3EDE1AF877E900B0B965 /* Pods_Surge_Client.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3F20A3021AE98134004C2598 /* NearTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearTableViewController.swift; sourceTree = "<group>"; };
@@ -69,9 +89,13 @@
 		DA55335A1AE0B57F003E369E /* Surge-ClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Surge-ClientTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA55335F1AE0B57F003E369E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA5533601AE0B57F003E369E /* Surge_ClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Surge_ClientTests.swift; sourceTree = "<group>"; };
+		DA7A3ED61AF875BD00B0B965 /* CRToast.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CRToast.framework; path = "Pods/../build/Debug-iphoneos/Pods-Surge-Client/CRToast.framework"; sourceTree = "<group>"; };
+		DAAA20591AF85633007FF97D /* JSONJoy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JSONJoy.framework; path = "Pods/../build/Debug-iphoneos/Pods-Surge-Client/JSONJoy.framework"; sourceTree = "<group>"; };
+		DAAA205B1AF85636007FF97D /* SwiftHTTP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftHTTP.framework; path = "Pods/../build/Debug-iphoneos/Pods-Surge-Client/SwiftHTTP.framework"; sourceTree = "<group>"; };
 		DAC2D0EC1AEF1EEE0047E4AE /* YakCreatePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YakCreatePostViewController.swift; sourceTree = "<group>"; };
 		DAC478101AE8988B00D300F3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		DAC478121AE8989200D300F3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DACF61E91AF60B44004604FD /* APIResponseObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResponseObjects.swift; sourceTree = "<group>"; };
 		DAD2E43B1AE7374100DFBB53 /* YakMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YakMainViewController.swift; sourceTree = "<group>"; };
 		DAD2E43D1AE738A700DFBB53 /* YakDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YakDetailViewController.swift; sourceTree = "<group>"; };
 		DAD2E4431AE7405A00DFBB53 /* YakCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YakCell.xib; sourceTree = "<group>"; };
@@ -88,8 +112,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAC478131AE8989200D300F3 /* UIKit.framework in Frameworks */,
+				DA7A3EDD1AF877E900B0B965 /* Pods_Surge_Client.framework in Frameworks */,
 				DAC478111AE8988B00D300F3 /* MapKit.framework in Frameworks */,
 				65C111CACFEFFEA9FD86FB1C /* Pods_Surge_Client.framework in Frameworks */,
+				DA7A3ED71AF875BD00B0B965 /* CRToast.framework in Frameworks */,
+				DAAA205C1AF85636007FF97D /* SwiftHTTP.framework in Frameworks */,
+				DAAA205A1AF85633007FF97D /* JSONJoy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +220,7 @@
 			children = (
 				DAE725E51AF03774008B8DA3 /* Surge-Client-Bridging-Header.h */,
 				DAE725E21AF036FA008B8DA3 /* LocationManager.h */,
+				DACF61E91AF60B44004604FD /* APIResponseObjects.swift */,
 				DAE725E31AF036FA008B8DA3 /* LocationManager.m */,
 			);
 			name = lib;
@@ -266,6 +295,9 @@
 		F832D3B06F9ABAA60864FF2C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA7A3ED61AF875BD00B0B965 /* CRToast.framework */,
+				DAAA205B1AF85636007FF97D /* SwiftHTTP.framework */,
+				DAAA20591AF85633007FF97D /* JSONJoy.framework */,
 				63D58DF9116783E77F98DB42 /* Pods_Surge_Client.framework */,
 			);
 			name = Frameworks;
@@ -284,6 +316,7 @@
 				DA5533401AE0B57F003E369E /* Resources */,
 				E827F7F6BE91723AEFAB068E /* Embed Pods Frameworks */,
 				632137C69166F8BA626D1D18 /* Copy Pods Resources */,
+				DA7A3EDA1AF877E000B0B965 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -432,6 +465,7 @@
 				3F4446321AE9792D0001DA1A /* FeaturedTableViewController.swift in Sources */,
 				3F8E5D671AEF4CE100B7363F /* RegisterViewController.swift in Sources */,
 				3F20A3051AE9814D004C2598 /* NearTableViewCell.swift in Sources */,
+				DACF61EA1AF60B44004604FD /* APIResponseObjects.swift in Sources */,
 				3FB0BDAA1AE9FC81009A8DB0 /* NotificationsTableViewCell.swift in Sources */,
 				3FCCBDD31AF75C0900D1695A /* RegisterResponse.swift in Sources */,
 				DAD2E43C1AE7374100DFBB53 /* YakMainViewController.swift in Sources */,
@@ -576,6 +610,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Pods-Surge-Client",
+				);
 				INFOPLIST_FILE = "Surge-Client/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -593,6 +631,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Pods-Surge-Client",
+				);
 				INFOPLIST_FILE = "Surge-Client/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
