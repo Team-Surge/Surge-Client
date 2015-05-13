@@ -1,11 +1,10 @@
 //
-//  APIResponseObjects.swift
+//  PostResponse.swift
 //  Surge-Client
 //
-//  Created by Dustin Guerrero on 5/3/15.
+//  Created by Dustin Guerrero on 5/13/15.
 //  Copyright (c) 2015 Team-Surge. All rights reserved.
 //
-
 
 import JSONJoy
 
