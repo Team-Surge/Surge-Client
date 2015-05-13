@@ -41,13 +41,11 @@ class YakMainViewController: UIViewController {
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "detailViewSegue" {
       let destination = segue.destinationViewController as! YakDetailViewController
-      let selectedCell = sender as! YakCell
-      destination.contentText = selectedCell.contentLabel.text
+      destination.sourcePost = sender as! Post
     }
   }
   
   func updatePosts() {
-    println("[YakMainViewController] Updating Posts")
     let request = HTTPTask()
     let params: Dictionary<String,AnyObject> = ["action": "postList"]
     
@@ -56,7 +54,7 @@ class YakMainViewController: UIViewController {
         if response.responseObject != nil {
           let resp = PostResponse(JSONDecoder(response.responseObject!))
           self.posts.removeAll(keepCapacity: true)
-          for post in resp.posts! {
+          for post in resp.posts {
             self.posts.append(post)
           }
           dispatch_async(dispatch_get_main_queue(),{
@@ -76,7 +74,7 @@ class YakMainViewController: UIViewController {
 extension YakMainViewController: UITableViewDelegate {
   
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    performSegueWithIdentifier("detailViewSegue", sender: tableView.cellForRowAtIndexPath(indexPath))
+    performSegueWithIdentifier("detailViewSegue", sender: posts[indexPath.row])
   }
 
 }
@@ -117,13 +115,11 @@ extension YakMainViewController: YakCellDelegate {
     var params: Dictionary<String,AnyObject> = ["action": "postVote", "postId": cell.id, "direction": state.rawValue]
     
     
-    request.POST("http://surge.seektom.com/post", parameters: params, success: {(response: HTTPResponse) in
-      if response.responseObject != nil {
-        println("[YakMainViewController] Vote Successful")
-  
+    request.POST("http://surge.seektom.com/post", parameters: params,
+      success: {(response: HTTPResponse) in
+      }, failure: {(error: NSError, response: HTTPResponse?) in
+          println("[YakMainViewController] Vote Failed with error:\n\t\(error)")
       }
-    }, failure: {(error: NSError, response: HTTPResponse?) in
-        println("[YakMainViewController] Vote Failed with error:\n\t\(error)")
-    })
+    )
   }
 }

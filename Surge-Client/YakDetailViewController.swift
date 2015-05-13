@@ -9,6 +9,8 @@
 import UIKit
 import MapKit
 import CoreLocation
+import SwiftHTTP
+import JSONJoy
 
 class YakDetailViewController: UIViewController {
 
@@ -20,7 +22,8 @@ class YakDetailViewController: UIViewController {
   @IBOutlet weak var textView: UITextView!
   
   var originalBottomConstraintConstant: CGFloat!
-  var contentText: String?
+  var sourcePost: Post!
+  private var comments = Array<Post>()
   
   @IBAction func onSendButtonPress(sender: AnyObject) {
     textFieldShouldReturn(textField)
@@ -29,7 +32,7 @@ class YakDetailViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    textView.text = contentText
+    textView.text = sourcePost?.content
     textView.selectable = false
     
     // Setup map
@@ -51,6 +54,7 @@ class YakDetailViewController: UIViewController {
   override func viewWillAppear(animated: Bool) {
     super.viewWillDisappear(animated)
     LocationManager.sharedInstance().addLocationManagerDelegate(self)
+    updatePosts()
   }
   
   override func viewDidDisappear(animated: Bool) {
@@ -75,6 +79,28 @@ class YakDetailViewController: UIViewController {
     originalBottomConstraintConstant = bottomConstraint.constant
     bottomConstraint.constant = keyboardFrame.size.height + bottomConstraint.constant
   }
+  
+  func updatePosts() {
+    let request = HTTPTask()
+    let params: Dictionary<String,AnyObject> = ["action": "postDetail", "postId": sourcePost.id!]
+    
+    request.POST("http://surge.seektom.com/post", parameters: params,
+      success: {(response: HTTPResponse) in
+        if response.responseObject != nil {
+          let resp = PostDetailResponse(JSONDecoder(response.responseObject!))
+          self.comments.removeAll(keepCapacity: true)
+          for comment in resp.post.comments! {
+            self.comments.append(comment)
+          }
+          dispatch_async(dispatch_get_main_queue(),{
+            self.innerTableView?.reloadData()
+          })
+        }
+      }, failure: {(error: NSError, response: HTTPResponse?) in
+        println("[YakDetailViewController] Update Failed with error\n\t\(error)")
+      }
+    )
+  }
 
 }
 
@@ -83,10 +109,12 @@ extension YakDetailViewController: UITableViewDelegate {
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("YakCell", forIndexPath: indexPath) as! YakCell
-    cell.karmaLabel.text = "\((indexPath.row + 1) * 5)"
-    cell.timeLabel.text = "\((indexPath.row + 1) * 3)m"
-    cell.replyLabel.text = "\((indexPath.row + 1) * 1) replies"
-    cell.contentLabel.text = "I am cell #\(indexPath.row)"
+    let post = self.comments[indexPath.row]
+    
+    println("\(post.content): \(post.voteState)")
+    cell.initializeCellWithContent(post.content!, voteCount: post.voteCount!, replyCount: indexPath.row + 1, state: VoteState(rawValue: post.voteState!)!, id: post.id!)
+    cell.replyLabel.hidden = true
+    cell.delegate = self
     return cell
   }
   
@@ -100,7 +128,7 @@ extension YakDetailViewController: UITableViewDataSource {
   }
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 4
+    return comments.count
   }
   
   func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -113,12 +141,20 @@ extension YakDetailViewController: UITableViewDataSource {
 extension YakDetailViewController: UITextFieldDelegate {
   
   func textFieldShouldReturn(textField: UITextField) -> Bool {
+    let request = HTTPTask()
+    let params: Dictionary<String,AnyObject> = ["action": "postCreateComment", "postId": sourcePost.id!, "content": textField.text]
+    
+    request.POST("http://surge.seektom.com/post", parameters: params,
+      success: {(response: HTTPResponse) in
+          dispatch_async(dispatch_get_main_queue(),{self.updatePosts()})
+      }, failure: {(error: NSError, response: HTTPResponse?) in
+        println("[YakDetailViewController] Update Failed with error\n\t\(error)")
+      }
+    )
     textField.resignFirstResponder()
-    println("TextFieldValue: \(textField.text)")
     textField.text = ""
     return true
   }
-  
 }
 
 // MARK: - MKMapViewDelegate
@@ -129,5 +165,19 @@ extension YakDetailViewController: MKMapViewDelegate {
 extension YakDetailViewController: LocationManagerDelegate {
   func mapViewToUpdateOnNewLocation() -> MKMapView! {
     return mapView;
+  }
+}
+
+extension YakDetailViewController: YakCellDelegate {
+  func cellDidChangeVoteState(cell: YakCell, state: VoteState) {
+    let request = HTTPTask()
+    var params: Dictionary<String,AnyObject> = ["action": "postCommentVote", "commentId": cell.id, "direction": state.rawValue]
+    
+    request.POST("http://surge.seektom.com/post", parameters: params,
+      success: {(response: HTTPResponse) in
+      }, failure: {(error: NSError, response: HTTPResponse?) in
+          println("[YakDetailViewController] Vote Failed with error:\n\t\(error)")
+      }
+    )
   }
 }

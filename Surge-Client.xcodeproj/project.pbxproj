@@ -34,6 +34,7 @@
 		DAC478111AE8988B00D300F3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAC478101AE8988B00D300F3 /* MapKit.framework */; };
 		DAC478131AE8989200D300F3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAC478121AE8989200D300F3 /* UIKit.framework */; };
 		DACDB9551B0331040074C4AD /* PostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACDB9541B0331040074C4AD /* PostResponse.swift */; };
+		DACDB9571B033BC20074C4AD /* PostDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACDB9561B033BC20074C4AD /* PostDetailResponse.swift */; };
 		DAD2E43C1AE7374100DFBB53 /* YakMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD2E43B1AE7374100DFBB53 /* YakMainViewController.swift */; };
 		DAD2E43E1AE738A700DFBB53 /* YakDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD2E43D1AE738A700DFBB53 /* YakDetailViewController.swift */; };
 		DAD2E4441AE7405A00DFBB53 /* YakCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAD2E4431AE7405A00DFBB53 /* YakCell.xib */; };
@@ -96,6 +97,7 @@
 		DAC478101AE8988B00D300F3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		DAC478121AE8989200D300F3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DACDB9541B0331040074C4AD /* PostResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostResponse.swift; sourceTree = "<group>"; };
+		DACDB9561B033BC20074C4AD /* PostDetailResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailResponse.swift; sourceTree = "<group>"; };
 		DAD2E43B1AE7374100DFBB53 /* YakMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YakMainViewController.swift; sourceTree = "<group>"; };
 		DAD2E43D1AE738A700DFBB53 /* YakDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YakDetailViewController.swift; sourceTree = "<group>"; };
 		DAD2E4431AE7405A00DFBB53 /* YakCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YakCell.xib; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				3F9AF3F21AF72613007EADC3 /* LoginResponse.swift */,
 				3FCCBDD21AF75C0900D1695A /* RegisterResponse.swift */,
 				DACDB9541B0331040074C4AD /* PostResponse.swift */,
+				DACDB9561B033BC20074C4AD /* PostDetailResponse.swift */,
 			);
 			name = JSON;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				3F20A3051AE9814D004C2598 /* NearTableViewCell.swift in Sources */,
 				3FB0BDAA1AE9FC81009A8DB0 /* NotificationsTableViewCell.swift in Sources */,
 				3FCCBDD31AF75C0900D1695A /* RegisterResponse.swift in Sources */,
+				DACDB9571B033BC20074C4AD /* PostDetailResponse.swift in Sources */,
 				DAD2E43C1AE7374100DFBB53 /* YakMainViewController.swift in Sources */,
 				DA5533481AE0B57F003E369E /* AppDelegate.swift in Sources */,
 				DAE725E41AF036FA008B8DA3 /* LocationManager.m in Sources */,
