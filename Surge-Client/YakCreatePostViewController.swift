@@ -9,6 +9,9 @@
 import UIKit
 import MapKit
 
+import SwiftHTTP
+import JSONJoy
+
 class YakCreatePostViewController: UIViewController {
   
   @IBOutlet weak var mapView: MKMapView!
@@ -21,6 +24,7 @@ class YakCreatePostViewController: UIViewController {
     textView.becomeFirstResponder()
     super.viewDidLoad()
   }
+  
   
   override func viewDidDisappear(animated: Bool) {
     super.viewDidDisappear(animated)
@@ -56,9 +60,21 @@ extension YakCreatePostViewController: UITextViewDelegate {
   
   func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
     if text == "\n" {
+      let request = HTTPTask()
+      let params: Dictionary<String,AnyObject> = ["action": "postCreate", "handle": "NO_HANDLE", "content": textView.text]
+      
+      request.POST("http://surge.seektom.com/post", parameters: params, success: {(response: HTTPResponse) in
+        if response.responseObject != nil {
+          let resp = PostResponse(JSONDecoder(response.responseObject!))
+        }
+      }, failure: {(error: NSError, response: HTTPResponse?) in
+          println("Failed")
+          println("Got an error: \(error)")
+      })
       textView.resignFirstResponder()
       return false
-    } else if clearField {
+    }
+     else if clearField {
       textView.text = text
       clearField = false
       return false
