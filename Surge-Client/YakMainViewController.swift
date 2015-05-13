@@ -1,4 +1,5 @@
 //
+
 //  YakMainViewController.swift
 //  Surge-Client
 //
@@ -12,22 +13,20 @@ import JSONJoy
 
 class YakMainViewController: UIViewController {
   
+  @IBOutlet weak var innerTableView: UITableView?
   
-  @IBOutlet weak var innerTableView: UITableView!
-  var location: CLLocation?
-  var detailText = ""
-  var posts = Array<Post>()
-  let refreshControl = UIRefreshControl()
+  private var posts = Array<Post>()
+  private let refreshControl = UIRefreshControl()
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    refreshControl.addTarget(self, action: "updatePosts", forControlEvents: UIControlEvents.ValueChanged)
+    refreshControl.addTarget(self, action: Selector("updatePosts"), forControlEvents: UIControlEvents.ValueChanged)
     refreshControl.backgroundColor = UIColor.whiteColor()
     refreshControl.tintColor = UIColor.blackColor()
     
     
-    innerTableView.addSubview(refreshControl)
-    innerTableView.registerNib(UINib(nibName: "YakCell", bundle: nil), forCellReuseIdentifier: "YakCell")
+    innerTableView?.addSubview(refreshControl)
+    innerTableView?.registerNib(UINib(nibName: "YakCell", bundle: nil), forCellReuseIdentifier: "YakCell")
   }
   
   
@@ -48,30 +47,29 @@ class YakMainViewController: UIViewController {
   }
   
   func updatePosts() {
-    println("Updating Posts")
+    println("[YakMainViewController] Updating Posts")
     let request = HTTPTask()
     let params: Dictionary<String,AnyObject> = ["action": "postList"]
-    posts.removeAll(keepCapacity: true)
     
-    request.POST("http://surge.seektom.com/post", parameters: params, success: {(response: HTTPResponse) in
-      if response.responseObject != nil {
-        let resp = PostResponse(JSONDecoder(response.responseObject!))
-        for post in resp.posts! {
-          self.posts.append(post)
+    request.POST("http://surge.seektom.com/post", parameters: params,
+      success: {(response: HTTPResponse) in
+        if response.responseObject != nil {
+          let resp = PostResponse(JSONDecoder(response.responseObject!))
+          self.posts.removeAll(keepCapacity: true)
+          for post in resp.posts! {
+            self.posts.append(post)
+          }
+          dispatch_async(dispatch_get_main_queue(),{
+            self.innerTableView?.reloadData()
+          })
         }
-        dispatch_async(dispatch_get_main_queue(),{
-          self.innerTableView.reloadData()
-        })
-      }
-      self.refreshControl.endRefreshing()
-    }, failure: {(error: NSError, response: HTTPResponse?) in
-        println("Failed")
-        println("Got an error: \(error)")
         self.refreshControl.endRefreshing()
-    })
-    
+      }, failure: {(error: NSError, response: HTTPResponse?) in
+        println("[YakMainViewController] Update Failed with error\n\t\(error)")
+        self.refreshControl.endRefreshing()
+      }
+    )
   }
-  
 }
 
 
@@ -93,12 +91,10 @@ extension YakMainViewController: UITableViewDataSource {
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("YakCell", forIndexPath: indexPath) as! YakCell
-    let post = self.posts[indexPath.row ]
+    let post = self.posts[indexPath.row]
     
-    cell.karmaLabel.text = String(post.voteCount!)
-    cell.timeLabel.text = "\((indexPath.row + 1) * 3)m"
-    cell.replyLabel.text = "\((indexPath.row + 1) * 1) replies"
-    cell.contentLabel.text = post.content!
+    cell.initializeCellWithContent(post.content!, voteCount: post.voteCount!, replyCount: indexPath.row + 1, state: VoteState(rawValue: post.voteState!)!, id: post.id!)
+    cell.delegate = self
     return cell
   }
   
@@ -107,7 +103,27 @@ extension YakMainViewController: UITableViewDataSource {
   }
   
   func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-    return 100
+    return UITableViewAutomaticDimension
   }
 
+  func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    return UITableViewAutomaticDimension
+  }
+}
+
+extension YakMainViewController: YakCellDelegate {
+  func cellDidChangeVoteState(cell: YakCell, state: VoteState) {
+    let request = HTTPTask()
+    var params: Dictionary<String,AnyObject> = ["action": "postVote", "postId": cell.id, "direction": state.rawValue]
+    
+    
+    request.POST("http://surge.seektom.com/post", parameters: params, success: {(response: HTTPResponse) in
+      if response.responseObject != nil {
+        println("[YakMainViewController] Vote Successful")
+  
+      }
+    }, failure: {(error: NSError, response: HTTPResponse?) in
+        println("[YakMainViewController] Vote Failed with error:\n\t\(error)")
+    })
+  }
 }

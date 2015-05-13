@@ -15,6 +15,7 @@ struct Post : JSONJoy {
   var created_at: String?
   var handle: String?
   var voteCount: Int?
+  var voteState: String?
   
   init() {
     
@@ -26,6 +27,7 @@ struct Post : JSONJoy {
     created_at = decoder["created_at"].string
     handle = decoder["handle"].string
     voteCount = decoder["voteCount"].integer
+    voteState = decoder["userVote"].string
   }
 }
 
