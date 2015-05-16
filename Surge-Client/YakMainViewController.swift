@@ -13,10 +13,21 @@ import JSONJoy
 
 class YakMainViewController: UIViewController {
   
-  @IBOutlet weak var innerTableView: UITableView?
+  @IBOutlet weak var innerTableView: UITableView!
   
   private var posts = Array<Post>()
   private let refreshControl = UIRefreshControl()
+  
+  @IBAction func sortButtonChanged(sender: UISegmentedControl) {
+    if sender.selectedSegmentIndex == 1 {
+      // Sort by hot
+      posts.sort({$0.voteCount > $1.voteCount})
+    } else {
+      // Sort by new
+      posts.sort({$0.timestamp.timeIntervalSinceReferenceDate > $1.timestamp.timeIntervalSinceReferenceDate})
+    }
+    self.innerTableView.reloadData()
+  }
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -25,8 +36,8 @@ class YakMainViewController: UIViewController {
     refreshControl.tintColor = UIColor.blackColor()
     
     
-    innerTableView?.addSubview(refreshControl)
-    innerTableView?.registerNib(UINib(nibName: "YakCell", bundle: nil), forCellReuseIdentifier: "YakCell")
+    innerTableView.addSubview(refreshControl)
+    innerTableView.registerNib(UINib(nibName: "YakCell", bundle: nil), forCellReuseIdentifier: "YakCell")
   }
   
   
@@ -55,16 +66,18 @@ class YakMainViewController: UIViewController {
           let resp = PostResponse(JSONDecoder(response.responseObject!))
           self.posts.removeAll(keepCapacity: true)
           for post in resp.posts {
-            self.posts.append(post)
+            self.posts.insert(post, atIndex: 0)
           }
           dispatch_async(dispatch_get_main_queue(),{
-            self.innerTableView?.reloadData()
+            self.innerTableView.reloadData()
+            self.refreshControl.endRefreshing()
           })
         }
-        self.refreshControl.endRefreshing()
       }, failure: {(error: NSError, response: HTTPResponse?) in
         println("[YakMainViewController] Update Failed with error\n\t\(error)")
-        self.refreshControl.endRefreshing()
+        dispatch_async(dispatch_get_main_queue(),{
+          self.refreshControl.endRefreshing()
+        })
       }
     )
   }
@@ -91,7 +104,7 @@ extension YakMainViewController: UITableViewDataSource {
     let cell = tableView.dequeueReusableCellWithIdentifier("YakCell", forIndexPath: indexPath) as! YakCell
     let post = self.posts[indexPath.row]
     
-    cell.initializeCellWithContent(post.content!, voteCount: post.voteCount!, replyCount: indexPath.row + 1, state: VoteState(rawValue: post.voteState!)!, id: post.id!)
+    cell.initializeCellFromPost(post)
     cell.delegate = self
     return cell
   }

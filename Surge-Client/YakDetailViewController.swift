@@ -112,7 +112,7 @@ extension YakDetailViewController: UITableViewDelegate {
     let post = self.comments[indexPath.row]
     
     println("\(post.content): \(post.voteState)")
-    cell.initializeCellWithContent(post.content!, voteCount: post.voteCount!, replyCount: indexPath.row + 1, state: VoteState(rawValue: post.voteState!)!, id: post.id!)
+    cell.initializeCellWithContent(post.content!, voteCount: post.voteCount!, replyCount: indexPath.row + 1, state: VoteState(rawValue: post.voteState!)!, id: post.id!, timestamp: post.timestamp)
     cell.replyLabel.hidden = true
     cell.delegate = self
     return cell
