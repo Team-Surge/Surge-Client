@@ -75,6 +75,12 @@ class LoginViewController: UIViewController {
       })
   }
   
+  override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    super.touchesBegan(touches, withEvent: event)
+    emailField.resignFirstResponder()
+    passwordField.resignFirstResponder()
+  }
+  
   /*
   // MARK: - Navigation
 

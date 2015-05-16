@@ -101,6 +101,13 @@ class RegisterViewController: UIViewController {
   @IBAction func backToLoginAction(sender: UIButton) {
     self.dismissViewControllerAnimated(true, completion: nil)
   }
+  
+  override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    super.touchesBegan(touches, withEvent: event)
+    emailField.resignFirstResponder()
+    passwordField.resignFirstResponder()
+    reenterPasswordField.resignFirstResponder()
+  }
 
   /*
   // MARK: - Navigation

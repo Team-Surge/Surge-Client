@@ -1374,7 +1374,7 @@
                                     <constraint firstAttribute="height" constant="40" id="Mdg-tk-yJy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="Mdg-tk-yJy"/>
@@ -1559,7 +1559,7 @@
                                     <constraint firstAttribute="height" constant="40" id="EWt-0t-JIl"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="EWt-0t-JIl"/>
