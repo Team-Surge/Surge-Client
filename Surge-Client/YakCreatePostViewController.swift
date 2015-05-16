@@ -42,6 +42,7 @@ class YakCreatePostViewController: UIViewController {
   
 }
 
+// MARK: - UITextViewDelegate
 extension YakCreatePostViewController: UITextViewDelegate {
   func textViewDidBeginEditing(textView: UITextView) {
     clearField = true
@@ -80,6 +81,7 @@ extension YakCreatePostViewController: UITextViewDelegate {
   }
 }
 
+// MARK: - LocationManagerDelegate
 extension YakCreatePostViewController: LocationManagerDelegate {
   func mapViewToUpdateOnNewLocation() -> MKMapView! {
     return mapView

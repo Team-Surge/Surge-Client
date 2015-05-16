@@ -111,9 +111,7 @@ extension YakDetailViewController: UITableViewDelegate {
     let cell = tableView.dequeueReusableCellWithIdentifier("YakCell", forIndexPath: indexPath) as! YakCell
     let post = self.comments[indexPath.row]
     
-    println("\(post.content): \(post.voteState)")
-    cell.initializeCellWithContent(post.content!, voteCount: post.voteCount!, replyCount: indexPath.row + 1, state: VoteState(rawValue: post.voteState!)!, id: post.id!, timestamp: post.timestamp)
-    cell.replyLabel.hidden = true
+    cell.initializeCellFromPost(post)
     cell.delegate = self
     return cell
   }
@@ -162,12 +160,14 @@ extension YakDetailViewController: MKMapViewDelegate {
   
 }
 
+// MARK: - Location Manager Delegate
 extension YakDetailViewController: LocationManagerDelegate {
   func mapViewToUpdateOnNewLocation() -> MKMapView! {
     return mapView;
   }
 }
 
+// MARK: - YakCellDelegate
 extension YakDetailViewController: YakCellDelegate {
   func cellDidChangeVoteState(cell: YakCell, state: VoteState) {
     let request = HTTPTask()

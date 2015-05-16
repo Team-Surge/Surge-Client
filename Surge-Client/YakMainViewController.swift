@@ -84,6 +84,7 @@ class YakMainViewController: UIViewController {
 }
 
 
+// MARK: - UITableViewDelegate
 extension YakMainViewController: UITableViewDelegate {
   
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -93,6 +94,7 @@ extension YakMainViewController: UITableViewDelegate {
 }
 
 
+// MARK: - UITableViewDataSource
 extension YakMainViewController: UITableViewDataSource {
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -122,6 +124,7 @@ extension YakMainViewController: UITableViewDataSource {
   }
 }
 
+// MARK: - YakCellDelegate
 extension YakMainViewController: YakCellDelegate {
   func cellDidChangeVoteState(cell: YakCell, state: VoteState) {
     let request = HTTPTask()
