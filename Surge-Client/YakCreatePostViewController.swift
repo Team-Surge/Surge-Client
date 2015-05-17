@@ -16,12 +16,14 @@ class YakCreatePostViewController: UIViewController {
   
   @IBOutlet weak var mapView: MKMapView!
   @IBOutlet weak var textView: UITextView!
-  private var clearField = true
+  @IBOutlet weak var handleField: UITextField!
+  @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
   
   override func viewDidLoad() {
     textView.delegate = self
-    textView.returnKeyType = UIReturnKeyType.Send
-    textView.becomeFirstResponder()
+    handleField.delegate = self
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil)
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil)
     super.viewDidLoad()
   }
   
@@ -40,44 +42,54 @@ class YakCreatePostViewController: UIViewController {
     super.didReceiveMemoryWarning()
   }
   
+  func keyboardWillShow(notification: NSNotification) {
+    var info = notification.userInfo!
+    var keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+    bottomConstraint.constant = keyboardFrame.size.height - 40
+  }
+  
+  func keyboardWillHide(notification: NSNotification) {
+    var info = notification.userInfo!
+    var keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+    bottomConstraint.constant = 1
+  }
+  
+  func createPostAction() {
+    let request = HTTPTask()
+    let params: Dictionary<String,AnyObject> = ["action": "postCreate", "handle": handleField.text, "content": textView.text]
+    
+    request.POST("http://surge.seektom.com/post", parameters: params,
+      success: {(response: HTTPResponse) in
+      }, failure: {(error: NSError, response: HTTPResponse?) in
+          println("[YakCreatePostViewController] Failed to create post\n\tError: \(error)")
+      }
+    )
+    navigationController?.popViewControllerAnimated(true)
+  }
 }
 
 // MARK: - UITextViewDelegate
 extension YakCreatePostViewController: UITextViewDelegate {
   func textViewDidBeginEditing(textView: UITextView) {
-    clearField = true
+    if textView.text == "What's on your mind?" {
+      textView.text = ""
+    }
   }
   
-  func textViewDidEndEditing(textView: UITextView) {
-    clearField = false
-  }
-  
-  
-  func textViewShouldEndEditing(textView: UITextView) -> Bool {
-    navigationController?.popViewControllerAnimated(true)
-    return true
-  }
   
   func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
     if text == "\n" {
-      let request = HTTPTask()
-      let params: Dictionary<String,AnyObject> = ["action": "postCreate", "handle": "", "content": textView.text]
-      
-      request.POST("http://surge.seektom.com/post", parameters: params,
-        success: {(response: HTTPResponse) in
-        }, failure: {(error: NSError, response: HTTPResponse?) in
-            println("[YakCreatePostViewController] Failed to create post\n\tError: \(error)")
-        }
-      )
-      textView.resignFirstResponder()
-      return false
-    } else if clearField {
-      textView.text = text
-      clearField = false
-      return false
-    } else {
-      return true
+      createPostAction()
     }
+    return true
+  }
+}
+
+// MARK: - UITextFieldDelegate
+extension YakCreatePostViewController: UITextFieldDelegate {
+  func textFieldShouldReturn(textField: UITextField) -> Bool {
+    createPostAction()
+    return true
   }
 }
 
@@ -87,3 +99,4 @@ extension YakCreatePostViewController: LocationManagerDelegate {
     return mapView
   }
 }
+

@@ -12,7 +12,7 @@ class Post : JSONJoy {
   var content: String!
   var id: Int!
   var timestamp: NSDate!
-  var handle: String!
+  var handle: String?
   var voteCount: Int!
   var voteState: String!
   var commentCount: Int?

@@ -20,12 +20,15 @@ protocol YakCellDelegate : class {
 
 class YakCell: UITableViewCell {
   
+  @IBOutlet weak var contentVerticalSpace: NSLayoutConstraint!
+  @IBOutlet weak var centerAlignmentConstraint: NSLayoutConstraint!
   var delegate: YakCellDelegate?
   var state = VoteState.Neutral
   var baseKarma = 0
   var id = 0
   var timestamp: NSDate!
   
+  @IBOutlet weak var handleLabel: UILabel!
   @IBOutlet weak var replyLabel: UILabel!
   @IBOutlet weak var karmaLabel: UILabel!
   @IBOutlet weak var contentLabel: UILabel!
@@ -122,6 +125,23 @@ class YakCell: UITableViewCell {
     baseKarma = post.voteCount
     state = VoteState(rawValue: post.voteState!)!
     id = post.id
+    
+    if let handle = post.handle {
+      if handle == "" {
+        println("Hiding handle")
+        handleLabel.hidden = true
+        contentVerticalSpace.constant = 5
+        if let x = centerAlignmentConstraint {
+          x.active = false
+        }
+      } else {
+        handleLabel.text = handle
+        handleLabel.hidden = false
+      }
+    } else {
+      println("Hiding handle")
+      handleLabel.hidden = true
+    }
     
     if let commentCount = post.commentCount {
       replyLabel.text = "\(commentCount) replies"
