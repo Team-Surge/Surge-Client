@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rpj-yL-ax4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rpj-yL-ax4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -1055,10 +1055,10 @@
             </objects>
             <point key="canvasLocation" x="4288.5" y="64.125"/>
         </scene>
-        <!--Send a Yak-->
+        <!--Yak Create Post View Controller-->
         <scene sceneID="mYq-bd-7LF">
             <objects>
-                <viewController title="Send a Yak" id="el0-JQ-ce6" customClass="YakCreatePostViewController" customModule="Surge_Client" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Yak Create Post View Controller" id="el0-JQ-ce6" customClass="YakCreatePostViewController" customModule="Surge_Client" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="73j-Rh-5oB"/>
                         <viewControllerLayoutGuide type="bottom" id="v7D-eR-8Wj"/>
@@ -1201,6 +1201,7 @@
             <objects>
                 <tableViewController id="X0c-Dn-809" customClass="YakPostDetailViewController" customModule="Surge_Client" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="NPY-ST-9lx">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -1378,16 +1379,16 @@
                                 <exclude reference="VXd-7R-vBw"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="I8Z-Do-FsL"/>
-                                <exclude reference="RQT-t6-Par"/>
-                                <exclude reference="UtZ-BX-Del"/>
-                                <exclude reference="c1o-dB-ryh"/>
-                                <exclude reference="cLt-wW-LJb"/>
                                 <exclude reference="62K-9j-6Bs"/>
                                 <exclude reference="C4y-40-9Mm"/>
                                 <exclude reference="Dqa-jR-wav"/>
                                 <exclude reference="jRE-6s-xqk"/>
                                 <exclude reference="qa5-Nw-VaC"/>
+                                <exclude reference="I8Z-Do-FsL"/>
+                                <exclude reference="RQT-t6-Par"/>
+                                <exclude reference="UtZ-BX-Del"/>
+                                <exclude reference="c1o-dB-ryh"/>
+                                <exclude reference="cLt-wW-LJb"/>
                                 <exclude reference="Q71-xv-sxs"/>
                             </mask>
                         </variation>
@@ -1397,16 +1398,16 @@
                                 <include reference="VXd-7R-vBw"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="I8Z-Do-FsL"/>
-                                <include reference="RQT-t6-Par"/>
-                                <include reference="UtZ-BX-Del"/>
-                                <exclude reference="c1o-dB-ryh"/>
-                                <exclude reference="cLt-wW-LJb"/>
                                 <include reference="62K-9j-6Bs"/>
                                 <include reference="C4y-40-9Mm"/>
                                 <include reference="Dqa-jR-wav"/>
                                 <include reference="jRE-6s-xqk"/>
                                 <include reference="qa5-Nw-VaC"/>
+                                <include reference="I8Z-Do-FsL"/>
+                                <include reference="RQT-t6-Par"/>
+                                <include reference="UtZ-BX-Del"/>
+                                <exclude reference="c1o-dB-ryh"/>
+                                <exclude reference="cLt-wW-LJb"/>
                                 <include reference="Q71-xv-sxs"/>
                             </mask>
                         </variation>
