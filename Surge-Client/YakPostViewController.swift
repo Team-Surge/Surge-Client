@@ -53,10 +53,12 @@ class YakPostViewController: UITableViewController {
   
   func sortCellsByHot() {
     posts.sort({$0.voteCount > $1.voteCount})
+    tableView.reloadData()
   }
   
   func sortCellsByRecent() {
     posts.sort({$0.timestamp.timeIntervalSinceReferenceDate > $1.timestamp.timeIntervalSinceReferenceDate})
+    tableView.reloadData()
   }
   
   override func viewDidLoad() {
