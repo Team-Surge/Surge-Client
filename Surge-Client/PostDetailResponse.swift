@@ -12,8 +12,6 @@ struct PostDetailResponse : JSONJoy {
   var post: Post!
   var action: String!
   var success: Bool!
-  init() {
-  }
   
   init(_ decoder: JSONDecoder) {
     action = decoder["action"].string

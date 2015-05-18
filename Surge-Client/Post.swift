@@ -19,10 +19,6 @@ class Post : JSONJoy {
   var commentCount: Int?
   var comments: Array<Post>?
   
-  init() {
-    
-  }
-  
   required init(_ decoder: JSONDecoder) {
     content = decoder["content"].string
     id = decoder["id"].integer
