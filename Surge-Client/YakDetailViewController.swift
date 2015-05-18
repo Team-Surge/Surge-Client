@@ -23,7 +23,7 @@ class YakDetailViewController: UIViewController {
   var sourcePost: Post!
   
   internal var originalBottomConstraintConstant: CGFloat!
-  internal var comments = Array<Post>()
+  internal var comments = [Post]()
   internal var postViewController: YakPostViewController?
   
   @IBAction func onSendButtonPress(sender: AnyObject) {
@@ -90,7 +90,7 @@ extension YakDetailViewController: UITextFieldDelegate {
   
   func textFieldShouldReturn(textField: UITextField) -> Bool {
     let request = HTTPTask()
-    let params: Dictionary<String,AnyObject> = ["action": "postCreateComment", "postId": sourcePost.id!, "content": textField.text]
+    let params: [String:AnyObject] = ["action": "postCreateComment", "postId": sourcePost.id!, "content": textField.text]
     
     request.POST("http://surge.seektom.com/post", parameters: params,
       success: {(response: HTTPResponse) in
@@ -118,7 +118,7 @@ extension YakDetailViewController: LocationManagerDelegate {
 }
 
 extension YakDetailViewController: YakPostViewControllerSource {
-  func generatePostRetrieveParameters() -> Dictionary<String, String> {
+  func generatePostRetrieveParameters() -> [String:String] {
     println("Getting: \(sourcePost.id)")
     return ["action": "postDetail", "postId": toString(sourcePost.id)]
   }

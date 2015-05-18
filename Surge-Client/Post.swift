@@ -17,7 +17,7 @@ class Post : JSONJoy {
   var voteCount: Int!
   var voteState: String!
   var commentCount: Int?
-  var comments: Array<Post>?
+  var comments: [Post]?
   
   required init(_ decoder: JSONDecoder) {
     content = decoder["content"].string
@@ -26,8 +26,9 @@ class Post : JSONJoy {
     voteCount = decoder["voteCount"].integer
     voteState = decoder["userVote"].string
     commentCount = decoder["commentCount"].integer
+    
     if let postDecoders = decoder["comments"].array {
-      comments = Array<Post>()
+      comments = [Post]()
       for postDecoder in postDecoders {
         comments!.append(Post(postDecoder))
       }

@@ -9,7 +9,7 @@
 import JSONJoy
 
 struct PostResponse : JSONJoy {
-  var posts: Array<Post>!
+  var posts: [Post]!
   var action: String!
   var success: Bool!
   
@@ -17,7 +17,7 @@ struct PostResponse : JSONJoy {
     action = decoder["action"].string
     success = decoder["success"].bool
     if let postDecoders = decoder["posts"].array {
-      posts = Array<Post>()
+      posts = [Post]()
       for postDecoder in postDecoders {
         posts!.append(Post(postDecoder))
       }

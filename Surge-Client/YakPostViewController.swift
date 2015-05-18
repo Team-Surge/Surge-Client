@@ -13,20 +13,20 @@ import JSONJoy
 
 
 protocol YakPostViewControllerSource {
-  func generatePostRetrieveParameters() -> Dictionary<String, String>
+  func generatePostRetrieveParameters() -> [String:String]
   func postWasSelected(post: Post)
   //func generatePostResponseParameters(sender: Post) -> Dictionary<String, String>
   //func generatePostViewParameters() -> Dictionary<String, String>
 }
 
 class YakPostViewController: UITableViewController {
-  internal var posts = Array<Post>()
+  internal var posts = [Post]()
   internal var delegate: YakPostViewControllerSource?
   
   internal func retrievePosts() {
     if let delegate = self.delegate {
       let request = HTTPTask()
-      let params: Dictionary<String,String> = delegate.generatePostRetrieveParameters()
+      let params: [String:String] = delegate.generatePostRetrieveParameters()
       
       request.POST("http://surge.seektom.com/post", parameters: params,
         success: {(response: HTTPResponse) in
@@ -107,7 +107,7 @@ class YakPostViewController: UITableViewController {
 extension YakPostViewController: YakCellDelegate {
   func cellDidChangeVoteState(cell: YakCell, state: VoteState) {
     let request = HTTPTask()
-    var params: Dictionary<String,AnyObject> = ["action": "postVote", "postId": cell.id, "direction": state.rawValue]
+    var params: [String:AnyObject] = ["action": "postVote", "postId": cell.id, "direction": state.rawValue]
     
     
     request.POST("http://surge.seektom.com/post", parameters: params,

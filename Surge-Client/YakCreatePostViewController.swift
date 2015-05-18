@@ -56,7 +56,7 @@ class YakCreatePostViewController: UIViewController {
   
   func createPostAction() {
     let request = HTTPTask()
-    let params: Dictionary<String,AnyObject> = ["action": "postCreate", "handle": handleField.text, "content": textView.text]
+    let params: [String:AnyObject] = ["action": "postCreate", "handle": handleField.text, "content": textView.text]
     
     request.POST("http://surge.seektom.com/post", parameters: params,
       success: {(response: HTTPResponse) in

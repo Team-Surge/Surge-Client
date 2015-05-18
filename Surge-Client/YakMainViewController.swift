@@ -38,7 +38,7 @@ class YakMainViewController: UIViewController {
 }
 
 extension YakMainViewController: YakPostViewControllerSource {
-  func generatePostRetrieveParameters() -> Dictionary<String, String> {
+  func generatePostRetrieveParameters() -> [String:String] {
     return ["action": "postList"]
   }
   

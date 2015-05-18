@@ -14,7 +14,7 @@ class YakPostDetailViewController: YakPostViewController {
   internal override func retrievePosts() {
     if let delegate = self.delegate {
       let request = HTTPTask()
-      let params: Dictionary<String,String> = delegate.generatePostRetrieveParameters()
+      let params: [String:String] = delegate.generatePostRetrieveParameters()
       
       request.POST("http://surge.seektom.com/post", parameters: params,
         success: {(response: HTTPResponse) in
