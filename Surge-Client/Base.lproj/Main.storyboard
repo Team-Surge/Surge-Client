@@ -1103,17 +1103,17 @@
                                 <exclude reference="3nJ-WG-TyX"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="76a-RX-iJY"/>
+                                <exclude reference="PCl-TQ-Vem"/>
+                                <exclude reference="asy-db-Up5"/>
+                                <exclude reference="n7K-te-sad"/>
+                                <exclude reference="Vaw-Fr-t7E"/>
                                 <exclude reference="rbI-9h-zbh"/>
                                 <exclude reference="yse-YE-Z56"/>
                                 <exclude reference="COs-FI-WPD"/>
                                 <exclude reference="ECD-bV-1sd"/>
                                 <exclude reference="kFq-KN-xok"/>
                                 <exclude reference="oBQ-I8-OUh"/>
-                                <exclude reference="76a-RX-iJY"/>
-                                <exclude reference="PCl-TQ-Vem"/>
-                                <exclude reference="asy-db-Up5"/>
-                                <exclude reference="n7K-te-sad"/>
-                                <exclude reference="Vaw-Fr-t7E"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -1123,17 +1123,17 @@
                                 <include reference="3nJ-WG-TyX"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="76a-RX-iJY"/>
+                                <include reference="PCl-TQ-Vem"/>
+                                <include reference="asy-db-Up5"/>
+                                <include reference="n7K-te-sad"/>
+                                <include reference="Vaw-Fr-t7E"/>
                                 <include reference="rbI-9h-zbh"/>
                                 <include reference="yse-YE-Z56"/>
                                 <include reference="COs-FI-WPD"/>
                                 <include reference="ECD-bV-1sd"/>
                                 <include reference="kFq-KN-xok"/>
                                 <include reference="oBQ-I8-OUh"/>
-                                <include reference="76a-RX-iJY"/>
-                                <include reference="PCl-TQ-Vem"/>
-                                <include reference="asy-db-Up5"/>
-                                <include reference="n7K-te-sad"/>
-                                <include reference="Vaw-Fr-t7E"/>
                             </mask>
                         </variation>
                     </view>

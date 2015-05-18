@@ -18,6 +18,7 @@
 		3FB0BDAD1AE9FCAD009A8DB0 /* NotificationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0BDAC1AE9FCAD009A8DB0 /* NotificationsTableViewController.swift */; };
 		3FB0BDAF1AEA1E23009A8DB0 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0BDAE1AEA1E23009A8DB0 /* MeViewController.swift */; };
 		3FCCBDD31AF75C0900D1695A /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCCBDD21AF75C0900D1695A /* RegisterResponse.swift */; };
+		3FE625E01B0A7CAE000700F4 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE625DF1B0A7CAE000700F4 /* Post.swift */; };
 		65C111CACFEFFEA9FD86FB1C /* Pods_Surge_Client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D58DF9116783E77F98DB42 /* Pods_Surge_Client.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		DA2F086F1B099E6C0061B318 /* YakPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2F086E1B099E6C0061B318 /* YakPostViewController.swift */; };
 		DA5533481AE0B57F003E369E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5533471AE0B57F003E369E /* AppDelegate.swift */; };
@@ -80,6 +81,7 @@
 		3FB0BDAC1AE9FCAD009A8DB0 /* NotificationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewController.swift; sourceTree = "<group>"; };
 		3FB0BDAE1AEA1E23009A8DB0 /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 		3FCCBDD21AF75C0900D1695A /* RegisterResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
+		3FE625DF1B0A7CAE000700F4 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		42FD031BEDF5185BD1CDFBA1 /* Pods-Surge-Client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surge-Client.release.xcconfig"; path = "Pods/Target Support Files/Pods-Surge-Client/Pods-Surge-Client.release.xcconfig"; sourceTree = "<group>"; };
 		63D58DF9116783E77F98DB42 /* Pods_Surge_Client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Surge_Client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA2F086E1B099E6C0061B318 /* YakPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YakPostViewController.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				3FCCBDD21AF75C0900D1695A /* RegisterResponse.swift */,
 				DACDB9541B0331040074C4AD /* PostResponse.swift */,
 				DACDB9561B033BC20074C4AD /* PostDetailResponse.swift */,
+				3FE625DF1B0A7CAE000700F4 /* Post.swift */,
 			);
 			name = JSON;
 			sourceTree = "<group>";
@@ -478,6 +481,7 @@
 				3F8E5D671AEF4CE100B7363F /* RegisterViewController.swift in Sources */,
 				3F20A3051AE9814D004C2598 /* NearTableViewCell.swift in Sources */,
 				3FB0BDAA1AE9FC81009A8DB0 /* NotificationsTableViewCell.swift in Sources */,
+				3FE625E01B0A7CAE000700F4 /* Post.swift in Sources */,
 				3FCCBDD31AF75C0900D1695A /* RegisterResponse.swift in Sources */,
 				DACDB9571B033BC20074C4AD /* PostDetailResponse.swift in Sources */,
 				DAD2E43C1AE7374100DFBB53 /* YakMainViewController.swift in Sources */,
