@@ -1058,7 +1058,7 @@
         <!--Yak Create Post View Controller-->
         <scene sceneID="mYq-bd-7LF">
             <objects>
-                <viewController title="Yak Create Post View Controller" id="el0-JQ-ce6" customClass="YakCreatePostViewController" customModule="Surge_Client" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="el0-JQ-ce6" customClass="YakCreatePostViewController" customModule="Surge_Client" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="73j-Rh-5oB"/>
                         <viewControllerLayoutGuide type="bottom" id="v7D-eR-8Wj"/>
@@ -1067,17 +1067,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zUW-mL-5PJ">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="textShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Title" id="xyU-o9-Wce"/>
-                                </items>
-                            </navigationBar>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.20000000000000001" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Pg7-Ny-MNn">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             </mapView>
@@ -1095,15 +1084,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Pg7-Ny-MNn" firstAttribute="trailing" secondItem="zUW-mL-5PJ" secondAttribute="trailing" id="B91-SZ-uIV"/>
+                            <constraint firstItem="3nJ-WG-TyX" firstAttribute="trailing" secondItem="Pg7-Ny-MNn" secondAttribute="trailing" id="76a-RX-iJY"/>
                             <constraint firstItem="Pg7-Ny-MNn" firstAttribute="bottom" secondItem="v7D-eR-8Wj" secondAttribute="top" id="COs-FI-WPD"/>
                             <constraint firstItem="Pg7-Ny-MNn" firstAttribute="leading" secondItem="pxV-Hh-ma4" secondAttribute="leading" id="ECD-bV-1sd"/>
-                            <constraint firstItem="Pg7-Ny-MNn" firstAttribute="leading" secondItem="zUW-mL-5PJ" secondAttribute="leading" id="KeW-nA-qll"/>
-                            <constraint firstItem="Pg7-Ny-MNn" firstAttribute="top" secondItem="zUW-mL-5PJ" secondAttribute="bottom" id="NFa-vz-i7m"/>
+                            <constraint firstItem="3nJ-WG-TyX" firstAttribute="leading" secondItem="Pg7-Ny-MNn" secondAttribute="leading" id="PCl-TQ-Vem"/>
                             <constraint firstItem="v7D-eR-8Wj" firstAttribute="top" secondItem="3nJ-WG-TyX" secondAttribute="bottom" constant="1" id="Vaw-Fr-t7E"/>
                             <constraint firstItem="3nJ-WG-TyX" firstAttribute="top" secondItem="3le-wu-Ozi" secondAttribute="bottom" constant="8" symbolic="YES" id="asy-db-Up5"/>
-                            <constraint firstItem="3le-wu-Ozi" firstAttribute="leading" secondItem="zUW-mL-5PJ" secondAttribute="leading" id="i1O-Qu-TjM"/>
-                            <constraint firstItem="3le-wu-Ozi" firstAttribute="trailing" secondItem="zUW-mL-5PJ" secondAttribute="trailing" id="igh-dI-Ki0"/>
                             <constraint firstItem="Pg7-Ny-MNn" firstAttribute="top" secondItem="73j-Rh-5oB" secondAttribute="bottom" id="kFq-KN-xok"/>
                             <constraint firstItem="3nJ-WG-TyX" firstAttribute="trailing" secondItem="3le-wu-Ozi" secondAttribute="trailing" id="n7K-te-sad"/>
                             <constraint firstAttribute="trailing" secondItem="Pg7-Ny-MNn" secondAttribute="trailing" id="oBQ-I8-OUh"/>
@@ -1112,50 +1098,42 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="zUW-mL-5PJ"/>
                                 <exclude reference="Pg7-Ny-MNn"/>
                                 <exclude reference="3le-wu-Ozi"/>
                                 <exclude reference="3nJ-WG-TyX"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="rbI-9h-zbh"/>
+                                <exclude reference="yse-YE-Z56"/>
+                                <exclude reference="COs-FI-WPD"/>
+                                <exclude reference="ECD-bV-1sd"/>
+                                <exclude reference="kFq-KN-xok"/>
+                                <exclude reference="oBQ-I8-OUh"/>
+                                <exclude reference="76a-RX-iJY"/>
+                                <exclude reference="PCl-TQ-Vem"/>
                                 <exclude reference="asy-db-Up5"/>
                                 <exclude reference="n7K-te-sad"/>
                                 <exclude reference="Vaw-Fr-t7E"/>
-                                <exclude reference="i1O-Qu-TjM"/>
-                                <exclude reference="igh-dI-Ki0"/>
-                                <exclude reference="rbI-9h-zbh"/>
-                                <exclude reference="yse-YE-Z56"/>
-                                <exclude reference="B91-SZ-uIV"/>
-                                <exclude reference="COs-FI-WPD"/>
-                                <exclude reference="ECD-bV-1sd"/>
-                                <exclude reference="KeW-nA-qll"/>
-                                <exclude reference="NFa-vz-i7m"/>
-                                <exclude reference="kFq-KN-xok"/>
-                                <exclude reference="oBQ-I8-OUh"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="zUW-mL-5PJ"/>
                                 <include reference="Pg7-Ny-MNn"/>
                                 <include reference="3le-wu-Ozi"/>
                                 <include reference="3nJ-WG-TyX"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="rbI-9h-zbh"/>
+                                <include reference="yse-YE-Z56"/>
+                                <include reference="COs-FI-WPD"/>
+                                <include reference="ECD-bV-1sd"/>
+                                <include reference="kFq-KN-xok"/>
+                                <include reference="oBQ-I8-OUh"/>
+                                <include reference="76a-RX-iJY"/>
+                                <include reference="PCl-TQ-Vem"/>
                                 <include reference="asy-db-Up5"/>
                                 <include reference="n7K-te-sad"/>
                                 <include reference="Vaw-Fr-t7E"/>
-                                <include reference="i1O-Qu-TjM"/>
-                                <include reference="igh-dI-Ki0"/>
-                                <include reference="rbI-9h-zbh"/>
-                                <include reference="yse-YE-Z56"/>
-                                <include reference="B91-SZ-uIV"/>
-                                <include reference="COs-FI-WPD"/>
-                                <include reference="ECD-bV-1sd"/>
-                                <include reference="KeW-nA-qll"/>
-                                <include reference="NFa-vz-i7m"/>
-                                <include reference="kFq-KN-xok"/>
-                                <include reference="oBQ-I8-OUh"/>
                             </mask>
                         </variation>
                     </view>
@@ -1856,6 +1834,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.59999999999999998" green="0.40000000000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
