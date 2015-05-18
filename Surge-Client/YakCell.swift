@@ -128,7 +128,6 @@ class YakCell: UITableViewCell {
     
     if let handle = post.handle {
       if handle == "" {
-        println("Hiding handle")
         handleLabel.hidden = true
         contentVerticalSpace.constant = 5
         if let x = centerAlignmentConstraint {
@@ -139,7 +138,6 @@ class YakCell: UITableViewCell {
         handleLabel.hidden = false
       }
     } else {
-      println("Hiding handle")
       handleLabel.hidden = true
     }
     
