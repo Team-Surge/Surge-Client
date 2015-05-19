@@ -11,15 +11,15 @@ import UIKit
 
 class Color {
   // Shades of purple
-  let Surge = UIColor(rgba: "#a56cfd")
-  let Lightning = UIColor(rgba: "#b686ff")
-  let Blurple = UIColor(rgba: "#683ab0")
+  static let Surge = UIColor(rgba: "#a56cfd")
+  static let Lightning = UIColor(rgba: "#b686ff")
+  static let Blurple = UIColor(rgba: "#683ab0")
   
   // Shades of Green
-  let Leaf = UIColor(rgba: "#b0ac28")
-  let KeyLime = UIColor(rgba: "#fdf86C")
+  static let Leaf = UIColor(rgba: "#b0ac28")
+  static let KeyLime = UIColor(rgba: "#fdf86C")
   
   // Bootstrap Colors
-  let Danger = UIColor(rgba: "#d9534f")
-  let Success = UIColor(rgba: "#5cb85c")
+  static let Danger = UIColor(rgba: "#d9534f")
+  static let Success = UIColor(rgba: "#5cb85c")
 }
