@@ -17,13 +17,13 @@ class YakMainViewController: UIViewController {
   @IBAction func sortButtonChanged(sender: UISegmentedControl) {
     if sender.selectedSegmentIndex == 1 {
       // Sort by hot
-      postViewController?.sortCellsByHot()
+      postViewController?.setCellOrderToHot()
     } else {
       // Sort by new
-      postViewController?.sortCellsByRecent()
+      postViewController?.setCellOrderToRecent()
     }
   }
-  
+
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "detailViewSegue" {

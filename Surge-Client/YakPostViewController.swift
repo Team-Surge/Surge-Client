@@ -15,13 +15,17 @@ import JSONJoy
 protocol YakPostViewControllerSource {
   func generatePostRetrieveParameters() -> [String:String]
   func postWasSelected(post: Post)
-  //func generatePostResponseParameters(sender: Post) -> Dictionary<String, String>
-  //func generatePostViewParameters() -> Dictionary<String, String>
 }
 
 class YakPostViewController: UITableViewController {
   internal var posts = [Post]()
   internal var delegate: YakPostViewControllerSource?
+  internal var orderPostsBy = SortableFeature.Recent
+  
+  enum SortableFeature {
+    case Hot
+    case Recent
+  }
   
   internal func retrievePosts() {
     if let delegate = self.delegate {
@@ -37,7 +41,7 @@ class YakPostViewController: UITableViewController {
               self.posts.insert(post, atIndex: 0)
             }
             dispatch_async(dispatch_get_main_queue(),{
-              self.tableView.reloadData()
+              self.sortCellsAndReload()
               self.refreshControl!.endRefreshing()
             })
           }
@@ -51,14 +55,27 @@ class YakPostViewController: UITableViewController {
     }
   }
   
-  func sortCellsByHot() {
-    posts.sort({$0.voteCount > $1.voteCount})
+  func sortCellsAndReload() {
+    switch orderPostsBy {
+    case .Hot:
+      posts.sort({$0.voteCount > $1.voteCount})
+    case .Recent:
+      posts.sort({$0.timestamp.timeIntervalSinceReferenceDate > $1.timestamp.timeIntervalSinceReferenceDate})
+    default:
+      // Shouldn't get here. In case we do, then sort by Recent
+      posts.sort({$0.timestamp.timeIntervalSinceReferenceDate > $1.timestamp.timeIntervalSinceReferenceDate})
+    }
     tableView.reloadData()
   }
   
-  func sortCellsByRecent() {
-    posts.sort({$0.timestamp.timeIntervalSinceReferenceDate > $1.timestamp.timeIntervalSinceReferenceDate})
-    tableView.reloadData()
+  func setCellOrderToHot() {
+    orderPostsBy = .Hot
+    sortCellsAndReload()
+  }
+  
+  func setCellOrderToRecent() {
+    orderPostsBy = .Recent
+    sortCellsAndReload()
   }
   
   override func viewDidLoad() {
