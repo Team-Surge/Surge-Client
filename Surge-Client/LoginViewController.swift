@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CRToast
 import SwiftHTTP
 import JSONJoy
 
@@ -15,17 +14,6 @@ class LoginViewController: UIViewController {
   @IBOutlet weak var emailField: UITextField!
   @IBOutlet weak var passwordField: UITextField!
   @IBOutlet weak var loginSpinner: UIActivityIndicatorView!
-  
-  let loginFailedToastOptions: [NSObject:AnyObject] = [
-    kCRToastNotificationTypeKey: CRToastType.NavigationBar.rawValue,
-    kCRToastTextKey: "Login failed please try again" as NSString,
-    kCRToastTextAlignmentKey: NSTextAlignment.Center.rawValue,
-    kCRToastBackgroundColorKey: UIColor.redColor(),
-    kCRToastAnimationInTypeKey: CRToastAnimationType.Linear.rawValue,
-    kCRToastAnimationOutTypeKey: CRToastAnimationType.Linear.rawValue,
-    kCRToastAnimationInDirectionKey: CRToastAnimationDirection.Top.rawValue,
-    kCRToastAnimationOutDirectionKey: CRToastAnimationDirection.Top.rawValue
-  ]
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -65,7 +53,7 @@ class LoginViewController: UIViewController {
         } else {
           dispatch_async(dispatch_get_main_queue(), {
             self.loginSpinner.stopAnimating()
-            CRToastManager.showNotificationWithOptions(self.loginFailedToastOptions, completionBlock: {_ in})
+            SurgeToast.showError("Failed to login", onCompletion: {_ in})
           })
         }
       }, failure: {(error: NSError, response: HTTPResponse?) in

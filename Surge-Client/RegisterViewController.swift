@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CRToast
 import SwiftHTTP
 import JSONJoy
 
@@ -16,29 +15,6 @@ class RegisterViewController: UIViewController {
   @IBOutlet weak var passwordField: UITextField!
   @IBOutlet weak var reenterPasswordField: UITextField!
   @IBOutlet weak var registerSpinner: UIActivityIndicatorView!
-  
-  var registrationEmailFailureToastOptions: [NSObject:AnyObject] = [
-    kCRToastNotificationTypeKey: CRToastType.NavigationBar.rawValue,
-    // Set this before dispatching the alert
-    kCRToastTextKey: "" as NSString,
-    kCRToastTextAlignmentKey: NSTextAlignment.Center.rawValue,
-    kCRToastBackgroundColorKey: UIColor.redColor(),
-    kCRToastAnimationInTypeKey: CRToastAnimationType.Linear.rawValue,
-    kCRToastAnimationOutTypeKey: CRToastAnimationType.Linear.rawValue,
-    kCRToastAnimationInDirectionKey: CRToastAnimationDirection.Top.rawValue,
-    kCRToastAnimationOutDirectionKey: CRToastAnimationDirection.Top.rawValue
-  ]
-  
-  let registrationEmailSuccessToastOptions: [NSObject:AnyObject] = [
-    kCRToastNotificationTypeKey: CRToastType.NavigationBar.rawValue,
-    kCRToastTextKey: "Registration was successful!" as NSString,
-    kCRToastTextAlignmentKey: NSTextAlignment.Center.rawValue,
-    kCRToastBackgroundColorKey: UIColor.greenColor(),
-    kCRToastAnimationInTypeKey: CRToastAnimationType.Linear.rawValue,
-    kCRToastAnimationOutTypeKey: CRToastAnimationType.Linear.rawValue,
-    kCRToastAnimationInDirectionKey: CRToastAnimationDirection.Top.rawValue,
-    kCRToastAnimationOutDirectionKey: CRToastAnimationDirection.Top.rawValue
-  ]
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -53,9 +29,7 @@ class RegisterViewController: UIViewController {
   
   func hasValidRegistrationInput() -> Bool {
     if passwordField.text != reenterPasswordField.text {
-      registrationEmailFailureToastOptions[kCRToastTextKey] = "Passwords do not match"
-      CRToastManager.showNotificationWithOptions(registrationEmailFailureToastOptions, completionBlock:
-        {_ in})
+      SurgeToast.showError("Passwords do not match", onCompletion: ({ _ in}))
       return false
     }
     return true
@@ -80,16 +54,13 @@ class RegisterViewController: UIViewController {
         let jsonResponse = RegisterResponse(JSONDecoder(response.responseObject!))
         if jsonResponse.success! == true {
           dispatch_async(dispatch_get_main_queue(), {
-            CRToastManager.showNotificationWithOptions(self.registrationEmailSuccessToastOptions,
-              completionBlock: {_ in})
+            SurgeToast.showSuccess("Successfully registered", onCompletion: ({_ in}))
             self.dismissViewControllerAnimated(true, completion: nil)
           })
         } else {
           dispatch_async(dispatch_get_main_queue(), {
             self.registerSpinner.stopAnimating()
-            self.registrationEmailFailureToastOptions[kCRToastTextKey] = "Registration failure"
-            CRToastManager.showNotificationWithOptions(self.registrationEmailFailureToastOptions,
-              completionBlock: {_ in})
+            SurgeToast.showError("Registration failure", onCompletion: ({_ in}))
           })
         }
       }, failure: {(error: NSError, response: HTTPResponse?) in
