@@ -18,6 +18,7 @@ class SurgeToast {
       kCRToastAnimationOutTypeKey: CRToastAnimationType.Linear.rawValue,
       kCRToastAnimationInDirectionKey: CRToastAnimationDirection.Top.rawValue,
       kCRToastAnimationOutDirectionKey: CRToastAnimationDirection.Top.rawValue,
+      kCRToastInteractionRespondersKey: [CRToastInteractionResponder(interactionType: CRToastInteractionType.All, automaticallyDismiss: true, block: ({_ in}))],
       kCRToastTextKey: errorMsg,
       kCRToastBackgroundColorKey: Color.Danger
     ]
@@ -33,6 +34,7 @@ class SurgeToast {
       kCRToastAnimationOutTypeKey: CRToastAnimationType.Linear.rawValue,
       kCRToastAnimationInDirectionKey: CRToastAnimationDirection.Top.rawValue,
       kCRToastAnimationOutDirectionKey: CRToastAnimationDirection.Top.rawValue,
+      kCRToastInteractionRespondersKey: [CRToastInteractionResponder(interactionType: CRToastInteractionType.All, automaticallyDismiss: true, block: ({_ in}))],
       kCRToastTextKey: successMsg,
       kCRToastBackgroundColorKey: Color.Success
     ]
