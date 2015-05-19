@@ -54,14 +54,29 @@ class YakCreatePostViewController: UIViewController {
     bottomConstraint.constant = 1
   }
   
+  func hasValidPostText () -> Bool {
+    if count(handleField.text) > 15 {
+      SurgeToast.showError("Handle must be less than 15 characters", onCompletion: ({_ in}))
+      return false
+    } else if count(textView.text) == 0 {
+      SurgeToast.showError("Body can't be empty", onCompletion: ({_ in}))
+      return false
+    }
+    return true
+  }
+  
   func createPostAction() {
     let request = HTTPTask()
     let params: [String:AnyObject] = ["action": "postCreate", "handle": handleField.text, "content": textView.text]
     
+    if hasValidPostText() == false {
+      return
+    }
+    
     request.POST("http://surge.seektom.com/post", parameters: params,
       success: {(response: HTTPResponse) in
       }, failure: {(error: NSError, response: HTTPResponse?) in
-          println("[YakCreatePostViewController] Failed to create post\n\tError: \(error)")
+        SurgeToast.showError("Failed to create post", onCompletion: ({_ in}))
       }
     )
     navigationController?.popViewControllerAnimated(true)
