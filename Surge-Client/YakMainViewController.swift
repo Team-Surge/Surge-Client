@@ -12,7 +12,7 @@ import SwiftHTTP
 import JSONJoy
 
 class YakMainViewController: UIViewController {
-  internal var postViewController: YakPostViewController?
+  private var postViewController: YakPostViewController?
   
   @IBAction func sortButtonChanged(sender: UISegmentedControl) {
     if sender.selectedSegmentIndex == 1 {

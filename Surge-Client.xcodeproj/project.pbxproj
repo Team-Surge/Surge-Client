@@ -200,7 +200,7 @@
 			name = Login/Register;
 			sourceTree = "<group>";
 		};
-		3F9AF3F11AF725A2007EADC3 /* Objects */ = {
+		3F9AF3F11AF725A2007EADC3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				3F9AF3F21AF72613007EADC3 /* LoginResponse.swift */,
@@ -210,7 +210,7 @@
 				3FE625DF1B0A7CAE000700F4 /* Post.swift */,
 				3FE625E11B0AC47E000700F4 /* Poll.swift */,
 			);
-			name = Objects;
+			name = Models;
 			sourceTree = "<group>";
 		};
 		3FB0BDA81AE9FC65009A8DB0 /* Me */ = {
@@ -266,7 +266,7 @@
 		DA5533441AE0B57F003E369E /* Surge-Client */ = {
 			isa = PBXGroup;
 			children = (
-				3F9AF3F11AF725A2007EADC3 /* Objects */,
+				3F9AF3F11AF725A2007EADC3 /* Models */,
 				DA5533471AE0B57F003E369E /* AppDelegate.swift */,
 				3F9A3D721AEF17F8006E4B70 /* Login/Register */,
 				3FB0BDA81AE9FC65009A8DB0 /* Me */,
