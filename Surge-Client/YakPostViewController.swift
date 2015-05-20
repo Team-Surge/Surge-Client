@@ -10,8 +10,6 @@ import UIKit
 import SwiftHTTP
 import JSONJoy
 
-
-
 protocol YakPostViewControllerSource {
   func generatePostRetrieveParameters() -> [String:String]
   func postWasSelected(post: Post)
@@ -21,6 +19,7 @@ class YakPostViewController: UITableViewController {
   internal var posts = [Post]()
   internal var delegate: YakPostViewControllerSource?
   internal var orderPostsBy = SortableFeature.Recent
+  internal var surgeRefreshControl: SurgePullToRefresh?
   
   enum SortableFeature {
     case Hot
@@ -80,11 +79,8 @@ class YakPostViewController: UITableViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    refreshControl = UIRefreshControl()
-    refreshControl!.addTarget(self, action: Selector("retrievePosts"), forControlEvents: UIControlEvents.ValueChanged)
-    refreshControl!.backgroundColor = UIColor.whiteColor()
-    refreshControl!.tintColor = UIColor.blackColor()
     
+    surgeRefreshControl = SurgePullToRefresh(target: self, refreshAction: "retrievePosts")
     
     tableView.registerNib(UINib(nibName: "YakCell", bundle: nil), forCellReuseIdentifier: "YakCell")
     retrievePosts()

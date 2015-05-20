@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3F20A3031AE98134004C2598 /* NearTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20A3021AE98134004C2598 /* NearTableViewController.swift */; };
 		3F20A3051AE9814D004C2598 /* NearTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20A3041AE9814D004C2598 /* NearTableViewCell.swift */; };
+		3F3E0D011B0BFB3B00FC0367 /* PullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3E0D001B0BFB3B00FC0367 /* PullToRefresh.swift */; };
 		3F4446301AE978300001DA1A /* FeaturedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44462F1AE978300001DA1A /* FeaturedTableViewCell.swift */; };
 		3F4446321AE9792D0001DA1A /* FeaturedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4446311AE9792D0001DA1A /* FeaturedTableViewController.swift */; };
 		3F8E5D671AEF4CE100B7363F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8E5D661AEF4CE100B7363F /* RegisterViewController.swift */; };
@@ -76,6 +77,7 @@
 /* Begin PBXFileReference section */
 		3F20A3021AE98134004C2598 /* NearTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearTableViewController.swift; sourceTree = "<group>"; };
 		3F20A3041AE9814D004C2598 /* NearTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearTableViewCell.swift; sourceTree = "<group>"; };
+		3F3E0D001B0BFB3B00FC0367 /* PullToRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefresh.swift; sourceTree = "<group>"; };
 		3F44462F1AE978300001DA1A /* FeaturedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedTableViewCell.swift; sourceTree = "<group>"; };
 		3F4446311AE9792D0001DA1A /* FeaturedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedTableViewController.swift; sourceTree = "<group>"; };
 		3F8E5D661AEF4CE100B7363F /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				3FE625E71B0AE476000700F4 /* Toast.swift */,
 				3FE625EC1B0AEE12000700F4 /* UIColorExtension.swift */,
 				3FE625EA1B0AE8A1000700F4 /* Color.swift */,
+				3F3E0D001B0BFB3B00FC0367 /* PullToRefresh.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -490,6 +493,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F9A3D741AEF1895006E4B70 /* LoginViewController.swift in Sources */,
+				3F3E0D011B0BFB3B00FC0367 /* PullToRefresh.swift in Sources */,
 				DAF211ED1B09D9B400EEEE4A /* YakPostDetailViewController.swift in Sources */,
 				3FB0BDAF1AEA1E23009A8DB0 /* MeViewController.swift in Sources */,
 				DACDB9551B0331040074C4AD /* PostResponse.swift in Sources */,
