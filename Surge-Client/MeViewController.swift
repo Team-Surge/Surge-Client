@@ -40,24 +40,6 @@ class MeViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
   
-  // MARK: - Navigation
-  
-  /*
-  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get reference to Notifications and My Stuff views
-    if let segueIdentifier = segue.identifier {
-      if segueIdentifier == "embedSegue" {
-        innerTabBarController = (segue.destinationViewController as! UITabBarController)
-        //innerTabBarController!.tabBar.frame = CGRectMake(0, 499, 320, 49)
-      }
-    }
-    /*
-    if((segue.identifier as String!) == "notificationsTableViewSegue"){
-      notificationsTableView = segue.destinationViewController.view!! as UIView
-    } else if((segue.identifier as String!) == "myStuffTableViewSegue") {
-      myStuffTableView = segue.destinationViewController.view!! as UIView
-    }*/
-  }*/
 }
 
 extension MeViewController: LocationManagerDelegate {
