@@ -16,7 +16,9 @@ class MeViewController: UIViewController {
   
   weak var notificationsTableView: UIView?
   weak var myStuffTableView: UIView?
+  weak var innerTabBarController: UITabBarController?
   
+  @IBOutlet weak var containerView: UIView!
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
     LocationManager.sharedInstance().addLocationManagerDelegate(self)
@@ -33,43 +35,29 @@ class MeViewController: UIViewController {
     super.viewDidLoad()
   }
   
-  override func viewDidAppear(animated: Bool) {
-    // Start with notification view on
-    if(notificationsTableView != nil && myStuffTableView != nil) {
-      notificationsTableView!.hidden = false
-      myStuffTableView!.hidden = true
-    }
-  }
-
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
   
-  @IBAction func toggleViews(sender: UIButton!) {
-    if(sender == showNotificationsButton) {
-      if(notificationsTableView != nil && myStuffTableView != nil) {
-        notificationsTableView!.hidden = false
-        myStuffTableView!.hidden = true
-      }
-    } else if(sender == showMyStuffButton) {
-      if(myStuffTableView != nil && notificationsTableView != nil) {
-        myStuffTableView!.hidden = false
-        notificationsTableView!.hidden = true
-      }
-    }
-  }
-  
   // MARK: - Navigation
   
+  /*
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     // Get reference to Notifications and My Stuff views
+    if let segueIdentifier = segue.identifier {
+      if segueIdentifier == "embedSegue" {
+        innerTabBarController = (segue.destinationViewController as! UITabBarController)
+        //innerTabBarController!.tabBar.frame = CGRectMake(0, 499, 320, 49)
+      }
+    }
+    /*
     if((segue.identifier as String!) == "notificationsTableViewSegue"){
       notificationsTableView = segue.destinationViewController.view!! as UIView
     } else if((segue.identifier as String!) == "myStuffTableViewSegue") {
       myStuffTableView = segue.destinationViewController.view!! as UIView
-    }
-  }
+    }*/
+  }*/
 }
 
 extension MeViewController: LocationManagerDelegate {
