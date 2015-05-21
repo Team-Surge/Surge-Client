@@ -34,11 +34,11 @@ static int errorCount = 0;
     
     //Must check authorizationStatus before initiating a CLLocationManager
     CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
-    if (status == kCLAuthorizationStatusRestricted && status == kCLAuthorizationStatusDenied) {
-    } else {
+    if (status != kCLAuthorizationStatusRestricted && status != kCLAuthorizationStatusDenied) {
       _manager = [[CLLocationManager alloc] init];
       _manager.delegate = self;
       _manager.desiredAccuracy = kCLLocationAccuracyBest;
+      [_manager startUpdatingLocation];
     }
     if (status == kCLAuthorizationStatusNotDetermined) {
       //Must check if selector exists before messaging it
@@ -64,8 +64,12 @@ static int errorCount = 0;
   if ([self.observers containsObject:delegate]) {
     [self.observers removeObject:delegate];
   }
+  
 }
 
+- (void) update {
+  [self.manager startUpdatingLocation];
+}
 
 #pragma mark - Location Manager Delegate
 

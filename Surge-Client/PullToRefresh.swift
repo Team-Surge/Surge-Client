@@ -24,6 +24,7 @@ class SurgePullToRefresh {
     
     // Attach action to refresh controller
     refreshControl!.addTarget(tableViewController, action: refreshAction, forControlEvents: UIControlEvents.ValueChanged)
+    refreshControl!.addTarget(LocationManager.sharedInstance(), action: Selector("update"), forControlEvents: UIControlEvents.ValueChanged)
     
     // Customize refresh
     refreshControl!.backgroundColor = UIColor.whiteColor()

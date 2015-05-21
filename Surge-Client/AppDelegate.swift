@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     if let window = self.window {
       window.rootViewController = loginController
     }
+    LocationManager.sharedInstance().update()
     return true
   }
   

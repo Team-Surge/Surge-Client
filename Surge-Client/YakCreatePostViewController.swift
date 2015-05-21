@@ -67,7 +67,8 @@ class YakCreatePostViewController: UIViewController {
   
   func createPostAction() {
     let request = HTTPTask()
-    let params: [String:AnyObject] = ["action": "postCreate", "handle": handleField.text, "content": textView.text]
+    let lastLocation = LocationManager.sharedInstance().lastLocation
+    let params: [String:AnyObject] = ["action": "postCreate", "handle": handleField.text, "content": textView.text, "lat": toString(lastLocation.coordinate.latitude), "lng": toString(lastLocation.coordinate.longitude)]
     
     if hasValidPostText() == false {
       return

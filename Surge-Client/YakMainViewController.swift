@@ -36,6 +36,7 @@ class YakMainViewController: UIViewController {
 
 extension YakMainViewController: YakPostViewControllerSource {
   func generatePostRetrieveParameters() -> [String:String] {
-    return ["action": "postList"]
+    let lastLocation = LocationManager.sharedInstance().lastLocation
+    return ["action": "postList", "lat": toString(lastLocation.coordinate.latitude), "lng": toString(lastLocation.coordinate.longitude)]
   }
 }

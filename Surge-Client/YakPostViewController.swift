@@ -80,7 +80,6 @@ class YakPostViewController: UITableViewController {
     super.viewDidLoad()
     
     surgeRefreshControl = SurgePullToRefresh(target: self, refreshAction: "retrievePosts")
-    
     tableView.registerNib(UINib(nibName: "YakCell", bundle: nil), forCellReuseIdentifier: "YakCell")
     retrievePosts()
   }

@@ -13,17 +13,18 @@
 @protocol LocationManagerDelegate
 
 - (MKMapView*)mapViewToUpdateOnNewLocation;
-//- (void)locationManagerDidUpdateLocation:(CLLocation *)location;
+
 @required
 
 
 @end
 
 @interface LocationManager : NSObject<CLLocationManagerDelegate>
-@property (strong,nonatomic) CLLocation *lastLocation;
+@property (strong,nonatomic,readonly) CLLocation *lastLocation;
 
 + (LocationManager *)sharedInstance;
 - (void) addLocationManagerDelegate:(id<LocationManagerDelegate>) delegate;
 - (void) removeLocationManagerDelegate:(id<LocationManagerDelegate>) delegate;
+- (void) update;
 
 @end
