@@ -36,6 +36,7 @@
 		DA7A3ED71AF875BD00B0B965 /* CRToast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA7A3ED61AF875BD00B0B965 /* CRToast.framework */; };
 		DA7A3EDD1AF877E900B0B965 /* Pods_Surge_Client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D58DF9116783E77F98DB42 /* Pods_Surge_Client.framework */; };
 		DA7A3EDE1AF877E900B0B965 /* Pods_Surge_Client.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63D58DF9116783E77F98DB42 /* Pods_Surge_Client.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DA87E0381B0DAE5400FDA182 /* MyPostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87E0371B0DAE5400FDA182 /* MyPostsViewController.swift */; };
 		DAAA205A1AF85633007FF97D /* JSONJoy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAA20591AF85633007FF97D /* JSONJoy.framework */; };
 		DAAA205C1AF85636007FF97D /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAA205B1AF85636007FF97D /* SwiftHTTP.framework */; };
 		DAC2D0ED1AEF1EEE0047E4AE /* YakCreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC2D0EC1AEF1EEE0047E4AE /* YakCreatePostViewController.swift */; };
@@ -108,6 +109,7 @@
 		DA55335F1AE0B57F003E369E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA5533601AE0B57F003E369E /* Surge_ClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Surge_ClientTests.swift; sourceTree = "<group>"; };
 		DA7A3ED61AF875BD00B0B965 /* CRToast.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CRToast.framework; path = "Pods/../build/Debug-iphoneos/Pods-Surge-Client/CRToast.framework"; sourceTree = "<group>"; };
+		DA87E0371B0DAE5400FDA182 /* MyPostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPostsViewController.swift; sourceTree = "<group>"; };
 		DAAA20591AF85633007FF97D /* JSONJoy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JSONJoy.framework; path = "Pods/../build/Debug-iphoneos/Pods-Surge-Client/JSONJoy.framework"; sourceTree = "<group>"; };
 		DAAA205B1AF85636007FF97D /* SwiftHTTP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftHTTP.framework; path = "Pods/../build/Debug-iphoneos/Pods-Surge-Client/SwiftHTTP.framework"; sourceTree = "<group>"; };
 		DAC2D0EC1AEF1EEE0047E4AE /* YakCreatePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YakCreatePostViewController.swift; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 			children = (
 				3FB0BDAE1AEA1E23009A8DB0 /* MeViewController.swift */,
 				DA2F12D71B0D6490006AD05C /* MeTabBarController.swift */,
+				DA87E0361B0DAE0B00FDA182 /* My Stuff */,
 				3FB0BDAB1AE9FC88009A8DB0 /* Notifications */,
 			);
 			name = Me;
@@ -328,6 +331,14 @@
 				DA55335F1AE0B57F003E369E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DA87E0361B0DAE0B00FDA182 /* My Stuff */ = {
+			isa = PBXGroup;
+			children = (
+				DA87E0371B0DAE5400FDA182 /* MyPostsViewController.swift */,
+			);
+			name = "My Stuff";
 			sourceTree = "<group>";
 		};
 		F832D3B06F9ABAA60864FF2C /* Frameworks */ = {
@@ -509,6 +520,7 @@
 				3F8E5D671AEF4CE100B7363F /* RegisterViewController.swift in Sources */,
 				DA2F12D81B0D6490006AD05C /* MeTabBarController.swift in Sources */,
 				3F20A3051AE9814D004C2598 /* NearTableViewCell.swift in Sources */,
+				DA87E0381B0DAE5400FDA182 /* MyPostsViewController.swift in Sources */,
 				3FB0BDAA1AE9FC81009A8DB0 /* NotificationsTableViewCell.swift in Sources */,
 				3FE625E01B0A7CAE000700F4 /* Post.swift in Sources */,
 				3FE625ED1B0AEE12000700F4 /* UIColorExtension.swift in Sources */,

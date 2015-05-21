@@ -1,17 +1,15 @@
 //
-
-//  YakMainViewController.swift
+//  MyPostsViewController.swift
 //  Surge-Client
 //
-//  Created by Dustin Guerrero on 4/21/15.
+//  Created by Dustin Guerrero on 5/20/15.
 //  Copyright (c) 2015 Team-Surge. All rights reserved.
 //
 
 import UIKit
-import SwiftHTTP
-import JSONJoy
 
-class YakMainViewController: UIViewController {
+class MyPostsViewController: UIViewController {
+
   private var postViewController: YakPostViewController?
   
   @IBAction func sortButtonChanged(sender: UISegmentedControl) {
@@ -34,8 +32,8 @@ class YakMainViewController: UIViewController {
   
 }
 
-extension YakMainViewController: YakPostViewControllerSource {
+extension MyPostsViewController: YakPostViewControllerSource {
   func generatePostRetrieveParameters() -> [String:String] {
-    return ["action": "postList"]
+    return ["action": "postListSelf"]
   }
 }

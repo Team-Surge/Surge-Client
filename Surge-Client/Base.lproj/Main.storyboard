@@ -302,7 +302,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yaT-IA-Ssn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-803.25" y="1447.5"/>
+            <point key="canvasLocation" x="-791.25" y="1060.5"/>
         </scene>
         <!--Featured Table View Controller-->
         <scene sceneID="Nge-T9-zTS">
@@ -587,7 +587,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b1T-mD-bUj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1147.5" y="1849.875"/>
+            <point key="canvasLocation" x="2359.5" y="1900.5"/>
         </scene>
         <!--My Stuff Table View Controller-->
         <scene sceneID="2sh-yu-IKt">
@@ -600,7 +600,7 @@
                         <sections>
                             <tableViewSection id="4v0-VG-lov">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="E8p-0S-irA">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="E8p-0S-irA" userLabel="My Posts">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E8p-0S-irA" id="v7g-qP-Xqo">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -640,8 +640,11 @@
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Tqc-3T-GXA" kind="show" id="3R6-3Y-11s"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Gb8-xP-k3Z">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Gb8-xP-k3Z" userLabel="My Replies">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gb8-xP-k3Z" id="jx8-24-s2L">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -682,7 +685,7 @@
                                             </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="bbi-lD-m1c">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="bbi-lD-m1c" userLabel="Settings">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bbi-lD-m1c" id="2ey-hZ-7yt">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -736,7 +739,67 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xa5-fC-SNV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2398.5" y="1849.875"/>
+            <point key="canvasLocation" x="1077" y="1900.5"/>
+        </scene>
+        <!--My Posts View Controller-->
+        <scene sceneID="d9H-lA-zb5">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TrK-0k-isf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Tqc-3T-GXA" customClass="MyPostsViewController" customModule="Surge_Client" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r1v-uB-ru2"/>
+                        <viewControllerLayoutGuide type="bottom" id="3OS-bq-Oc0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lGk-EZ-Twi">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="imY-Zy-Job">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <connections>
+                                    <segue destination="pFg-aD-6Gi" kind="embed" identifier="embedSegue" id="BBc-VI-dTH"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="imY-Zy-Job" secondAttribute="centerX" id="8go-bj-5ai"/>
+                            <constraint firstItem="3OS-bq-Oc0" firstAttribute="top" secondItem="imY-Zy-Job" secondAttribute="bottom" id="LqB-xq-dDG"/>
+                            <constraint firstItem="imY-Zy-Job" firstAttribute="leading" secondItem="lGk-EZ-Twi" secondAttribute="leadingMargin" constant="-16" id="MzS-83-Ljz"/>
+                            <constraint firstItem="imY-Zy-Job" firstAttribute="top" secondItem="r1v-uB-ru2" secondAttribute="bottom" id="XuZ-jp-uaX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="imY-Zy-Job" secondAttribute="trailing" constant="-16" id="c1d-ia-gul"/>
+                            <constraint firstAttribute="centerY" secondItem="imY-Zy-Job" secondAttribute="centerY" id="cqu-Ti-ycG"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="imY-Zy-Job"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="8go-bj-5ai"/>
+                                <exclude reference="MzS-83-Ljz"/>
+                                <exclude reference="XuZ-jp-uaX"/>
+                                <exclude reference="c1d-ia-gul"/>
+                                <exclude reference="cqu-Ti-ycG"/>
+                                <exclude reference="LqB-xq-dDG"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="imY-Zy-Job"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="8go-bj-5ai"/>
+                                <include reference="MzS-83-Ljz"/>
+                                <include reference="XuZ-jp-uaX"/>
+                                <include reference="c1d-ia-gul"/>
+                                <include reference="cqu-Ti-ycG"/>
+                                <include reference="LqB-xq-dDG"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-2305.5" y="2067"/>
         </scene>
         <!--Me Tab Bar Controller-->
         <scene sceneID="M8Z-dR-Krg">
@@ -1266,10 +1329,13 @@
                             <outlet property="delegate" destination="pFg-aD-6Gi" id="9IK-uU-rXr"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="f9n-0c-T09" kind="show" identifier="detailViewSegue" id="bvf-4D-QHY"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LaK-Tf-xve" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2062.5" y="1507.125"/>
+            <point key="canvasLocation" x="-2781" y="2547.375"/>
         </scene>
         <!--Yak Post Detail View Controller-->
         <scene sceneID="EBC-0d-gbl">
@@ -1295,7 +1361,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bin-hF-ba6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2788.5" y="2072.625"/>
+            <point key="canvasLocation" x="-2781" y="3539.625"/>
         </scene>
         <!--Yak Main View Controller-->
         <scene sceneID="sWp-rx-T3U">
@@ -1365,9 +1431,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="f9n-0c-T09" kind="show" identifier="detailViewSegue" id="hb5-ic-kbX"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ges-h7-tjh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1419,6 +1482,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="6" y="72" width="330" height="127"/>
+                                </variation>
                             </textView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VXd-7R-vBw">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -1498,7 +1564,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lM7-S6-9oB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2788.5" y="1525.5"/>
+            <point key="canvasLocation" x="-2788.5" y="3161.625"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Wf6-9d-1So">
@@ -2043,5 +2109,8 @@
         <image name="Bolt-Logo" width="146" height="200"/>
         <image name="viewed_dot" width="20" height="20"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="BBc-VI-dTH"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
