@@ -96,6 +96,8 @@ class YakPostViewController: UITableViewController {
     let cell = tableView.dequeueReusableCellWithIdentifier("YakCell", forIndexPath: indexPath) as! YakCell
     let post = self.posts[indexPath.row]
     
+    //println(cell.handleLabel.text)
+    //println(cell.contentView.constraints())
     cell.initializeCellFromPost(post)
     cell.delegate = self
     return cell
@@ -119,7 +121,7 @@ class YakPostViewController: UITableViewController {
   }
 
   override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-    return 80
+    return 400
   }
 }
 

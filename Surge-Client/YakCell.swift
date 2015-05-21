@@ -25,11 +25,20 @@ class YakCell: UITableViewCell {
   var id = 0
   var timestamp: NSDate!
   
+  var showState: Bool = false
+  
   @IBOutlet weak var handleLabel: UILabel!
   @IBOutlet weak var replyLabel: UILabel!
   @IBOutlet weak var karmaLabel: UILabel!
   @IBOutlet weak var contentTextView: UITextView!
   @IBOutlet weak var timeLabel: UILabel!
+
+  @IBOutlet var contentTextViewWithHandleTopConstraint: NSLayoutConstraint!
+  @IBOutlet var contentTextViewWithoutHandleTopConstraint: NSLayoutConstraint!
+  @IBOutlet var contentTextViewWithHandleHeightConstraint: NSLayoutConstraint!
+  @IBOutlet var contentTextViewWithoutHandleHeightConstraint: NSLayoutConstraint!
+  @IBOutlet var handleLabelExistsHeight: NSLayoutConstraint!
+  @IBOutlet var handleLabelDoesntExistHeight: NSLayoutConstraint!
   
   @IBOutlet weak var upBtn: UIButton!
   @IBOutlet weak var downBtn: UIButton!
@@ -116,23 +125,13 @@ class YakCell: UITableViewCell {
   
   func initializeCellFromPost(post: Post) {
     contentTextView.text = post.content
+    handleLabel.text = post.handle
     karmaLabel.text = toString(post.voteCount)
     timestamp = post.timestamp
     timeLabel.text = getTimeDescriptorFromDate(timestamp)
     baseKarma = post.voteCount
     state = VoteState(rawValue: post.voteState!)!
     id = post.id
-    
-    if let handle = post.handle {
-      if handle == "" {
-        handleLabel.hidden = true
-      } else {
-        handleLabel.text = handle
-        handleLabel.hidden = false
-      }
-    } else {
-      handleLabel.hidden = true
-    }
     
     if let commentCount = post.commentCount {
       replyLabel.text = "\(commentCount) replies"
@@ -151,7 +150,36 @@ class YakCell: UITableViewCell {
     }
     
     evaluateState(false)
-    
+    setNeedsUpdateConstraints()
+  }
+  
+  override func updateConstraints() {
+    if let label = handleLabel.text {
+      if label != "" {
+        NSLayoutConstraint.activateConstraints([
+          contentTextViewWithHandleHeightConstraint,
+          contentTextViewWithHandleTopConstraint,
+          handleLabelExistsHeight
+        ])
+        NSLayoutConstraint.deactivateConstraints([
+          contentTextViewWithoutHandleHeightConstraint,
+          contentTextViewWithoutHandleTopConstraint,
+          handleLabelDoesntExistHeight
+        ])
+      } else {
+        NSLayoutConstraint.deactivateConstraints([
+          contentTextViewWithHandleHeightConstraint,
+          contentTextViewWithHandleTopConstraint,
+          handleLabelExistsHeight
+        ])
+        NSLayoutConstraint.activateConstraints([
+          contentTextViewWithoutHandleHeightConstraint,
+          contentTextViewWithoutHandleTopConstraint,
+          handleLabelDoesntExistHeight
+          ])
+      }
+    }
+    super.updateConstraints()
   }
   
   func initializeCellWithContent(content: String!, voteCount: Int, replyCount: Int, state: VoteState, id: Int, timestamp: NSDate) {
@@ -175,6 +203,7 @@ class YakCell: UITableViewCell {
     }
     
     evaluateState(false)
+    setNeedsUpdateConstraints()
   }
 }
  
