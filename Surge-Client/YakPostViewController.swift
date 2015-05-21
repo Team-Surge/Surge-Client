@@ -10,9 +10,8 @@ import UIKit
 import SwiftHTTP
 import JSONJoy
 
-protocol YakPostViewControllerSource {
+@objc protocol YakPostViewControllerSource {
   func generatePostRetrieveParameters() -> [String:String]
-  func postWasSelected(post: Post)
 }
 
 class YakPostViewController: UITableViewController {
@@ -86,6 +85,13 @@ class YakPostViewController: UITableViewController {
     retrievePosts()
   }
   
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "detailViewSegue" {
+      let destination = segue.destinationViewController as! YakDetailViewController
+      destination.sourcePost = sender as! Post
+    }
+  }
+  
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("YakCell", forIndexPath: indexPath) as! YakCell
     let post = self.posts[indexPath.row]
@@ -100,7 +106,7 @@ class YakPostViewController: UITableViewController {
   }
   
   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    delegate?.postWasSelected(posts[indexPath.row])
+    performSegueWithIdentifier("detailViewSegue", sender: posts[indexPath.row])
   }
   
   
