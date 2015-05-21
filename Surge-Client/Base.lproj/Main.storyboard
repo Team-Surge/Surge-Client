@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rpj-yL-ax4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rpj-yL-ax4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -451,6 +451,11 @@
                                 <exclude reference="07I-rJ-Qck"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="pRr-Kc-2lQ"/>
+                                <exclude reference="1cY-hZ-6Qc"/>
+                                <exclude reference="8ft-I7-V5L"/>
+                                <exclude reference="sxX-uZ-39A"/>
+                                <exclude reference="xpx-ia-m3y"/>
                                 <exclude reference="F5p-p4-oha"/>
                                 <exclude reference="HE0-TB-yqR"/>
                                 <exclude reference="HIm-gt-sTQ"/>
@@ -459,12 +464,7 @@
                                 <exclude reference="Ory-9w-jTC"/>
                                 <exclude reference="ZLD-xh-q1w"/>
                                 <exclude reference="cl0-kJ-dZf"/>
-                                <exclude reference="1cY-hZ-6Qc"/>
-                                <exclude reference="8ft-I7-V5L"/>
-                                <exclude reference="sxX-uZ-39A"/>
-                                <exclude reference="xpx-ia-m3y"/>
                                 <exclude reference="ApP-hv-JKp"/>
-                                <exclude reference="pRr-Kc-2lQ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -474,6 +474,11 @@
                                 <include reference="07I-rJ-Qck"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="pRr-Kc-2lQ"/>
+                                <include reference="1cY-hZ-6Qc"/>
+                                <include reference="8ft-I7-V5L"/>
+                                <include reference="sxX-uZ-39A"/>
+                                <include reference="xpx-ia-m3y"/>
                                 <exclude reference="F5p-p4-oha"/>
                                 <include reference="HE0-TB-yqR"/>
                                 <include reference="HIm-gt-sTQ"/>
@@ -482,12 +487,7 @@
                                 <include reference="Ory-9w-jTC"/>
                                 <include reference="ZLD-xh-q1w"/>
                                 <include reference="cl0-kJ-dZf"/>
-                                <include reference="1cY-hZ-6Qc"/>
-                                <include reference="8ft-I7-V5L"/>
-                                <include reference="sxX-uZ-39A"/>
-                                <include reference="xpx-ia-m3y"/>
                                 <include reference="ApP-hv-JKp"/>
-                                <include reference="pRr-Kc-2lQ"/>
                             </mask>
                         </variation>
                     </view>
@@ -506,7 +506,7 @@
             <objects>
                 <tableViewController title="Notifications Table View Controller" id="w7U-BI-SWc" customClass="NotificationsTableViewController" customModule="Surge_Client" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="22" sectionFooterHeight="22" id="Dd7-2z-355">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="79"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" white="0.94948315930000005" alpha="1" colorSpace="calibratedWhite"/>
@@ -521,12 +521,18 @@
                                             <color key="backgroundColor" white="0.94948315930000005" alpha="1" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                <rect key="frame" x="0.0" y="0.0" width="204" height="74"/>
+                                            </variation>
                                         </textView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23h" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pwa-tI-18p">
                                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                <rect key="frame" x="212" y="27" width="21" height="19"/>
+                                            </variation>
                                         </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.94948315930000005" alpha="1" colorSpace="calibratedWhite"/>
@@ -594,7 +600,7 @@
             <objects>
                 <tableViewController title="My Stuff Table View Controller" id="uMD-XP-Xru" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="P5u-U4-Lj3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="79"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -610,9 +616,6 @@
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="15" y="10" width="72" height="21"/>
-                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <constraints>
@@ -651,9 +654,6 @@
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="15" y="10" width="85" height="21"/>
-                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <constraints>
@@ -692,9 +692,6 @@
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="15" y="10" width="63" height="21"/>
-                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <constraints>

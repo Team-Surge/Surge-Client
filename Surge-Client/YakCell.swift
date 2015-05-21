@@ -19,9 +19,6 @@ protocol YakCellDelegate : class {
 }
 
 class YakCell: UITableViewCell {
-  
-  @IBOutlet weak var contentVerticalSpace: NSLayoutConstraint!
-  @IBOutlet weak var centerAlignmentConstraint: NSLayoutConstraint!
   var delegate: YakCellDelegate?
   var state = VoteState.Neutral
   var baseKarma = 0
@@ -31,7 +28,7 @@ class YakCell: UITableViewCell {
   @IBOutlet weak var handleLabel: UILabel!
   @IBOutlet weak var replyLabel: UILabel!
   @IBOutlet weak var karmaLabel: UILabel!
-  @IBOutlet weak var contentLabel: UILabel!
+  @IBOutlet weak var contentTextView: UITextView!
   @IBOutlet weak var timeLabel: UILabel!
   
   @IBOutlet weak var upBtn: UIButton!
@@ -85,7 +82,7 @@ class YakCell: UITableViewCell {
   override func awakeFromNib() {
     super.awakeFromNib()
     // Initialization code
-    contentLabel.text = "<YakCell Default Text>"
+    contentTextView.text = "<YakCell Default Text>"
     timeLabel.text = "1m"
     karmaLabel.text = "<\(999)>"
     replyLabel.text = "<99 replies>"
@@ -118,7 +115,7 @@ class YakCell: UITableViewCell {
   }
   
   func initializeCellFromPost(post: Post) {
-    contentLabel.text = post.content
+    contentTextView.text = post.content
     karmaLabel.text = toString(post.voteCount)
     timestamp = post.timestamp
     timeLabel.text = getTimeDescriptorFromDate(timestamp)
@@ -129,10 +126,6 @@ class YakCell: UITableViewCell {
     if let handle = post.handle {
       if handle == "" {
         handleLabel.hidden = true
-        contentVerticalSpace.constant = 5
-        if let x = centerAlignmentConstraint {
-          x.active = false
-        }
       } else {
         handleLabel.text = handle
         handleLabel.hidden = false
@@ -162,7 +155,7 @@ class YakCell: UITableViewCell {
   }
   
   func initializeCellWithContent(content: String!, voteCount: Int, replyCount: Int, state: VoteState, id: Int, timestamp: NSDate) {
-    contentLabel.text = content
+    contentTextView.text = content
     karmaLabel.text = toString(baseKarma)
     replyLabel.text = "\(replyCount) replies"
     timeLabel.text = "30s"
