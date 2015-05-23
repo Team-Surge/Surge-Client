@@ -70,7 +70,7 @@
                         <rect key="frame" x="3" y="41" width="263" height="84"/>
                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="height" priority="999" constant="84" id="EQC-if-i5j"/>
+                            <constraint firstAttribute="height" priority="999" constant="117" id="EQC-if-i5j"/>
                             <constraint firstAttribute="height" constant="84" id="nUb-MA-HBP"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -89,7 +89,7 @@
                     <constraint firstAttribute="trailingMargin" secondItem="Bbo-cf-sjx" secondAttribute="trailing" constant="46" id="7CW-to-y1h"/>
                     <constraint firstItem="Bbo-cf-sjx" firstAttribute="leading" secondItem="7NX-JT-7pE" secondAttribute="leadingMargin" constant="-5" id="EDq-zQ-lLr"/>
                     <constraint firstItem="Bbo-cf-sjx" firstAttribute="top" secondItem="7NX-JT-7pE" secondAttribute="topMargin" constant="33" id="GdA-St-cZx"/>
-                    <constraint firstItem="Bbo-cf-sjx" firstAttribute="top" secondItem="7NX-JT-7pE" secondAttribute="topMargin" priority="999" constant="33" id="Li9-7H-tnA"/>
+                    <constraint firstItem="Bbo-cf-sjx" firstAttribute="top" secondItem="7NX-JT-7pE" secondAttribute="topMargin" priority="999" id="Li9-7H-tnA"/>
                     <constraint firstItem="wMa-Z3-PJN" firstAttribute="top" secondItem="7NX-JT-7pE" secondAttribute="topMargin" constant="1" id="Nph-ge-kNb"/>
                     <constraint firstAttribute="bottomMargin" secondItem="Bbo-cf-sjx" secondAttribute="bottom" constant="7.5" id="Nr3-w8-xOr"/>
                     <constraint firstItem="moH-1g-HwL" firstAttribute="leading" secondItem="7NX-JT-7pE" secondAttribute="leadingMargin" constant="112" id="OWo-Hh-yL9"/>
