@@ -25,6 +25,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       window.rootViewController = loginController
     }
     LocationManager.sharedInstance().update()
+    if application.respondsToSelector("registerUserNotificationSettings:") {
+      
+      let types:UIUserNotificationType = (.Alert | .Badge | .Sound)
+      let settings:UIUserNotificationSettings = UIUserNotificationSettings(forTypes: types, categories: nil)
+      
+      application.registerUserNotificationSettings(settings)
+      application.registerForRemoteNotifications()
+      
+    } else {
+      // Register for Push Notifications before iOS 8
+      application.registerForRemoteNotificationTypes(.Alert | .Badge | .Sound)
+    }
+
     return true
   }
   
@@ -114,6 +127,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       }
     }
   }
+  
+  func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+    println("My token is: " + toString(deviceToken))
+  }
+  
+  func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
+    println(error)
+  }
+  
   
 }
 
