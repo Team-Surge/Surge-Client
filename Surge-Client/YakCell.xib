@@ -81,6 +81,13 @@
                             </mask>
                         </variation>
                     </textView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poll" translatesAutoresizingMaskIntoConstraints="NO" id="d3S-Im-exv">
+                        <rect key="frame" x="233" y="93" width="40" height="47"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="OQD-cW-lpf"/>
+                            <constraint firstAttribute="height" constant="47" id="ma1-2c-vp2"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="wMa-Z3-PJN" firstAttribute="leading" secondItem="7NX-JT-7pE" secondAttribute="leadingMargin" id="1sr-LQ-nA9"/>
@@ -88,8 +95,10 @@
                     <constraint firstItem="Ibb-AN-0CL" firstAttribute="top" secondItem="iAe-mr-py4" secondAttribute="bottom" constant="3" id="4hS-OP-xWV"/>
                     <constraint firstAttribute="trailingMargin" secondItem="Bbo-cf-sjx" secondAttribute="trailing" constant="46" id="7CW-to-y1h"/>
                     <constraint firstItem="Bbo-cf-sjx" firstAttribute="leading" secondItem="7NX-JT-7pE" secondAttribute="leadingMargin" constant="-5" id="EDq-zQ-lLr"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="d3S-Im-exv" secondAttribute="bottom" constant="-8" id="GQd-we-qer"/>
                     <constraint firstItem="Bbo-cf-sjx" firstAttribute="top" secondItem="7NX-JT-7pE" secondAttribute="topMargin" constant="33" id="GdA-St-cZx"/>
                     <constraint firstItem="Bbo-cf-sjx" firstAttribute="top" secondItem="7NX-JT-7pE" secondAttribute="topMargin" priority="999" id="Li9-7H-tnA"/>
+                    <constraint firstItem="d3S-Im-exv" firstAttribute="bottom" secondItem="7NX-JT-7pE" secondAttribute="bottomMargin" id="MIM-Ov-PzQ"/>
                     <constraint firstItem="wMa-Z3-PJN" firstAttribute="top" secondItem="7NX-JT-7pE" secondAttribute="topMargin" constant="1" id="Nph-ge-kNb"/>
                     <constraint firstAttribute="bottomMargin" secondItem="Bbo-cf-sjx" secondAttribute="bottom" constant="7.5" id="Nr3-w8-xOr"/>
                     <constraint firstItem="moH-1g-HwL" firstAttribute="leading" secondItem="7NX-JT-7pE" secondAttribute="leadingMargin" constant="112" id="OWo-Hh-yL9"/>
@@ -98,10 +107,16 @@
                     <constraint firstAttribute="trailingMargin" secondItem="iAe-mr-py4" secondAttribute="trailing" constant="11" id="azQ-4f-cZm"/>
                     <constraint firstItem="67w-So-F1L" firstAttribute="top" secondItem="7NX-JT-7pE" secondAttribute="topMargin" constant="33" id="c7t-fi-xuC"/>
                     <constraint firstItem="iAe-mr-py4" firstAttribute="top" secondItem="67w-So-F1L" secondAttribute="bottom" constant="1" id="jdn-Bl-s4W"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="d3S-Im-exv" secondAttribute="trailing" constant="39" id="mlP-Zt-Pgd"/>
                     <constraint firstItem="Ibb-AN-0CL" firstAttribute="trailing" secondItem="7NX-JT-7pE" secondAttribute="trailingMargin" id="pXA-Hq-tAF"/>
                     <constraint firstItem="Fke-Y7-vIv" firstAttribute="bottom" secondItem="7NX-JT-7pE" secondAttribute="bottomMargin" id="rdY-tb-H4b"/>
                     <constraint firstItem="67w-So-F1L" firstAttribute="trailing" secondItem="7NX-JT-7pE" secondAttribute="trailingMargin" id="y78-jQ-dbd"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="MIM-Ov-PzQ"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="contentTextView" destination="Bbo-cf-sjx" id="et8-TH-AnV"/>
@@ -114,6 +129,7 @@
                 <outlet property="handleLabelDoesntExistHeight" destination="t5w-9j-6y9" id="bBK-DH-pJm"/>
                 <outlet property="handleLabelExistsHeight" destination="bFB-RW-ZDm" id="9fS-WD-32I"/>
                 <outlet property="karmaLabel" destination="iAe-mr-py4" id="C4k-PD-nfB"/>
+                <outlet property="poleImage" destination="d3S-Im-exv" id="wru-Fh-Sva"/>
                 <outlet property="replyLabel" destination="moH-1g-HwL" id="ilt-B6-nQZ"/>
                 <outlet property="timeLabel" destination="Fke-Y7-vIv" id="WA2-eG-sjj"/>
                 <outlet property="upBtn" destination="67w-So-F1L" id="zfP-Hd-MXp"/>
@@ -124,6 +140,7 @@
     <resources>
         <image name="down" width="31" height="19"/>
         <image name="down_selected" width="31" height="19"/>
+        <image name="poll" width="40" height="47"/>
         <image name="up" width="31" height="19"/>
         <image name="up_selected" width="31" height="19"/>
     </resources>
