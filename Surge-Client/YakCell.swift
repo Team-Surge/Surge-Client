@@ -19,6 +19,7 @@ protocol YakCellDelegate : class {
 }
 
 class YakCell: UITableViewCell {
+  var model: Post!
   var delegate: YakCellDelegate?
   var state = VoteState.Neutral
   var baseKarma = 0
@@ -83,6 +84,8 @@ class YakCell: UITableViewCell {
       downBtn.selected = true
     }
     
+    model.voteState = state.rawValue
+    model.voteCount = karmaLabel.text!.toInt()!
     if doSendUpdate {
       delegate?.cellDidChangeVoteState(self, state: state)
     }
@@ -124,14 +127,15 @@ class YakCell: UITableViewCell {
   }
   
   func initializeCellFromPost(post: Post) {
-    contentTextView.text = post.content
-    handleLabel.text = post.handle
-    karmaLabel.text = toString(post.voteCount)
-    timestamp = post.timestamp
-    timeLabel.text = getTimeDescriptorFromDate(timestamp)
-    baseKarma = post.voteCount
-    state = VoteState(rawValue: post.voteState!)!
-    id = post.id
+    self.model = post
+    contentTextView.text = model.content
+    handleLabel.text = model.handle
+    karmaLabel.text = toString(model.voteCount)
+    timestamp = model.timestamp
+    timeLabel.text = getTimeDescriptorFromDate(model.timestamp)
+    baseKarma = model.voteCount
+    state = VoteState(rawValue: model.voteState!)!
+    id = model.id
     
     if let commentCount = post.commentCount {
       replyLabel.text = "\(commentCount) replies"
@@ -180,30 +184,6 @@ class YakCell: UITableViewCell {
       }
     }
     super.updateConstraints()
-  }
-  
-  func initializeCellWithContent(content: String!, voteCount: Int, replyCount: Int, state: VoteState, id: Int, timestamp: NSDate) {
-    contentTextView.text = content
-    karmaLabel.text = toString(baseKarma)
-    replyLabel.text = "\(replyCount) replies"
-    timeLabel.text = "30s"
-    baseKarma = voteCount
-    self.timestamp = timestamp
-    self.id = id
-    self.state = state
-    
-    
-    switch state {
-    case VoteState.Upvote:
-      baseKarma -= 1
-    case VoteState.Neutral:
-      baseKarma += 0
-    case VoteState.Downvote:
-      baseKarma += 1
-    }
-    
-    evaluateState(false)
-    setNeedsUpdateConstraints()
   }
 }
  
