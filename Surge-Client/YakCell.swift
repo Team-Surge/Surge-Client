@@ -139,7 +139,7 @@ class YakCell: UITableViewCell {
     state = VoteState(rawValue: model.voteState!)!
     id = model.id
     
-    if model.type == "poll" {
+    if model?.type == "poll" {
       poleImage.hidden = false
     } else {
       poleImage.hidden = true
