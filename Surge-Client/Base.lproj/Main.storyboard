@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rpj-yL-ax4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rpj-yL-ax4">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -1513,9 +1513,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="0.0"/>
-                                </variation>
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DIE-ft-uyE">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -1548,10 +1545,10 @@
                                                     <constraint firstAttribute="width" constant="22" id="45K-hm-2Lt"/>
                                                     <constraint firstAttribute="height" constant="22" id="ewF-8G-vSX"/>
                                                 </constraints>
-                                                <state key="normal" image="radio_unselected">
+                                                <state key="normal" title="optionOne" image="radio_unselected">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
-                                                <state key="selected" image="radio_selected"/>
+                                                <state key="selected" title="optionOneSelected" image="radio_selected"/>
                                                 <state key="highlighted" image="radio_selected"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -1565,6 +1562,9 @@
                                                         <include reference="ewF-8G-vSX"/>
                                                     </mask>
                                                 </variation>
+                                                <connections>
+                                                    <action selector="voteForOption:" destination="f9n-0c-T09" eventType="touchUpInside" id="hx3-bZ-rWI"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VqN-Nu-7qb">
                                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -1697,10 +1697,10 @@
                                                     <constraint firstAttribute="height" constant="22" id="9IQ-OH-yC1"/>
                                                     <constraint firstAttribute="width" constant="22" id="PQb-de-eTu"/>
                                                 </constraints>
-                                                <state key="normal" image="radio_unselected">
+                                                <state key="normal" title="optionTwo" image="radio_unselected">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
-                                                <state key="selected" image="radio_selected"/>
+                                                <state key="selected" title="optionTwoSelected" image="radio_selected"/>
                                                 <state key="highlighted" image="radio_selected"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -1714,6 +1714,9 @@
                                                         <include reference="PQb-de-eTu"/>
                                                     </mask>
                                                 </variation>
+                                                <connections>
+                                                    <action selector="voteForOption:" destination="f9n-0c-T09" eventType="touchUpInside" id="sy2-E4-X6f"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tJ-5S-2sB">
                                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -1846,10 +1849,10 @@
                                                     <constraint firstAttribute="width" constant="22" id="gl9-99-vT9"/>
                                                     <constraint firstAttribute="height" constant="22" id="nwl-iU-d4T"/>
                                                 </constraints>
-                                                <state key="normal" image="radio_unselected">
+                                                <state key="normal" title="optionThree" image="radio_unselected">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
-                                                <state key="selected" image="radio_selected"/>
+                                                <state key="selected" title="optionThreeSelected" image="radio_selected"/>
                                                 <state key="highlighted" image="radio_selected"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -1863,6 +1866,9 @@
                                                         <include reference="nwl-iU-d4T"/>
                                                     </mask>
                                                 </variation>
+                                                <connections>
+                                                    <action selector="voteForOption:" destination="f9n-0c-T09" eventType="touchUpInside" id="JYz-xU-Kbf"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Knb-zM-Xk4">
                                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -1995,10 +2001,10 @@
                                                     <constraint firstAttribute="height" constant="22" id="kVJ-Li-NIj"/>
                                                     <constraint firstAttribute="width" constant="22" id="tjQ-IR-jTm"/>
                                                 </constraints>
-                                                <state key="normal" image="radio_unselected">
+                                                <state key="normal" title="optionFourDefault" image="radio_unselected">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
-                                                <state key="selected" image="radio_selected"/>
+                                                <state key="selected" title="optionFourSelected" image="radio_selected"/>
                                                 <state key="highlighted" image="radio_selected"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -2012,6 +2018,9 @@
                                                         <include reference="tjQ-IR-jTm"/>
                                                     </mask>
                                                 </variation>
+                                                <connections>
+                                                    <action selector="voteForOption:" destination="f9n-0c-T09" eventType="touchUpInside" id="7ls-pD-ppw"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="etc-i6-oT1">
                                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -2153,8 +2162,7 @@
                                         <exclude reference="yxv-Ex-Wjq"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="96"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="subviews">
                                         <include reference="7dt-fK-orA"/>
                                         <include reference="UrB-RU-sTq"/>
@@ -2179,9 +2187,6 @@
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VXd-7R-vBw">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="96" width="400" height="333"/>
-                                </variation>
                                 <connections>
                                     <segue destination="X0c-Dn-809" kind="embed" identifier="embedSegue" id="Yv5-He-VrH"/>
                                 </connections>
@@ -2273,15 +2278,19 @@
                     <connections>
                         <outlet property="bottomConstraint" destination="Ved-2I-Nlh" id="Tb8-QX-BGh"/>
                         <outlet property="mapView" destination="3pH-Ww-pcy" id="wch-1p-Veh"/>
+                        <outlet property="optionFourButton" destination="55G-22-Gsq" id="t8J-xd-nbf"/>
                         <outlet property="optionFourContentLabel" destination="IKb-HQ-cMB" id="3mM-5T-bTo"/>
                         <outlet property="optionFourCountLabel" destination="etc-i6-oT1" id="y2I-Jq-ljV"/>
                         <outlet property="optionFourProgress" destination="Tr4-LY-9n4" id="by9-yw-X8e"/>
+                        <outlet property="optionOneButton" destination="TeW-FC-V4N" id="sys-rh-xXU"/>
                         <outlet property="optionOneContentLabel" destination="ouk-3U-iPG" id="lDk-Ss-9qJ"/>
                         <outlet property="optionOneCountLabel" destination="VqN-Nu-7qb" id="kke-fU-55Q"/>
                         <outlet property="optionOneProgress" destination="u0r-ao-lC2" id="uP4-u5-eeT"/>
+                        <outlet property="optionThreeButton" destination="nMM-UZ-6Dv" id="qHU-ej-Jeq"/>
                         <outlet property="optionThreeContentLabel" destination="FoU-Wa-AKr" id="zqO-wl-dD4"/>
                         <outlet property="optionThreeCountLabel" destination="Knb-zM-Xk4" id="qtx-EA-gnj"/>
                         <outlet property="optionThreeProgress" destination="wva-gc-IPz" id="iZt-q8-9vE"/>
+                        <outlet property="optionTwoButton" destination="JTf-SZ-RWa" id="4Xl-Kl-Dfc"/>
                         <outlet property="optionTwoContentLabel" destination="fYc-m9-6Vd" id="1qq-4t-e7u"/>
                         <outlet property="optionTwoCountLabel" destination="2tJ-5S-2sB" id="vJQ-Fk-HR5"/>
                         <outlet property="optionTwoProgress" destination="2Oo-Ue-Y17" id="XFq-ho-TEq"/>

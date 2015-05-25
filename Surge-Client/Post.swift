@@ -19,6 +19,7 @@ class Post : JSONJoy {
   var commentCount: Int?
   var comments: [Post]?
   var type: String?
+  var userResponse: Int?
   var poll: Poll?
   
   required init(_ decoder: JSONDecoder) {
@@ -29,6 +30,7 @@ class Post : JSONJoy {
     voteState = decoder["userVote"].string
     commentCount = decoder["commentCount"].integer
     type = decoder["type"].string
+    userResponse = decoder["userResponse"].integer
     poll = Poll(decoder["poll"])
     
     if let postDecoders = decoder["comments"].array {
