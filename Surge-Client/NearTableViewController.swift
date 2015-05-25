@@ -9,6 +9,10 @@
 import UIKit
 
 class NearTableViewController: UITableViewController {
+  let featuredLocations = ["University of California, Riverside" : CLLocationCoordinate2DMake(33.973758742572116, -117.32816532254219),
+                            "Orangecrest" : CLLocationCoordinate2DMake(33.89157870127412, -117.31391742825508)]
+  
+  var targetName: String!
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -36,15 +40,29 @@ class NearTableViewController: UITableViewController {
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     // #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 18
+    return featuredLocations.count
   }
 
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("NearTableViewCell", forIndexPath: indexPath) as! NearTableViewCell
-
+    let locations = sorted(featuredLocations.keys)
+    let key = locations[indexPath.row]
+    cell.nearPlaceName.text = key
+    
     return cell
   }
+  
+  override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    targetName = sorted(featuredLocations.keys)[indexPath.row]
+    //performSegueWithIdentifier("detailViewSegue", sender: self)
+  }
 
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "detailViewSegue" {
+      let dest = segue.destinationViewController as! YakPostViewController
+      dest.delegate = self
+    }
+  }
   /*
   // Override to support conditional editing of the table view.
   override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -90,4 +108,18 @@ class NearTableViewController: UITableViewController {
   }
   */
 
+}
+
+extension NearTableViewController: YakPostViewControllerSource {
+  
+  func generatePostRetrieveParameters() -> [String:String] {
+    let lastLocation = featuredLocations[targetName]
+    println(toString(lastLocation!.longitude) + ", " + toString(lastLocation!.latitude))
+    return ["action": "postList", "lat": toString(lastLocation!.latitude), "lng": toString(lastLocation!.longitude)]
+  }
+  
+  func notifyWithUpdatedPost(_: AnyObject) {
+    // nothing
+  }
+  
 }

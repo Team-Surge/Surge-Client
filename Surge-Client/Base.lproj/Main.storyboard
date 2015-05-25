@@ -270,7 +270,7 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nearPlaceName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="osC-IC-xQF">
                                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
@@ -291,6 +291,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nearPlaceName" destination="osC-IC-xQF" id="bVL-vS-Ihc"/>
+                                    <segue destination="0zM-x7-tCb" kind="show" identifier="detailViewSegue" id="fju-rW-Y8G"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -320,21 +321,38 @@
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="viewed_dot" translatesAutoresizingMaskIntoConstraints="NO" id="Aza-0p-cIS">
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                <rect key="frame" x="20" y="18" width="20" height="18"/>
+                                            </variation>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="featuredPlaceName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jS9-Tq-hcl">
                                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="128" id="YBz-XG-bxm"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="YBz-XG-bxm"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                <rect key="frame" x="56" y="14" width="128" height="22"/>
+                                                <mask key="constraints">
+                                                    <include reference="YBz-XG-bxm"/>
+                                                </mask>
+                                            </variation>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="jS9-Tq-hcl" secondAttribute="bottom" constant="6" id="YdH-e6-iCa"/>
-                                        <constraint firstItem="jS9-Tq-hcl" firstAttribute="leading" secondItem="Aza-0p-cIS" secondAttribute="trailing" constant="19" id="Ydk-Am-NRL"/>
-                                        <constraint firstItem="Aza-0p-cIS" firstAttribute="leading" secondItem="Z0u-6I-pMu" secondAttribute="leadingMargin" constant="5" id="bm3-r3-IW2"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="Aza-0p-cIS" secondAttribute="bottom" constant="6" id="eRY-WW-j6d"/>
-                                        <constraint firstItem="jS9-Tq-hcl" firstAttribute="top" secondItem="Z0u-6I-pMu" secondAttribute="topMargin" constant="6" id="vJx-rH-NJO"/>
-                                        <constraint firstItem="Aza-0p-cIS" firstAttribute="top" secondItem="Z0u-6I-pMu" secondAttribute="topMargin" constant="7" id="wJ8-cl-j0p"/>
+                                        <constraint firstItem="jS9-Tq-hcl" firstAttribute="leading" secondItem="Aza-0p-cIS" secondAttribute="trailing" constant="16" id="2RL-Z2-85h"/>
+                                        <constraint firstItem="Aza-0p-cIS" firstAttribute="leading" secondItem="Z0u-6I-pMu" secondAttribute="leadingMargin" constant="5" id="NMx-Pp-14Z"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Aza-0p-cIS" secondAttribute="bottom" constant="5.5" id="PwR-Zc-SFV"/>
+                                        <constraint firstItem="Aza-0p-cIS" firstAttribute="top" secondItem="Z0u-6I-pMu" secondAttribute="topMargin" constant="10" id="VsP-PK-kaP"/>
+                                        <constraint firstItem="Aza-0p-cIS" firstAttribute="bottom" secondItem="jS9-Tq-hcl" secondAttribute="bottom" id="bQ4-p9-j0w"/>
+                                        <constraint firstItem="jS9-Tq-hcl" firstAttribute="top" secondItem="Z0u-6I-pMu" secondAttribute="topMargin" constant="6" id="oMu-ep-5yq"/>
                                     </constraints>
                                     <variation key="default">
                                         <mask key="subviews">
@@ -342,12 +360,12 @@
                                             <exclude reference="jS9-Tq-hcl"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <exclude reference="YdH-e6-iCa"/>
-                                            <exclude reference="Ydk-Am-NRL"/>
-                                            <exclude reference="vJx-rH-NJO"/>
-                                            <exclude reference="bm3-r3-IW2"/>
-                                            <exclude reference="eRY-WW-j6d"/>
-                                            <exclude reference="wJ8-cl-j0p"/>
+                                            <exclude reference="NMx-Pp-14Z"/>
+                                            <exclude reference="PwR-Zc-SFV"/>
+                                            <exclude reference="VsP-PK-kaP"/>
+                                            <exclude reference="bQ4-p9-j0w"/>
+                                            <exclude reference="2RL-Z2-85h"/>
+                                            <exclude reference="oMu-ep-5yq"/>
                                         </mask>
                                     </variation>
                                     <variation key="heightClass=regular-widthClass=compact">
@@ -356,12 +374,12 @@
                                             <include reference="jS9-Tq-hcl"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <include reference="YdH-e6-iCa"/>
-                                            <include reference="Ydk-Am-NRL"/>
-                                            <include reference="vJx-rH-NJO"/>
-                                            <include reference="bm3-r3-IW2"/>
-                                            <include reference="eRY-WW-j6d"/>
-                                            <include reference="wJ8-cl-j0p"/>
+                                            <include reference="NMx-Pp-14Z"/>
+                                            <include reference="PwR-Zc-SFV"/>
+                                            <include reference="VsP-PK-kaP"/>
+                                            <include reference="bQ4-p9-j0w"/>
+                                            <include reference="2RL-Z2-85h"/>
+                                            <include reference="oMu-ep-5yq"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
@@ -380,6 +398,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zVN-vf-XH1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-803.25" y="483.75"/>
+        </scene>
+        <!--Yak Post View Controller-->
+        <scene sceneID="eth-KW-XFi">
+            <objects>
+                <tableViewController id="0zM-x7-tCb" customClass="YakPostViewController" customModule="Surge_Client" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="psC-wU-sy5">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="5dM-Ig-2HL">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5dM-Ig-2HL" id="fMp-3u-ZXk">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="0zM-x7-tCb" id="klZ-bD-Tgb"/>
+                            <outlet property="delegate" destination="0zM-x7-tCb" id="cLz-vV-3C9"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hwg-wR-YIR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="106.5" y="759.75"/>
         </scene>
         <!--Me-->
         <scene sceneID="VHB-OJ-1RH">
@@ -1513,9 +1556,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="0.0"/>
-                                </variation>
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DIE-ft-uyE">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -2153,8 +2193,7 @@
                                         <exclude reference="yxv-Ex-Wjq"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="96"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="subviews">
                                         <include reference="7dt-fK-orA"/>
                                         <include reference="UrB-RU-sTq"/>
@@ -2960,7 +2999,7 @@
         <image name="viewed_dot" width="20" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BBc-VI-dTH"/>
+        <segue reference="ARi-63-cNd"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
