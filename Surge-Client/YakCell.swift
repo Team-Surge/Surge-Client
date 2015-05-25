@@ -33,6 +33,7 @@ class YakCell: UITableViewCell {
   @IBOutlet weak var karmaLabel: UILabel!
   @IBOutlet weak var contentTextView: UITextView!
   @IBOutlet weak var timeLabel: UILabel!
+  @IBOutlet weak var poleImage: UIImageView!
 
   @IBOutlet var contentTextViewWithHandleTopConstraint: NSLayoutConstraint!
   @IBOutlet var contentTextViewWithoutHandleTopConstraint: NSLayoutConstraint!
@@ -98,6 +99,7 @@ class YakCell: UITableViewCell {
     timeLabel.text = "1m"
     karmaLabel.text = "<\(999)>"
     replyLabel.text = "<99 replies>"
+    poleImage.hidden = true
   }
   
   override func setSelected(selected: Bool, animated: Bool) {
@@ -137,12 +139,17 @@ class YakCell: UITableViewCell {
     state = VoteState(rawValue: model.voteState!)!
     id = model.id
     
+    if model?.type == "poll" {
+      poleImage.hidden = false
+    } else {
+      poleImage.hidden = true
+    }
+    
     if let commentCount = post.commentCount {
       replyLabel.text = "\(commentCount) replies"
     } else {
       replyLabel.hidden = true
     }
-    
     
     switch state {
     case VoteState.Upvote:
