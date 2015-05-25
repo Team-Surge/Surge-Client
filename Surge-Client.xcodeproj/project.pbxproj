@@ -25,6 +25,8 @@
 		3FE625EB1B0AE8A1000700F4 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE625EA1B0AE8A1000700F4 /* Color.swift */; };
 		3FE625ED1B0AEE12000700F4 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE625EC1B0AEE12000700F4 /* UIColorExtension.swift */; };
 		65C111CACFEFFEA9FD86FB1C /* Pods_Surge_Client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D58DF9116783E77F98DB42 /* Pods_Surge_Client.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		DA0CE2E31B11C0C400F74CFC /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0CE2E21B11C0C400F74CFC /* ChatMessage.swift */; };
+		DA0CE2E61B11CA2500F74CFC /* SurgeChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0CE2E51B11CA2500F74CFC /* SurgeChatViewController.m */; };
 		DA2F086F1B099E6C0061B318 /* YakPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2F086E1B099E6C0061B318 /* YakPostViewController.swift */; };
 		DA2F12D81B0D6490006AD05C /* MeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2F12D71B0D6490006AD05C /* MeTabBarController.swift */; };
 		DA5533481AE0B57F003E369E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5533471AE0B57F003E369E /* AppDelegate.swift */; };
@@ -96,6 +98,9 @@
 		3FE625EC1B0AEE12000700F4 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		42FD031BEDF5185BD1CDFBA1 /* Pods-Surge-Client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surge-Client.release.xcconfig"; path = "Pods/Target Support Files/Pods-Surge-Client/Pods-Surge-Client.release.xcconfig"; sourceTree = "<group>"; };
 		63D58DF9116783E77F98DB42 /* Pods_Surge_Client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Surge_Client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA0CE2E21B11C0C400F74CFC /* ChatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
+		DA0CE2E41B11CA2500F74CFC /* SurgeChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SurgeChatViewController.h; sourceTree = "<group>"; };
+		DA0CE2E51B11CA2500F74CFC /* SurgeChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SurgeChatViewController.m; sourceTree = "<group>"; };
 		DA2F086E1B099E6C0061B318 /* YakPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YakPostViewController.swift; sourceTree = "<group>"; };
 		DA2F12D71B0D6490006AD05C /* MeTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeTabBarController.swift; sourceTree = "<group>"; };
 		DA5533421AE0B57F003E369E /* Surge-Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Surge-Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +177,7 @@
 				DAF211EC1B09D9B400EEEE4A /* YakPostDetailViewController.swift */,
 				DAD498931AE0C114000E5E93 /* YakCell.swift */,
 				DAD2E4431AE7405A00DFBB53 /* YakCell.xib */,
+				DA431DF31B11630A00AEF118 /* Chat */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -232,6 +238,7 @@
 				DACDB9561B033BC20074C4AD /* PostDetailResponse.swift */,
 				3FE625DF1B0A7CAE000700F4 /* Post.swift */,
 				3F20CC061B12DA0E003BE238 /* Poll.swift */,
+				DA0CE2E21B11C0C400F74CFC /* ChatMessage.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -264,6 +271,15 @@
 				DAE725E31AF036FA008B8DA3 /* LocationManager.m */,
 			);
 			name = lib;
+			sourceTree = "<group>";
+		};
+		DA431DF31B11630A00AEF118 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				DA0CE2E41B11CA2500F74CFC /* SurgeChatViewController.h */,
+				DA0CE2E51B11CA2500F74CFC /* SurgeChatViewController.m */,
+			);
+			name = Chat;
 			sourceTree = "<group>";
 		};
 		DA5533391AE0B57F003E369E = {
@@ -517,11 +533,14 @@
 				3FB0BDAD1AE9FCAD009A8DB0 /* NotificationsTableViewController.swift in Sources */,
 				3F4446321AE9792D0001DA1A /* FeaturedTableViewController.swift in Sources */,
 				3F20CC071B12DA0E003BE238 /* Poll.swift in Sources */,
+				
+                DA0CE2E61B11CA2500F74CFC /* SurgeChatViewController.m in Sources */,
 				3F8E5D671AEF4CE100B7363F /* RegisterViewController.swift in Sources */,
 				DA2F12D81B0D6490006AD05C /* MeTabBarController.swift in Sources */,
 				3F20A3051AE9814D004C2598 /* NearTableViewCell.swift in Sources */,
 				DA87E0381B0DAE5400FDA182 /* MyPostsViewController.swift in Sources */,
 				3FB0BDAA1AE9FC81009A8DB0 /* NotificationsTableViewCell.swift in Sources */,
+				DA0CE2E31B11C0C400F74CFC /* ChatMessage.swift in Sources */,
 				3FE625E01B0A7CAE000700F4 /* Post.swift in Sources */,
 				3FE625ED1B0AEE12000700F4 /* UIColorExtension.swift in Sources */,
 				3FCCBDD31AF75C0900D1695A /* RegisterResponse.swift in Sources */,
@@ -670,6 +689,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Pods-Surge-Client",
@@ -691,6 +711,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Pods-Surge-Client",
