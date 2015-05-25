@@ -11,6 +11,9 @@ import SwiftHTTP
 import JSONJoy
 
 class YakPostDetailViewController: YakPostViewController {
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+  }
+  
   internal override func retrievePosts() {
     if let delegate = self.delegate {
       let request = HTTPTask()

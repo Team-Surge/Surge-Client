@@ -9,7 +9,7 @@
         <!--Peek-->
         <scene sceneID="f8y-Zh-lUJ">
             <objects>
-                <viewController id="73D-ce-SNk" sceneMemberID="viewController">
+                <viewController title="Peek" id="73D-ce-SNk" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JLF-3n-cU9"/>
                         <viewControllerLayoutGuide type="bottom" id="elJ-3d-iVd"/>
@@ -614,7 +614,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Posts" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqe-HM-CkF">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -655,7 +655,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Replies" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhc-pD-7dF">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -693,7 +693,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TcK-CM-Rzc">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -797,7 +797,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TrK-0k-isf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2305.5" y="2067"/>
+            <point key="canvasLocation" x="-2302.5" y="1960.5"/>
         </scene>
         <!--Me Tab Bar Controller-->
         <scene sceneID="M8Z-dR-Krg">
@@ -1213,10 +1213,10 @@
             </objects>
             <point key="canvasLocation" x="4288.5" y="64.125"/>
         </scene>
-        <!--Yak Create Post View Controller-->
+        <!--Send a Post-->
         <scene sceneID="mYq-bd-7LF">
             <objects>
-                <viewController id="el0-JQ-ce6" customClass="YakCreatePostViewController" customModule="Surge_Client" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Send a Post" id="el0-JQ-ce6" customClass="YakCreatePostViewController" customModule="Surge_Client" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="73j-Rh-5oB"/>
                         <viewControllerLayoutGuide type="bottom" id="v7D-eR-8Wj"/>
@@ -1339,7 +1339,7 @@
         <scene sceneID="EBC-0d-gbl">
             <objects>
                 <tableViewController id="X0c-Dn-809" customClass="YakPostDetailViewController" customModule="Surge_Client" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="NPY-ST-9lx">
+                    <tableView key="view" autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="NPY-ST-9lx">
                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1349,6 +1349,9 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DkM-FI-zpU" id="DDA-Uz-fJZ">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="xtO-ZS-cYc" kind="show" identifier="detailViewSegue" id="0nG-EP-gF2"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1359,7 +1362,24 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bin-hF-ba6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2781" y="3539.625"/>
+            <point key="canvasLocation" x="-2788.5" y="3615.75"/>
+        </scene>
+        <!--Surge Chat View Controller-->
+        <scene sceneID="zYf-ht-qTL">
+            <objects>
+                <viewController id="xtO-ZS-cYc" customClass="SurgeChatViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8zW-bx-MdO"/>
+                        <viewControllerLayoutGuide type="bottom" id="D91-CQ-Jty"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="as3-VX-jzo">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6wY-la-G9B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2797.5" y="4153.5"/>
         </scene>
         <!--Yak Main View Controller-->
         <scene sceneID="sWp-rx-T3U">

@@ -1,0 +1,6 @@
+framework module JSQSystemSoundPlayer {
+  umbrella header "Pods-Surge-Client-JSQSystemSoundPlayer-umbrella.h"
+
+  export *
+  module * { export * }
+}
