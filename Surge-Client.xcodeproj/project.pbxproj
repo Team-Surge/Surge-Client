@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3F20A3031AE98134004C2598 /* NearTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20A3021AE98134004C2598 /* NearTableViewController.swift */; };
 		3F20A3051AE9814D004C2598 /* NearTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20A3041AE9814D004C2598 /* NearTableViewCell.swift */; };
+		3F20CC071B12DA0E003BE238 /* Poll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20CC061B12DA0E003BE238 /* Poll.swift */; };
 		3F3E0D011B0BFB3B00FC0367 /* PullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3E0D001B0BFB3B00FC0367 /* PullToRefresh.swift */; };
 		3F4446301AE978300001DA1A /* FeaturedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44462F1AE978300001DA1A /* FeaturedTableViewCell.swift */; };
 		3F4446321AE9792D0001DA1A /* FeaturedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4446311AE9792D0001DA1A /* FeaturedTableViewController.swift */; };
@@ -20,7 +21,6 @@
 		3FB0BDAF1AEA1E23009A8DB0 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0BDAE1AEA1E23009A8DB0 /* MeViewController.swift */; };
 		3FCCBDD31AF75C0900D1695A /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCCBDD21AF75C0900D1695A /* RegisterResponse.swift */; };
 		3FE625E01B0A7CAE000700F4 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE625DF1B0A7CAE000700F4 /* Post.swift */; };
-		3FE625E21B0AC47E000700F4 /* Poll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE625E11B0AC47E000700F4 /* Poll.swift */; };
 		3FE625E81B0AE476000700F4 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE625E71B0AE476000700F4 /* Toast.swift */; };
 		3FE625EB1B0AE8A1000700F4 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE625EA1B0AE8A1000700F4 /* Color.swift */; };
 		3FE625ED1B0AEE12000700F4 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE625EC1B0AEE12000700F4 /* UIColorExtension.swift */; };
@@ -79,6 +79,7 @@
 /* Begin PBXFileReference section */
 		3F20A3021AE98134004C2598 /* NearTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearTableViewController.swift; sourceTree = "<group>"; };
 		3F20A3041AE9814D004C2598 /* NearTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearTableViewCell.swift; sourceTree = "<group>"; };
+		3F20CC061B12DA0E003BE238 /* Poll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poll.swift; sourceTree = "<group>"; };
 		3F3E0D001B0BFB3B00FC0367 /* PullToRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefresh.swift; sourceTree = "<group>"; };
 		3F44462F1AE978300001DA1A /* FeaturedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedTableViewCell.swift; sourceTree = "<group>"; };
 		3F4446311AE9792D0001DA1A /* FeaturedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedTableViewController.swift; sourceTree = "<group>"; };
@@ -90,7 +91,6 @@
 		3FB0BDAE1AEA1E23009A8DB0 /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 		3FCCBDD21AF75C0900D1695A /* RegisterResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
 		3FE625DF1B0A7CAE000700F4 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		3FE625E11B0AC47E000700F4 /* Poll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poll.swift; sourceTree = "<group>"; };
 		3FE625E71B0AE476000700F4 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		3FE625EA1B0AE8A1000700F4 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		3FE625EC1B0AEE12000700F4 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -231,7 +231,7 @@
 				DACDB9541B0331040074C4AD /* PostResponse.swift */,
 				DACDB9561B033BC20074C4AD /* PostDetailResponse.swift */,
 				3FE625DF1B0A7CAE000700F4 /* Post.swift */,
-				3FE625E11B0AC47E000700F4 /* Poll.swift */,
+				3F20CC061B12DA0E003BE238 /* Poll.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -511,12 +511,12 @@
 				DAF211ED1B09D9B400EEEE4A /* YakPostDetailViewController.swift in Sources */,
 				3FB0BDAF1AEA1E23009A8DB0 /* MeViewController.swift in Sources */,
 				DACDB9551B0331040074C4AD /* PostResponse.swift in Sources */,
-				3FE625E21B0AC47E000700F4 /* Poll.swift in Sources */,
 				DA2F086F1B099E6C0061B318 /* YakPostViewController.swift in Sources */,
 				DAD498941AE0C114000E5E93 /* YakCell.swift in Sources */,
 				3F20A3031AE98134004C2598 /* NearTableViewController.swift in Sources */,
 				3FB0BDAD1AE9FCAD009A8DB0 /* NotificationsTableViewController.swift in Sources */,
 				3F4446321AE9792D0001DA1A /* FeaturedTableViewController.swift in Sources */,
+				3F20CC071B12DA0E003BE238 /* Poll.swift in Sources */,
 				3F8E5D671AEF4CE100B7363F /* RegisterViewController.swift in Sources */,
 				DA2F12D81B0D6490006AD05C /* MeTabBarController.swift in Sources */,
 				3F20A3051AE9814D004C2598 /* NearTableViewCell.swift in Sources */,

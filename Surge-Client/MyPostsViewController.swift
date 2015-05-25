@@ -36,4 +36,8 @@ extension MyPostsViewController: YakPostViewControllerSource {
   func generatePostRetrieveParameters() -> [String:String] {
     return ["action": "postListSelf"]
   }
+  
+  func notifyWithUpdatedPost(_: AnyObject) {
+    // nothing
+  }
 }

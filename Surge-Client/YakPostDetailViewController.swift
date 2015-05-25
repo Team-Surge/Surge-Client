@@ -27,6 +27,7 @@ class YakPostDetailViewController: YakPostViewController {
             dispatch_async(dispatch_get_main_queue(),{
               self.tableView.reloadData()
               self.refreshControl!.endRefreshing()
+              delegate.notifyWithUpdatedPost(resp)
             })
           }
         }, failure: {(error: NSError, response: HTTPResponse?) in
