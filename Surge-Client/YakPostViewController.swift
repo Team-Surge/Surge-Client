@@ -10,8 +10,9 @@ import UIKit
 import SwiftHTTP
 import JSONJoy
 
-@objc protocol YakPostViewControllerSource {
+protocol YakPostViewControllerSource {
   func generatePostRetrieveParameters() -> [String:String]
+  func notifyWithUpdatedPost(AnyObject)
 }
 
 class YakPostViewController: UITableViewController {
@@ -126,7 +127,6 @@ extension YakPostViewController: YakCellDelegate {
   func cellDidChangeVoteState(cell: YakCell, state: VoteState) {
     let request = HTTPTask()
     var params: [String:AnyObject] = ["action": "postVote", "postId": cell.id, "direction": state.rawValue]
-    
     
     request.POST("http://surge.seektom.com/post", parameters: params,
       success: {(response: HTTPResponse) in

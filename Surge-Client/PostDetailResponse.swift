@@ -8,12 +8,12 @@
 
 import JSONJoy
 
-struct PostDetailResponse : JSONJoy {
+class PostDetailResponse : JSONJoy {
   var post: Post!
   var action: String!
   var success: Bool!
   
-  init(_ decoder: JSONDecoder) {
+  required init(_ decoder: JSONDecoder) {
     action = decoder["action"].string
     success = decoder["success"].bool
     post = Post(decoder["post"])
