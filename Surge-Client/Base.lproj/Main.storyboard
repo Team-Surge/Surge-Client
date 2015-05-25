@@ -273,19 +273,37 @@
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                <rect key="frame" x="14" y="13" width="181" height="24"/>
+                                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                <rect key="frame" x="14" y="13" width="294" height="24"/>
                                             </variation>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="osC-IC-xQF" secondAttribute="bottom" constant="4.5" id="8QL-sK-ufl"/>
+                                        <constraint firstAttribute="trailing" secondItem="osC-IC-xQF" secondAttribute="trailing" id="gxS-74-fNw"/>
+                                        <constraint firstItem="osC-IC-xQF" firstAttribute="leading" secondItem="Xxj-UG-ner" secondAttribute="leadingMargin" constant="-1" id="sJN-hm-id5"/>
+                                        <constraint firstItem="osC-IC-xQF" firstAttribute="top" secondItem="Xxj-UG-ner" secondAttribute="topMargin" constant="5" id="tvf-U9-ibi"/>
+                                    </constraints>
                                     <variation key="default">
                                         <mask key="subviews">
                                             <exclude reference="osC-IC-xQF"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <exclude reference="8QL-sK-ufl"/>
+                                            <exclude reference="gxS-74-fNw"/>
+                                            <exclude reference="sJN-hm-id5"/>
+                                            <exclude reference="tvf-U9-ibi"/>
                                         </mask>
                                     </variation>
                                     <variation key="heightClass=regular-widthClass=compact">
                                         <mask key="subviews">
                                             <include reference="osC-IC-xQF"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <include reference="8QL-sK-ufl"/>
+                                            <include reference="gxS-74-fNw"/>
+                                            <include reference="sJN-hm-id5"/>
+                                            <include reference="tvf-U9-ibi"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>

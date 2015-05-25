@@ -10,7 +10,7 @@ import UIKit
 
 class NearTableViewController: UITableViewController {
   let featuredLocations = ["University of California, Riverside" : CLLocationCoordinate2DMake(33.973758742572116, -117.32816532254219),
-                            "Orangecrest" : CLLocationCoordinate2DMake(33.89157870127412, -117.31391742825508)]
+                            "Apple" : CLLocationCoordinate2DMake(37.331419, -122.029637)]
   
   var targetName: String!
 
