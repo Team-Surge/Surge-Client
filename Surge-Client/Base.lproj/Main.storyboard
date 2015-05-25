@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rpj-yL-ax4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rpj-yL-ax4">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -1350,7 +1350,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="xtO-ZS-cYc" kind="show" identifier="detailViewSegue" id="0nG-EP-gF2"/>
+                                    <segue destination="xtO-ZS-cYc" kind="show" identifier="chatViewSegue" id="0nG-EP-gF2"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1373,6 +1373,7 @@
                         <viewControllerLayoutGuide type="bottom" id="D91-CQ-Jty"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="as3-VX-jzo">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1510,6 +1511,9 @@
                             </mapView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VXd-7R-vBw">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="128"/>
+                                </variation>
                                 <connections>
                                     <segue destination="X0c-Dn-809" kind="embed" identifier="embedSegue" id="Yv5-He-VrH"/>
                                 </connections>
@@ -1518,6 +1522,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="128"/>
+                                </variation>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1563,14 +1570,7 @@
                                 <exclude reference="0fV-pu-x3f"/>
                                 <exclude reference="So7-X3-Gce"/>
                                 <exclude reference="jC7-Ae-3ud"/>
-                                <exclude reference="I8Z-Do-FsL"/>
-                                <exclude reference="RQT-t6-Par"/>
-                                <exclude reference="U0b-0m-SeK"/>
-                                <exclude reference="UtZ-BX-Del"/>
-                                <exclude reference="c1o-dB-ryh"/>
-                                <exclude reference="cLt-wW-LJb"/>
-                                <exclude reference="fy3-GA-AOe"/>
-                                <exclude reference="zzL-Ti-wd3"/>
+                                <exclude reference="f6e-1K-s2M"/>
                                 <exclude reference="4Z0-Za-126"/>
                                 <exclude reference="62K-9j-6Bs"/>
                                 <exclude reference="C4y-40-9Mm"/>
@@ -1580,7 +1580,14 @@
                                 <exclude reference="X5V-mO-TNf"/>
                                 <exclude reference="jRE-6s-xqk"/>
                                 <exclude reference="qa5-Nw-VaC"/>
-                                <exclude reference="f6e-1K-s2M"/>
+                                <exclude reference="I8Z-Do-FsL"/>
+                                <exclude reference="RQT-t6-Par"/>
+                                <exclude reference="U0b-0m-SeK"/>
+                                <exclude reference="UtZ-BX-Del"/>
+                                <exclude reference="c1o-dB-ryh"/>
+                                <exclude reference="cLt-wW-LJb"/>
+                                <exclude reference="fy3-GA-AOe"/>
+                                <exclude reference="zzL-Ti-wd3"/>
                                 <exclude reference="Q71-xv-sxs"/>
                             </mask>
                         </variation>
@@ -1595,14 +1602,7 @@
                                 <include reference="So7-X3-Gce"/>
                                 <exclude reference="gAF-Bv-AVH"/>
                                 <include reference="jC7-Ae-3ud"/>
-                                <exclude reference="I8Z-Do-FsL"/>
-                                <exclude reference="RQT-t6-Par"/>
-                                <include reference="U0b-0m-SeK"/>
-                                <exclude reference="UtZ-BX-Del"/>
-                                <exclude reference="c1o-dB-ryh"/>
-                                <exclude reference="cLt-wW-LJb"/>
-                                <include reference="fy3-GA-AOe"/>
-                                <include reference="zzL-Ti-wd3"/>
+                                <include reference="f6e-1K-s2M"/>
                                 <include reference="4Z0-Za-126"/>
                                 <exclude reference="62K-9j-6Bs"/>
                                 <exclude reference="C4y-40-9Mm"/>
@@ -1612,7 +1612,14 @@
                                 <include reference="X5V-mO-TNf"/>
                                 <exclude reference="jRE-6s-xqk"/>
                                 <exclude reference="qa5-Nw-VaC"/>
-                                <include reference="f6e-1K-s2M"/>
+                                <exclude reference="I8Z-Do-FsL"/>
+                                <exclude reference="RQT-t6-Par"/>
+                                <include reference="U0b-0m-SeK"/>
+                                <exclude reference="UtZ-BX-Del"/>
+                                <exclude reference="c1o-dB-ryh"/>
+                                <exclude reference="cLt-wW-LJb"/>
+                                <include reference="fy3-GA-AOe"/>
+                                <include reference="zzL-Ti-wd3"/>
                                 <exclude reference="Q71-xv-sxs"/>
                             </mask>
                         </variation>

@@ -3,6 +3,7 @@
 //
 
 #import "LocationManager.h"
+#import "SurgeChatViewController.h"
 #import <CRToast/CRToast.h>
 #import <JSQMessagesViewController/JSQMessageData.h>
 #import <JSQMessagesViewController/JSQMessages.h>

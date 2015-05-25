@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     
+    LocationManager.sharedInstance().update()
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
     let loginController = storyboard.instantiateViewControllerWithIdentifier("LoginViewController") as! UIViewController
     
@@ -24,7 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     if let window = self.window {
       window.rootViewController = loginController
     }
-    LocationManager.sharedInstance().update()
     return true
   }
   

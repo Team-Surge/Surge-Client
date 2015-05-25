@@ -25,6 +25,8 @@
 		3FE625EB1B0AE8A1000700F4 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE625EA1B0AE8A1000700F4 /* Color.swift */; };
 		3FE625ED1B0AEE12000700F4 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE625EC1B0AEE12000700F4 /* UIColorExtension.swift */; };
 		65C111CACFEFFEA9FD86FB1C /* Pods_Surge_Client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D58DF9116783E77F98DB42 /* Pods_Surge_Client.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		DA0292621B13073C00B8105B /* ChatCreateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0292611B13073C00B8105B /* ChatCreateResponse.swift */; };
+		DA0292641B13097E00B8105B /* SurgeChatAPIRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0292631B13097E00B8105B /* SurgeChatAPIRequests.swift */; };
 		DA0CE2E31B11C0C400F74CFC /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0CE2E21B11C0C400F74CFC /* ChatMessage.swift */; };
 		DA0CE2E61B11CA2500F74CFC /* SurgeChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0CE2E51B11CA2500F74CFC /* SurgeChatViewController.m */; };
 		DA2F086F1B099E6C0061B318 /* YakPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2F086E1B099E6C0061B318 /* YakPostViewController.swift */; };
@@ -98,6 +100,8 @@
 		3FE625EC1B0AEE12000700F4 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		42FD031BEDF5185BD1CDFBA1 /* Pods-Surge-Client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surge-Client.release.xcconfig"; path = "Pods/Target Support Files/Pods-Surge-Client/Pods-Surge-Client.release.xcconfig"; sourceTree = "<group>"; };
 		63D58DF9116783E77F98DB42 /* Pods_Surge_Client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Surge_Client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA0292611B13073C00B8105B /* ChatCreateResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCreateResponse.swift; sourceTree = "<group>"; };
+		DA0292631B13097E00B8105B /* SurgeChatAPIRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurgeChatAPIRequests.swift; sourceTree = "<group>"; };
 		DA0CE2E21B11C0C400F74CFC /* ChatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
 		DA0CE2E41B11CA2500F74CFC /* SurgeChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SurgeChatViewController.h; sourceTree = "<group>"; };
 		DA0CE2E51B11CA2500F74CFC /* SurgeChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SurgeChatViewController.m; sourceTree = "<group>"; };
@@ -239,6 +243,7 @@
 				3FE625DF1B0A7CAE000700F4 /* Post.swift */,
 				3FE625E11B0AC47E000700F4 /* Poll.swift */,
 				DA0CE2E21B11C0C400F74CFC /* ChatMessage.swift */,
+				DA0292611B13073C00B8105B /* ChatCreateResponse.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 			children = (
 				DA0CE2E41B11CA2500F74CFC /* SurgeChatViewController.h */,
 				DA0CE2E51B11CA2500F74CFC /* SurgeChatViewController.m */,
+				DA0292631B13097E00B8105B /* SurgeChatAPIRequests.swift */,
 			);
 			name = Chat;
 			sourceTree = "<group>";
@@ -525,6 +531,7 @@
 				3F9A3D741AEF1895006E4B70 /* LoginViewController.swift in Sources */,
 				3F3E0D011B0BFB3B00FC0367 /* PullToRefresh.swift in Sources */,
 				DAF211ED1B09D9B400EEEE4A /* YakPostDetailViewController.swift in Sources */,
+				DA0292641B13097E00B8105B /* SurgeChatAPIRequests.swift in Sources */,
 				3FB0BDAF1AEA1E23009A8DB0 /* MeViewController.swift in Sources */,
 				DACDB9551B0331040074C4AD /* PostResponse.swift in Sources */,
 				3FE625E21B0AC47E000700F4 /* Poll.swift in Sources */,
@@ -547,6 +554,7 @@
 				DAD2E43C1AE7374100DFBB53 /* YakMainViewController.swift in Sources */,
 				3FE625EB1B0AE8A1000700F4 /* Color.swift in Sources */,
 				DA5533481AE0B57F003E369E /* AppDelegate.swift in Sources */,
+				DA0292621B13073C00B8105B /* ChatCreateResponse.swift in Sources */,
 				DAE725E41AF036FA008B8DA3 /* LocationManager.m in Sources */,
 				DAC2D0ED1AEF1EEE0047E4AE /* YakCreatePostViewController.swift in Sources */,
 				DA55334B1AE0B57F003E369E /* Surge_Client.xcdatamodeld in Sources */,

@@ -11,7 +11,17 @@ import SwiftHTTP
 import JSONJoy
 
 class YakPostDetailViewController: YakPostViewController {
+  
+  override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    performSegueWithIdentifier("chatViewSegue", sender: posts[indexPath.row])
+  }
+  
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "chatViewSegue" {
+      var destination = segue.destinationViewController as! SurgeChatViewController
+      let srcPost = sender as! Post
+      destination.parentCommentID = srcPost.id
+    }
   }
   
   internal override func retrievePosts() {

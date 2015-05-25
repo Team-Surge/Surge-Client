@@ -7,7 +7,16 @@
 //
 
 import UIKit
+import JSONJoy
 
-class ChatCreateResponse: JSONJoy {
-   
+@objc class ChatCreateResponse: JSONJoy {
+  var conversationID: Int?
+  var success: Bool!
+  var action: String!
+  
+  required init(_ decoder: JSONDecoder) {
+    action = decoder["action"].string
+    success = decoder["success"].bool
+    conversationID = decoder["conversationId"].integer!
+  }
 }

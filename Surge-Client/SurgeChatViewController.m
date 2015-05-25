@@ -15,6 +15,8 @@
 @property (strong, nonatomic) JSQMessagesBubbleImage *incomingBubbleImageData;
 @property (strong) NSInputStream *inputStream;
 @property (strong) NSOutputStream *outputStream;
+@property BOOL chatDoesExist;
+@property NSInteger conversationID;
 @end
 
 @implementation SurgeChatViewController
@@ -36,7 +38,9 @@
   self.showLoadEarlierMessagesHeader = NO;
   
   [self initNetworkCommunication];
-  
+  [SurgeChatAPIRequests createChatFromCommentWithID:[self.parentCommentID integerValue]
+                                           callBack:^(NSInteger conversationID) {self.conversationID = conversationID;}];
+  [self updatePosts];
 }
 
 
@@ -55,7 +59,8 @@
                                                         date:date
                                                         text:text];
   [self.messages addObject:message];
-  [self transmitMessage: text];
+  assert(self.conversationID > 0);
+  [SurgeChatAPIRequests sendMessageWithConversationID:self.conversationID message:text];
 
   [JSQSystemSoundPlayer jsq_playMessageSentSound];
   [self finishSendingMessageAnimated:YES];
@@ -160,10 +165,8 @@
       break;
       
     case NSStreamEventNone:
-      break;
-      
     default:
-      NSLog(@"Unknown event");
+      break;
   }
   
 }
@@ -198,4 +201,50 @@
   
   [_outputStream write:[data bytes] maxLength:[data length]];
 }
+
+#pragma mark - API Methods
+
+- (void) createChat
+{
+  /*
+    let request = HTTPTask()
+    let lastLocation = LocationManager.sharedInstance().lastLocation
+    let params: [String:AnyObject] = ["action": "postCreate", "handle": handleField.text, "content": textView.text, "lat": toString(lastLocation.coordinate.latitude), "lng": toString(lastLocation.coordinate.longitude)]
+    
+    if hasValidPostText() == false {
+      return
+    }
+    
+    request.POST("http://surge.seektom.com/post", parameters: params,
+      success: {(response: HTTPResponse) in
+      }, failure: {(error: NSError, response: HTTPResponse?) in
+        SurgeToast.showError("Failed to create post", onCompletion: ({_ in}))
+      }
+    )*/
+  
+  
+}
+-(void) updatePosts
+{
+  
+  [SurgeChatAPIRequests getConversationByCommentID:[self.parentCommentID integerValue]
+                                          callBack:^(ChatMessageResponse *response) {
+                                            NSLog(@"Received message subject: %@", response.subject);
+                                            self.senderId = [NSString stringWithFormat: @"%ld", (long)response.id];
+                                            self.senderDisplayName = [NSString stringWithFormat: @"%ld", (long)response.id];
+                                            self.conversationID = response.conversationID;
+                                            for (ChatMessage *msg in response.messages) {
+                                              NSString *senderID = [NSString stringWithFormat: @"%ld", (long)msg.senderID];
+                                              JSQMessage *newMessage = [JSQMessage messageWithSenderId:senderID displayName:senderID text:msg.content];
+                                              [self.messages addObject:newMessage];
+                                              dispatch_async(dispatch_get_main_queue(),
+                                                             ^{
+                                                               [self finishReceivingMessageAnimated:YES];
+                                                             });
+                                              
+                                            }
+                                          }];
+}
+
 @end
+

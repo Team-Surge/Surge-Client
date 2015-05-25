@@ -9,5 +9,5 @@
 #import <JSQMessagesViewController/JSQMessages.h>
 
 @interface SurgeChatViewController : JSQMessagesViewController <JSQMessagesCollectionViewDataSource, JSQMessagesCollectionViewDelegateFlowLayout, NSStreamDelegate>
-
+@property NSNumber *parentCommentID;
 @end
