@@ -80,7 +80,12 @@ static int errorCount = 0;
   MKCoordinateRegion region = MKCoordinateRegionMake(_lastLocation.coordinate, MKCoordinateSpanMake(0.00725, 0.00725));
   for(id<LocationManagerDelegate> observer in self.observers) {
     if (observer) {
-      [[observer mapViewToUpdateOnNewLocation] setRegion: region animated: false];
+      if (([observer respondsToSelector:@selector(mapViewToUpdateOnNewLocation)])) {
+        [[observer mapViewToUpdateOnNewLocation] setRegion: region animated: false];
+      }
+      if (([observer respondsToSelector:@selector(onLocationUpdate:)])) {
+        [observer onLocationUpdate:_lastLocation];
+      }
     }
   }
 }

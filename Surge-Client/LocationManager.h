@@ -10,9 +10,11 @@
 #import "CoreLocation/CoreLocation.h"
 #import "MapKit/MapKit.h"
 
-@protocol LocationManagerDelegate
+@protocol LocationManagerDelegate <NSObject>
 
+@optional
 - (MKMapView*)mapViewToUpdateOnNewLocation;
+- (void)onLocationUpdate:(CLLocation*)location;
 
 @required
 
