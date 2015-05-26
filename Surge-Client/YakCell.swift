@@ -34,6 +34,7 @@ class YakCell: UITableViewCell {
   @IBOutlet weak var contentTextView: UITextView!
   @IBOutlet weak var timeLabel: UILabel!
   @IBOutlet weak var poleImage: UIImageView!
+  @IBOutlet weak var categoryLabel: UILabel!
 
   @IBOutlet var contentTextViewWithHandleTopConstraint: NSLayoutConstraint!
   @IBOutlet var contentTextViewWithoutHandleTopConstraint: NSLayoutConstraint!
@@ -149,6 +150,16 @@ class YakCell: UITableViewCell {
       replyLabel.text = "\(commentCount) replies"
     } else {
       replyLabel.hidden = true
+    }
+    
+    if let tags = post.tags {
+      if (tags.count >= 2) {
+        categoryLabel.text = tags[0] + ", " + tags[1]
+      } else {
+        categoryLabel.text = tags[0]
+      }
+    } else {
+      categoryLabel.text = ""
     }
     
     switch state {

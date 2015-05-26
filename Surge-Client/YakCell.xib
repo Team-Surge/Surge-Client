@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -13,8 +13,8 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ou3-4N-d5G" id="7NX-JT-7pE">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 replies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="moH-1g-HwL" userLabel="replyLabel">
-                        <rect key="frame" x="120" y="117" width="80" height="15"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5 replies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="moH-1g-HwL" userLabel="replyLabel">
+                        <rect key="frame" x="120" y="117" width="80" height="14.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -52,13 +52,13 @@
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAe-mr-py4" userLabel="score">
-                        <rect key="frame" x="291" y="64" width="10" height="20"/>
+                        <rect key="frame" x="291" y="64" width="9.5" height="20"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5m" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fke-Y7-vIv" userLabel="timeLabel">
-                        <rect key="frame" x="8" y="117" width="31" height="15"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5m" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fke-Y7-vIv" userLabel="timeLabel">
+                        <rect key="frame" x="8" y="117" width="31" height="14.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="31" id="PqC-d9-4rN"/>
                         </constraints>
@@ -88,9 +88,19 @@
                             <constraint firstAttribute="height" constant="47" id="ma1-2c-vp2"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999964" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkm-gL-8yx" userLabel="categories">
+                        <rect key="frame" x="74" y="13" width="226.5" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="226.5" id="2qZ-pp-njo"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="wMa-Z3-PJN" firstAttribute="leading" secondItem="7NX-JT-7pE" secondAttribute="leadingMargin" id="1sr-LQ-nA9"/>
+                    <constraint firstItem="Bbo-cf-sjx" firstAttribute="top" secondItem="rkm-gL-8yx" secondAttribute="bottom" constant="7" id="20z-yi-bhT"/>
                     <constraint firstItem="moH-1g-HwL" firstAttribute="bottom" secondItem="7NX-JT-7pE" secondAttribute="bottomMargin" id="32U-Dm-81f"/>
                     <constraint firstItem="Ibb-AN-0CL" firstAttribute="top" secondItem="iAe-mr-py4" secondAttribute="bottom" constant="3" id="4hS-OP-xWV"/>
                     <constraint firstAttribute="trailingMargin" secondItem="Bbo-cf-sjx" secondAttribute="trailing" constant="46" id="7CW-to-y1h"/>
@@ -104,12 +114,15 @@
                     <constraint firstItem="moH-1g-HwL" firstAttribute="leading" secondItem="7NX-JT-7pE" secondAttribute="leadingMargin" constant="112" id="OWo-Hh-yL9"/>
                     <constraint firstItem="Fke-Y7-vIv" firstAttribute="leading" secondItem="7NX-JT-7pE" secondAttribute="leadingMargin" id="R6F-Yc-yqp"/>
                     <constraint firstAttribute="trailingMargin" secondItem="moH-1g-HwL" secondAttribute="trailing" constant="112" id="Svg-ur-xXm"/>
+                    <constraint firstItem="rkm-gL-8yx" firstAttribute="top" secondItem="7NX-JT-7pE" secondAttribute="topMargin" constant="5" id="T7i-cZ-bf4"/>
                     <constraint firstAttribute="trailingMargin" secondItem="iAe-mr-py4" secondAttribute="trailing" constant="11" id="azQ-4f-cZm"/>
                     <constraint firstItem="67w-So-F1L" firstAttribute="top" secondItem="7NX-JT-7pE" secondAttribute="topMargin" constant="33" id="c7t-fi-xuC"/>
                     <constraint firstItem="iAe-mr-py4" firstAttribute="top" secondItem="67w-So-F1L" secondAttribute="bottom" constant="1" id="jdn-Bl-s4W"/>
                     <constraint firstAttribute="trailingMargin" secondItem="d3S-Im-exv" secondAttribute="trailing" constant="39" id="mlP-Zt-Pgd"/>
+                    <constraint firstItem="rkm-gL-8yx" firstAttribute="leading" secondItem="wMa-Z3-PJN" secondAttribute="trailing" constant="10" id="ogc-9P-vy7"/>
                     <constraint firstItem="Ibb-AN-0CL" firstAttribute="trailing" secondItem="7NX-JT-7pE" secondAttribute="trailingMargin" id="pXA-Hq-tAF"/>
                     <constraint firstItem="Fke-Y7-vIv" firstAttribute="bottom" secondItem="7NX-JT-7pE" secondAttribute="bottomMargin" id="rdY-tb-H4b"/>
+                    <constraint firstItem="rkm-gL-8yx" firstAttribute="trailing" secondItem="d3S-Im-exv" secondAttribute="trailing" constant="27.5" id="uOa-oy-RRQ"/>
                     <constraint firstItem="67w-So-F1L" firstAttribute="trailing" secondItem="7NX-JT-7pE" secondAttribute="trailingMargin" id="y78-jQ-dbd"/>
                 </constraints>
                 <variation key="default">
@@ -119,6 +132,7 @@
                 </variation>
             </tableViewCellContentView>
             <connections>
+                <outlet property="categoryLabel" destination="rkm-gL-8yx" id="YKx-13-zmk"/>
                 <outlet property="contentTextView" destination="Bbo-cf-sjx" id="et8-TH-AnV"/>
                 <outlet property="contentTextViewWithHandleHeightConstraint" destination="nUb-MA-HBP" id="7om-bW-qcm"/>
                 <outlet property="contentTextViewWithHandleTopConstraint" destination="GdA-St-cZx" id="akA-2b-tNE"/>

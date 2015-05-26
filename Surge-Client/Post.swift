@@ -21,6 +21,7 @@ class Post : JSONJoy {
   var type: String?
   var userResponse: Int?
   var poll: Poll?
+  var tags: Array<String>?
   
   required init(_ decoder: JSONDecoder) {
     content = decoder["content"].string
@@ -32,6 +33,8 @@ class Post : JSONJoy {
     type = decoder["type"].string
     userResponse = decoder["userResponse"].integer
     poll = Poll(decoder["poll"])
+    decoder["tags"].getArray(&tags)
+    
     
     if let postDecoders = decoder["comments"].array {
       comments = [Post]()
@@ -39,11 +42,13 @@ class Post : JSONJoy {
         comments!.append(Post(postDecoder))
       }
     }
+    
     let created_at = decoder["created_at"].string
     let dateFormatter = NSDateFormatter()
     dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
     dateFormatter.locale = NSLocale(localeIdentifier: "en_US")
     dateFormatter.timeZone = NSTimeZone(abbreviation: "UTC")
     timestamp = dateFormatter.dateFromString(created_at!)
+    
   }
 }
