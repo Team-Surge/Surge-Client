@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rpj-yL-ax4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rpj-yL-ax4">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -180,16 +180,16 @@
                                                 <exclude reference="JeY-2D-CUj"/>
                                                 <exclude reference="AJS-th-QCb"/>
                                                 <exclude reference="iwO-vs-hxZ"/>
-                                                <exclude reference="Buq-Oc-fHU"/>
-                                                <exclude reference="VgH-ZH-wLq"/>
-                                                <exclude reference="hC7-7G-zk4"/>
                                                 <exclude reference="bVT-HB-GtF"/>
                                                 <exclude reference="zjH-un-u1w"/>
+                                                <exclude reference="Pu9-oq-5Al"/>
+                                                <exclude reference="gVu-j0-lL6"/>
                                                 <exclude reference="LrG-tV-MI3"/>
                                                 <exclude reference="kXh-84-Cu5"/>
                                                 <exclude reference="nl9-ct-elT"/>
-                                                <exclude reference="Pu9-oq-5Al"/>
-                                                <exclude reference="gVu-j0-lL6"/>
+                                                <exclude reference="Buq-Oc-fHU"/>
+                                                <exclude reference="VgH-ZH-wLq"/>
+                                                <exclude reference="hC7-7G-zk4"/>
                                                 <exclude reference="6cK-wS-j1f"/>
                                                 <exclude reference="6xc-aV-Ns1"/>
                                                 <exclude reference="HxP-8s-19j"/>
@@ -209,16 +209,16 @@
                                                 <exclude reference="JeY-2D-CUj"/>
                                                 <include reference="AJS-th-QCb"/>
                                                 <include reference="iwO-vs-hxZ"/>
-                                                <include reference="Buq-Oc-fHU"/>
-                                                <include reference="VgH-ZH-wLq"/>
-                                                <include reference="hC7-7G-zk4"/>
                                                 <include reference="bVT-HB-GtF"/>
                                                 <include reference="zjH-un-u1w"/>
+                                                <include reference="Pu9-oq-5Al"/>
+                                                <include reference="gVu-j0-lL6"/>
                                                 <include reference="LrG-tV-MI3"/>
                                                 <include reference="kXh-84-Cu5"/>
                                                 <include reference="nl9-ct-elT"/>
-                                                <include reference="Pu9-oq-5Al"/>
-                                                <include reference="gVu-j0-lL6"/>
+                                                <include reference="Buq-Oc-fHU"/>
+                                                <include reference="VgH-ZH-wLq"/>
+                                                <include reference="hC7-7G-zk4"/>
                                                 <include reference="6cK-wS-j1f"/>
                                                 <include reference="6xc-aV-Ns1"/>
                                                 <include reference="HxP-8s-19j"/>
@@ -1178,6 +1178,9 @@
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="ofd-zg-xja" kind="show" id="xwT-ea-Kf5"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="1xd-lR-bwz">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -1229,6 +1232,9 @@
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="ofd-zg-xja" kind="show" id="a30-zl-OB1"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="hxG-7X-fbi">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -1280,6 +1286,9 @@
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="ofd-zg-xja" kind="show" id="Xta-CU-fIe"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -1294,6 +1303,70 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cH8-lb-GUl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4288.5" y="64.125"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Dti-hV-ScE">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ofd-zg-xja" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="15x-Le-H6V"/>
+                        <viewControllerLayoutGuide type="bottom" id="tX5-c6-U5q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ktp-UZ-EmK">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sP8-ru-PO9">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Description of Modifications. You must make sure that you have modified that component; or it may not alter or otherwise give the program's name and a brief idea of what it does. Copyright (C) 1996, 1999 International Business Machines Corporation ("IBM"), the Original License. Distribution of Modified Versions without the Source, provided that you conspicuously and appropriately publish on each copy of the Work to be a Contribution.
+
+Once a Contribution to the Copyright Holder and seek a different license provided that the Source Code You distribute. You may aggregate the Package constitutes direct or contributory patent infringement, then this takes effect immediately upon announcement. If the distribution of the Agreement is governed by the Package.
+
+Distributor Fees are allowed. Distribution of Executable Versions. You may charge fees for other programs. The license granted by Participant to You for claims brought by any other license you select, with the losing party responsible for determining the amount or value of the License. Effect of New Versions. Once Licensed Product as an addendum to the Program, the distribution of the 60 day notice period specified above. Contributor to the Contributor Version directly or indirectly infringes any patent where such claim is resolved (such as source code, documentation source, and configuration files for the Covered Code is a "Licensed Product." Licensed Product, or via an accepted Electronic Distribution Mechanism is maintained by a third party intellectual property laws of the Original Code or ownership rights under this Agreement is invalid or unenforceable under any applicable law or agreed to in writing, the Copyright Holder nor by other people, then you must give any other countries). GENERAL If any provision of this License will immediately terminate and You must include a prominent notice, in the event of termination under Sections 2.1 and/or 2.2 automatically terminate without any additional file created by such Respondent, or (ii) withdraw Your litigation claim with respect to the terms of any other form of any change.
+
+You must include a prominent reference to another party. It does not create potential liability for Contributors. Therefore, if a Contributor if it was added to MirBSD. It has also been designated as GPL compatible by the Licensor under this License shall be taken into account in determining the appropriateness of using and distributing the Program. Each Contributor disclaims any liability to Recipient for claims brought by a Contributor shall also apply to the combination of the License are offered by you alone, not by any other trademarks, service marks, or product names of &lt;Name of Development Group, Name of Institution&gt;, nor the names of its contributors may be copied, such that the additions and/or changes are intended to facilitate the commercial use of the Program.
+
+Each Contributor disclaims any liability in the province of Quebec, Canada, the following in a reasonable manner on or through a list of conditions and the remainder of this License are fulfilled for the Current Maintainer is reachable and the Copyright Holder. Version" means the Original Program, and ii) additions to the public as provided herein, then Licensee hereby agrees to indicate in a commercial product offering. The obligations in this license, but changing it is Recipient's responsibility to secure any other entity. Apple and every Contributor ("Indemnified Contributor") against any losses, damages and costs of program errors, compliance with applicable laws, damage to or loss of data, programs or equipment, and unavailability or interruption of operations. DISCLAIMER OF WARRANTY. COVERED CODE PROVE DEFECTIVE IN ANY WAY OUT OF THE SOFTWARE IS PROVIDED UNDER THIS LICENSE This section is intended to be Current Maintainer does not, of itself, alter the recipient's rights in its Contribution, if any, in source code for the package. Program. "Contributor" means any party wishing to do the following: a) accompany it with the distribution.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sP8-ru-PO9" firstAttribute="top" secondItem="Ktp-UZ-EmK" secondAttribute="top" id="Edt-cP-RMe"/>
+                            <constraint firstItem="sP8-ru-PO9" firstAttribute="leading" secondItem="Ktp-UZ-EmK" secondAttribute="leading" id="LZY-CS-UuY"/>
+                            <constraint firstItem="sP8-ru-PO9" firstAttribute="bottom" secondItem="tX5-c6-U5q" secondAttribute="top" id="Z2Y-oC-SYx"/>
+                            <constraint firstAttribute="trailing" secondItem="sP8-ru-PO9" secondAttribute="trailing" id="peY-C8-31M"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="sP8-ru-PO9"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Edt-cP-RMe"/>
+                                <exclude reference="LZY-CS-UuY"/>
+                                <exclude reference="Z2Y-oC-SYx"/>
+                                <exclude reference="peY-C8-31M"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="sP8-ru-PO9"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Edt-cP-RMe"/>
+                                <include reference="LZY-CS-UuY"/>
+                                <include reference="Z2Y-oC-SYx"/>
+                                <include reference="peY-C8-31M"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hno-9G-GWY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5014.5" y="82.5"/>
         </scene>
         <!--Send a Post-->
         <scene sceneID="mYq-bd-7LF">
@@ -3127,6 +3200,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="wc1-Ng-3AU"/>
+        <segue reference="xwT-ea-Kf5"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
