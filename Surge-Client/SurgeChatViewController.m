@@ -17,6 +17,7 @@
 @property (strong) NSOutputStream *outputStream;
 @property BOOL chatDoesExist;
 @property NSInteger conversationID;
+@property NSInteger userID;
 @end
 
 @implementation SurgeChatViewController
@@ -37,10 +38,17 @@
   
   self.showLoadEarlierMessagesHeader = NO;
   
-  [self initNetworkCommunication];
+  //[self initNetworkCommunication];
   [SurgeChatAPIRequests createChatFromCommentWithID:[self.parentCommentID integerValue]
                                            callBack:^(NSInteger conversationID) {self.conversationID = conversationID;}];
-  [self updatePosts];
+  
+  [SurgeChatAPIRequests getUserID:^(NSNumber *id) {
+    self.userID = [id integerValue];
+    [self updatePosts];
+    NSString *msg = [SurgeChatAPIRequests getChatServerConnectMessage:self.userID];
+    [self transmitMessage:msg];
+  }];
+  //[self updatePosts];
 }
 
 
@@ -68,8 +76,7 @@
 
 - (void)didPressAccessoryButton:(UIButton *)sender
 {
-  // Do nothing, for now...
-  [super didPressAccessoryButton: sender];
+  [self updatePosts];
 }
 
 #pragma mark - JSQMessages CollectionView DataSource
@@ -135,9 +142,25 @@
   
   [_inputStream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
   [_outputStream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
-  
+
   [_inputStream open];
   [_outputStream open];
+  
+  
+}
+
+- (void) viewWillDisappear:(BOOL)animated
+{
+  [super viewWillDisappear:animated];
+  [_inputStream close];
+  [_outputStream close];
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
+  [super viewWillDisappear:animated];
+  [self initNetworkCommunication];
+  
 }
 
 - (void)stream:(NSStream *)sender handleEvent:(NSStreamEvent)streamEvent
@@ -186,12 +209,47 @@
   }
   
   NSLog(@"Received message: %@", msg);
-  JSQMessage *newMessage = [JSQMessage messageWithSenderId:@"1" displayName:@"OtherGuy" text:msg];
-  [self.messages addObject:newMessage];
-  [JSQSystemSoundPlayer jsq_playMessageReceivedSound];
-  [self scrollToBottomAnimated:YES];
-  [self finishReceivingMessageAnimated:YES];
+  NSError *error = nil;
+
+  id object = [NSJSONSerialization
+               JSONObjectWithData:[msg dataUsingEncoding:NSASCIIStringEncoding]
+               options:0
+               error:&error];
   
+  if (error) {
+    NSLog(@"Error: %@", error);
+  } else if (![object isKindOfClass:[NSDictionary class]]) {
+    NSLog(@"Failed to receive message");
+  } else {
+    NSDictionary *results = object;
+    NSDictionary *message = [results objectForKey:@"message"];
+    NSLog(@"Message: %@", message[@"content"]);
+    
+    NSNumber *number = message[@"tid"];
+    NSString *senderID = [number stringValue];
+    JSQMessage *newMessage = [JSQMessage messageWithSenderId: senderID displayName:@"OtherGuy" text:message[@"content"]];
+    [self.messages addObject:newMessage];
+    [JSQSystemSoundPlayer jsq_playMessageReceivedSound];
+    [self scrollToBottomAnimated:YES];
+    [self finishReceivingMessageAnimated:YES];
+  }
+  
+  /*
+    NSDictionary *results = object;
+    id object2 = [NSJSONSerialization
+                 JSONObjectWithData:[results[@"message"] dataUsingEncoding:NSASCIIStringEncoding]
+                 options:0
+                 error:&error];
+    if (error) {
+      NSLog(@"Error: %@", error);
+    } else {
+      NSDictionary *message = object2;
+      JSQMessage *newMessage = [JSQMessage messageWithSenderId:@"1" displayName:@"OtherGuy" text:message[@"content"]];
+      [self.messages addObject:newMessage];
+      [JSQSystemSoundPlayer jsq_playMessageReceivedSound];
+      [self scrollToBottomAnimated:YES];
+      [self finishReceivingMessageAnimated:YES];
+  }*/
 }
 
 - (void)transmitMessage:(NSString *)message
@@ -224,6 +282,7 @@
   
   
 }
+
 -(void) updatePosts
 {
   
@@ -233,6 +292,7 @@
                                             self.senderId = [NSString stringWithFormat: @"%ld", (long)response.id];
                                             self.senderDisplayName = [NSString stringWithFormat: @"%ld", (long)response.id];
                                             self.conversationID = response.conversationID;
+                                            [self.messages removeAllObjects];
                                             for (ChatMessage *msg in response.messages) {
                                               NSString *senderID = [NSString stringWithFormat: @"%ld", (long)msg.senderID];
                                               JSQMessage *newMessage = [JSQMessage messageWithSenderId:senderID displayName:senderID text:msg.content];
