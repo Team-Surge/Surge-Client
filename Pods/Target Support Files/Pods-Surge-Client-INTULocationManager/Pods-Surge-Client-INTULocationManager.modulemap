@@ -1,0 +1,6 @@
+framework module INTULocationManager {
+  umbrella header "Pods-Surge-Client-INTULocationManager-umbrella.h"
+
+  export *
+  module * { export * }
+}

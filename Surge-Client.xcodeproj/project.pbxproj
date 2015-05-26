@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F10E9221B14165000C85E42 /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F10E9211B14165000C85E42 /* LoadingScreen.swift */; };
 		3F20A3031AE98134004C2598 /* NearTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20A3021AE98134004C2598 /* NearTableViewController.swift */; };
 		3F20A3051AE9814D004C2598 /* NearTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20A3041AE9814D004C2598 /* NearTableViewCell.swift */; };
 		3F20CC071B12DA0E003BE238 /* Poll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20CC061B12DA0E003BE238 /* Poll.swift */; };
@@ -81,6 +82,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3F10E9211B14165000C85E42 /* LoadingScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingScreen.swift; sourceTree = "<group>"; };
 		3F20A3021AE98134004C2598 /* NearTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearTableViewController.swift; sourceTree = "<group>"; };
 		3F20A3041AE9814D004C2598 /* NearTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearTableViewCell.swift; sourceTree = "<group>"; };
 		3F20CC061B12DA0E003BE238 /* Poll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poll.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				3FE625EC1B0AEE12000700F4 /* UIColorExtension.swift */,
 				3FE625EA1B0AE8A1000700F4 /* Color.swift */,
 				3F3E0D001B0BFB3B00FC0367 /* PullToRefresh.swift */,
+				3F10E9211B14165000C85E42 /* LoadingScreen.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -540,10 +543,10 @@
 				3FB0BDAD1AE9FCAD009A8DB0 /* NotificationsTableViewController.swift in Sources */,
 				3F4446321AE9792D0001DA1A /* FeaturedTableViewController.swift in Sources */,
 				3F20CC071B12DA0E003BE238 /* Poll.swift in Sources */,
-				
-                DA0CE2E61B11CA2500F74CFC /* SurgeChatViewController.m in Sources */,
+				DA0CE2E61B11CA2500F74CFC /* SurgeChatViewController.m in Sources */,
 				3F8E5D671AEF4CE100B7363F /* RegisterViewController.swift in Sources */,
 				DA2F12D81B0D6490006AD05C /* MeTabBarController.swift in Sources */,
+				3F10E9221B14165000C85E42 /* LoadingScreen.swift in Sources */,
 				3F20A3051AE9814D004C2598 /* NearTableViewCell.swift in Sources */,
 				DA87E0381B0DAE5400FDA182 /* MyPostsViewController.swift in Sources */,
 				3FB0BDAA1AE9FC81009A8DB0 /* NotificationsTableViewCell.swift in Sources */,
